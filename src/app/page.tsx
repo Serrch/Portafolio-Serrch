@@ -3,7 +3,7 @@ import Proyectos from "@/components/section-components/proyectos-components/proy
 import Experiencia from "@/components/section-components/experiencia-components/experiencia-main";
 export default function Home() {
   return (
-    <div className="bg-background grid grid-cols-1 gap-4 ">
+    <div className="bg-background flex flex-col gap-12 ">
       <SobreMi></SobreMi>
       <Experiencia></Experiencia>
       <Proyectos></Proyectos>

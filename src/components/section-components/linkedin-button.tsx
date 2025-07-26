@@ -1,9 +1,9 @@
 import { Button } from "../ui/button";
-import { SiGithub } from "react-icons/si";
+import { SiLinkedin } from "react-icons/si";
 
-export default function GithubButton() {
+export default function LinkedinButton() {
   function click() {
-    window.open("https://github.com/Serrch");
+    window.open("https://linkedin.com/in/serrrch");
   }
   return (
     <div>
@@ -13,7 +13,7 @@ export default function GithubButton() {
         className="cursor-pointer"
         onClick={click}
       >
-        <SiGithub /> GitHub
+        <SiLinkedin /> LinkedIn
       </Button>
     </div>
   );

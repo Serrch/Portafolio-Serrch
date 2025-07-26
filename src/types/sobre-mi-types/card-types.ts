@@ -1,0 +1,24 @@
+export type CardType = CardTypes[];
+
+export type CardTypes = {
+  title: string;
+  img: string;
+  description: string;
+  cargo: string;
+  date: string;
+  techStack: TechOptions[];
+};
+
+type TechOptions =
+  | "Javascript"
+  | "Typescript"
+  | "NodeJS"
+  | "NextJS"
+  | ".NET"
+  | "MSQL"
+  | "MySQL"
+  | "Angular"
+  | "Express"
+  | "React"
+  | "Swagger"
+  | "Tailwind";
