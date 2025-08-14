@@ -1,7 +1,6 @@
 import { Button } from "../ui/button";
-import { SiGithub } from "react-icons/si";
-
-export default function GithubButton({ link }: { link?: string }) {
+import { FiLink2 } from "react-icons/fi";
+export default function NewPageButton({ link }: { link: string }) {
   function click() {
     return link ? window.open(link) : window.open("https://github.com/Serrch");
   }
@@ -10,10 +9,11 @@ export default function GithubButton({ link }: { link?: string }) {
       <Button
         variant="outline"
         size="sm"
-        className="cursor-pointer"
+        className="cursor-pointer  "
         onClick={click}
       >
-        <SiGithub /> {link ? "Código" : "Github"}
+        <FiLink2 />
+        Página
       </Button>
     </div>
   );

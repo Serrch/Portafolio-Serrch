@@ -25,7 +25,7 @@ export default function SobreMi() {
 
         <div className="col-span-2 flex flex-col gap-1 md:gap-4">
           <h1 className="text-4xl font-bold">Sobre mi</h1>
-          <p className="text-justify text-sm md:text-xl md:border-b md:pb-2">
+          <p className="text-justify text-sm md:text-xl md:pb-2">
             Mi nombre es{" "}
             <strong className="underline">Perez Rivas Sergio E.</strong> soy un
             Ingeniero en software - Desarrollador fullstack.
@@ -40,9 +40,7 @@ export default function SobreMi() {
           </p>
           <MiStack />
           <div>
-            <p className="text-md md:text-xl font-bold mb-1 pt-2 md:border-t">
-              Contacto
-            </p>
+            <p className="text-md md:text-xl font-bold mb-1 pt-2 ">Contacto</p>
             <div className="grid grid-cols-2 gap-2  md:flex md:gap-2 ">
               <GithubButton />
               <LinkedinButton />

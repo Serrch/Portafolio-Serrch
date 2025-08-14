@@ -1,6 +1,9 @@
 "use client";
 import {
+  SiHtml5,
+  SiCss3,
   SiTypescript,
+  SiAngular,
   SiJavascript,
   SiNodedotjs,
   SiReact,
@@ -8,39 +11,29 @@ import {
   SiDotnet,
   SiSwagger,
   SiTailwindcss,
+  SiExpress,
+  SiMysql,
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
+import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
-export default function ChooseIcon(name: string) {
-  switch (name) {
-    case "Javascript":
-      return <SiJavascript className="text-yellow-400 w-6 h-6" />;
+const iconMap: Record<TechOptions, React.ReactNode> = {
+  Javascript: <SiJavascript className="text-yellow-400 w-6 h-6" />,
+  HTML: <SiHtml5 className="text-orange-400 w-6 h-6" />,
+  CSS: <SiCss3 className="text-blue-400 w-6 h-6" />,
+  Angular: <SiAngular className="text-red-400 w-6 h-6" />,
+  Typescript: <SiTypescript className="text-blue-500 w-6 h-6" />,
+  NodeJS: <SiNodedotjs className="text-green-500 w-6 h-6" />,
+  NextJS: <SiNextdotjs className="dark:text-white w-6 h-6" />,
+  React: <SiReact className="text-blue-500 w-6 h-6" />,
+  ".NET": <SiDotnet className="text-purple-500 w-6 h-6" />,
+  MSQL: <DiMsqlServer className="text-orange-500 w-6 h-6" />,
+  Swagger: <SiSwagger className="text-green-500 w-6 h-6" />,
+  Tailwind: <SiTailwindcss className="text-blue-500 w-6 h-6" />,
+  MySQL: <SiMysql className="text-blue-300 w-6 h-6" />,
+  Express: <SiExpress className="text-green-500 w-6 h-6" />,
+};
 
-    case "Typescript":
-      return <SiTypescript className="text-blue-500 w-6 h-6" />;
-
-    case "NodeJS":
-      return <SiNodedotjs className="text-green-500 w-6 h-6" />;
-
-    case "NextJS":
-      return <SiNextdotjs className="dark:text-white w-6 h-6" />;
-
-    case "React":
-      return <SiReact className="text-blue-500 w-6 h-6" />;
-
-    case ".NET":
-      return <SiDotnet className="text-purple-500 w-6 h-6" />;
-
-    case "MSQL":
-      return <DiMsqlServer className="text-orange-500 w-6 h-6" />;
-
-    case "Swagger":
-      return <SiSwagger className="text-green-500 w-6 h-6" />;
-
-    case "Tailwind":
-      return <SiTailwindcss className="text-blue-500 w-6 h-6" />;
-
-    default:
-      return <p>{`${name}`}</p>;
-  }
+export default function ChooseIcon(name: TechOptions) {
+  return iconMap[name] ?? <p>{name}</p>;
 }

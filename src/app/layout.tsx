@@ -21,8 +21,8 @@ export default function RootLayout({
       <body className={`${outfit.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <main className="background-color text-foreground">

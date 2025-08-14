@@ -8,16 +8,16 @@ export default function CardExperiencia({
   CardProps: CardTypes;
 }) {
   return (
-    <div className="flex-col border rounded-2xl shadow-md">
-      <div className="border-b mb-2 p-2 md:p-4 grid grid-cols-2 justify-center items-center">
+    <div className="flex-col border border-zinc-700 rounded-2xl shadow-md ">
+      <div className="border-b  mb-2 p-2 md:p-4 grid grid-cols-2 justify-center items-center ">
         <div className="justify-center items-center">
           {CardProps.img ? (
             <Image
               src={`${CardProps.img}`}
               alt={`imagen ${CardProps.title}`}
-              width={100}
-              height={100}
-              className="md:scale-120 md:ml-2"
+              width={40}
+              height={40}
+              className="md:scale-105 md:ml-2"
             ></Image>
           ) : (
             <h2 className="text-xl md:text-2xl"> {CardProps.title}</h2>

@@ -9,7 +9,9 @@ export type CardTypes = {
   techStack: TechOptions[];
 };
 
-type TechOptions =
+export type TechOptions =
+  | "HTML"
+  | "CSS"
   | "Javascript"
   | "Typescript"
   | "NodeJS"
