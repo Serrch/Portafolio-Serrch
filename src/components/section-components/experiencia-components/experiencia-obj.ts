@@ -1,13 +1,14 @@
 import { CardType } from "@/types/sobre-mi-types/card-types";
+
 export const experienciaCards: CardType = [
   {
     title: "Radical Software",
     img: "/assets/img-experiencia/2023-logo-leyenda.svg",
     description:
-      "Durante este periodo me dedique a la refactorizacion de un API utilizando ASP.NET, Swagger y SQL" +
-      " en donde con ayuda de los principios SOLID y Clean Code me enfoque en corregir la logica, rehaciendo clases y aplicando una estructura de controladores, clases e interfaces limpias " +
-      " en los distintos endpoints asi tambien propuse la estandarizacion en los formatos de respuesta.",
-    cargo: "Interno",
+      "Durante este periodo me dediqué a la refactorización de una API utilizando ASP.NET, Swagger y SQL. " +
+      "Con ayuda de los principios SOLID y Clean Code, me enfoqué en corregir la lógica, rehaciendo clases y aplicando una estructura limpia de controladores, clases e interfaces. " +
+      "También propuse la estandarización en los formatos de respuesta.",
+    cargo: "Practicante",
     date: "Diciembre 2024 - Enero 2025",
     techStack: [".NET", "Swagger", "MSQL"],
   },
@@ -15,10 +16,10 @@ export const experienciaCards: CardType = [
     title: "Radical Software",
     img: "/assets/img-experiencia/2023-logo-leyenda.svg",
     description:
-      "Terminando la refactorizacion del backend, se me asigno la tarea de llevar a cabo una migracion de un proyecto de Blazor a React con NextJS" +
-      " Aqui me enfoque en la creacion de formularios dinamicos para cada endpoint desarrollado en la API" +
-      " el objetivo era hacer una pagina amigable con el usuario y escalable facilmente para los desarrolladores del equipo.",
-    cargo: "Interno",
+      "Tras finalizar la refactorización del backend, se me asignó la tarea de migrar un proyecto de Blazor a React con NextJS. " +
+      "Me enfoqué en la creación de formularios dinámicos para cada endpoint desarrollado en la API. " +
+      "El objetivo fue construir una página amigable para el usuario y fácilmente escalable para los desarrolladores del equipo.",
+    cargo: "Practicante",
     date: "Enero 2025 - Junio 2025",
     techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
   },

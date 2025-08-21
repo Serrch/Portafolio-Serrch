@@ -13,7 +13,9 @@ import {
   SiTailwindcss,
   SiExpress,
   SiMysql,
+  SiGithub,
 } from "react-icons/si";
+import Image from "next/image";
 import { DiMsqlServer } from "react-icons/di";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
@@ -32,6 +34,15 @@ const iconMap: Record<TechOptions, React.ReactNode> = {
   Tailwind: <SiTailwindcss className="text-blue-500 w-6 h-6" />,
   MySQL: <SiMysql className="text-blue-300 w-6 h-6" />,
   Express: <SiExpress className="text-green-500 w-6 h-6" />,
+  Github: <SiGithub className="dark:text-white w-6 h-6" />,
+  "C#": (
+    <Image
+      width={25}
+      height={25}
+      src="/assets/icons/language/csharp.png"
+      alt="C# logo"
+    ></Image>
+  ),
 };
 
 export default function ChooseIcon(name: TechOptions) {

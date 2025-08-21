@@ -11,15 +11,16 @@ export default function CardProyectos2({
 }) {
   return (
     <div className="flex flex-col gap-2 rounded-2xl p-4 shadow-md border dark:border-zinc-700 h-full">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center overflow-hidden rounded-lg h-full">
         <Image
           src={proyectoObj.img}
           alt={`Imagen-${proyectoObj.title}`}
           width={600}
           height={600}
-          className="md:max-w-sm rounded-lg object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
+
       <div className="flex flex-col justify-around h-full">
         <div className="mb-2 f">
           <h2 className="text-2xl font-bold">{proyectoObj.title}</h2>

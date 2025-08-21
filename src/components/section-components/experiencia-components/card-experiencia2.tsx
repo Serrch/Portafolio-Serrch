@@ -31,11 +31,13 @@ export default function CardExperiencia2({
         <p className="text-sm md:text-base dark:text-zinc-300 mb-2 text-justify">
           {CardProps.description}
         </p>
-        <div className="flex gap-2 justify-center md:justify-start">
-          Tecnologias:
-          {CardProps.techStack.map((tech, index) => (
-            <div key={index}>{ChooseIcon(tech)}</div>
-          ))}
+        <div className="grid grid-cols-1 md:flex  gap-2 justify-center md:justify-start">
+          <p className="text-center md:text-end">Tecnologias:</p>
+          <div className="flex gap-2 justify-center md:justify-start">
+            {CardProps.techStack.map((tech, index) => (
+              <div key={index}>{ChooseIcon(tech)}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

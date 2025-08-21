@@ -23,4 +23,6 @@ export type TechOptions =
   | "Express"
   | "React"
   | "Swagger"
-  | "Tailwind";
+  | "Tailwind"
+  | "Github"
+  | "C#";

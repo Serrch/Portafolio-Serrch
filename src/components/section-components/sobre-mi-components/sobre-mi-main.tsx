@@ -30,8 +30,8 @@ export default function SobreMi() {
             <strong className="underline">Perez Rivas Sergio E.</strong> soy un
             Ingeniero en software - Desarrollador fullstack.
             <br />
-            Me enfoco en crear soluciones prácticas y limpias así como fáciles
-            de entender y escalar con la ayuda de los principios de Clean Code y
+            Me enfoco en crear soluciones prácticas, limpias así como fáciles de
+            entender y escalar con la ayuda de los principios de Clean Code y
             SOLID.
             <br />
             Me gusta trabajar en proyectos que involucren la creacion de un
