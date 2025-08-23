@@ -14,8 +14,10 @@ import {
   SiExpress,
   SiMysql,
   SiGithub,
+  SiGitlab,
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
 const sizeMap = {
@@ -61,7 +63,8 @@ export default function ChooseIconStack({
     MySQL: <SiMysql className={clases} />,
     Express: <SiExpress className={clases} />,
     Github: <SiGithub className={clases} />,
-    "C#": <SiDotnet className={clases} />,
+    "C#": <TbBrandCSharp className={clases} />,
+    Gitlab: <SiGitlab className={clases} />,
   };
 
   return iconMap[name] ?? <p>{name}</p>;

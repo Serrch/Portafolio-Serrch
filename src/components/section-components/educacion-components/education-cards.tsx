@@ -14,7 +14,7 @@ export default function EducationCards({
   const toggleDescription = () => setExpanded((prev) => !prev);
 
   return (
-    <div className="grid grid-cols-5 gap-2 border dark:border-zinc-700 shadow-md rounded-xl p-2 md:p-4">
+    <div className="grid grid-cols-5 gap-2 border dark:border-zinc-700 shadow-md rounded-xl p-2 md:p-4 h-full">
       <div className="col-span-1 flex items-center justify-center">
         {educationInfo.img ? (
           <img
@@ -30,7 +30,7 @@ export default function EducationCards({
         )}
       </div>
 
-      <div className="col-span-3 flex flex-col gap-2 ">
+      <div className="col-span-3 flex flex-col gap-2 justify-around ">
         <h2 className="text-xl md:text-2xl font-bold">{educationInfo.title}</h2>
 
         <p

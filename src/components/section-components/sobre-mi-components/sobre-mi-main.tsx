@@ -19,7 +19,7 @@ export default function SobreMi() {
             alt="Mi foto"
             width={200}
             height={200}
-            className="rounded-lg object-cover scale-100 md:scale-150 "
+            className="rounded-lg object-cover scale-100 md:scale-140 xl:scale-170 "
           />
         </div>
 

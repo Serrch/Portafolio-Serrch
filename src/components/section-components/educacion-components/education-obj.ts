@@ -21,4 +21,13 @@ export const educationObj: EducationCardType[] = [
     certificationLink:
       "https://www.coursera.org/account/accomplishments/verify/5RYVLCV97Y3M",
   },
+  {
+    title: "Curso Radical Software - SOLID",
+    status: true,
+    description:
+      "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
+    stDate: "Diciembre 2024",
+    endDate: "Enero 2025",
+    img: "/assets/img-experiencia/radical_logo_solo.png",
+  },
 ];

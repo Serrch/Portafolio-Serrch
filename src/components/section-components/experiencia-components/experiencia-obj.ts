@@ -6,10 +6,10 @@ export const experienciaCards: CardType = [
     img: "/assets/img-experiencia/2023-logo-leyenda.svg",
     description:
       "Durante este periodo me dediqué a la refactorización de una API utilizando ASP.NET, Swagger y SQL. " +
-      "Con ayuda de los principios SOLID y Clean Code, me enfoqué en corregir la lógica, rehaciendo clases y aplicando una estructura limpia de controladores, clases e interfaces. " +
+      "Con ayuda de los principios SOLID y Clean Code, me enfoqué en corregir la lógica, rehaciendo clases, dividiendo responsabilidades y aplicando una estructura limpia de controladores, accesos a datos, interfaces y servicios. " +
       "También propuse la estandarización en los formatos de respuesta.",
     cargo: "Practicante",
-    date: "Diciembre 2024 - Enero 2025",
+    date: "Diciembre 2024 - Marzo 2025",
     techStack: [".NET", "Swagger", "MSQL"],
   },
   {
@@ -20,7 +20,7 @@ export const experienciaCards: CardType = [
       "Me enfoqué en la creación de formularios dinámicos para cada endpoint desarrollado en la API. " +
       "El objetivo fue construir una página amigable para el usuario y fácilmente escalable para los desarrolladores del equipo.",
     cargo: "Practicante",
-    date: "Enero 2025 - Junio 2025",
+    date: "Marzo 2025 - Junio 2025",
     techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
   },
 ];

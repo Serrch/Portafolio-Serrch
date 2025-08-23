@@ -25,4 +25,5 @@ export type TechOptions =
   | "Swagger"
   | "Tailwind"
   | "Github"
-  | "C#";
+  | "C#"
+  | "Gitlab";
