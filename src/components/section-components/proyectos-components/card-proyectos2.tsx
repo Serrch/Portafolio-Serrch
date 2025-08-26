@@ -33,7 +33,11 @@ export default function CardProyectos2({
 
         <div className="flex flex-col gap-3 md:grid grid-cols-2 justify-between items-center md:items-start">
           <div className="flex gap-2 ">
-            <GithubButton link={proyectoObj.githubLink} />
+            {proyectoObj.githubLink ? (
+              <GithubButton link={proyectoObj.githubLink} />
+            ) : (
+              <div></div>
+            )}
             {proyectoObj.pageLink ? (
               <NewPageButton link={proyectoObj.pageLink} />
             ) : (

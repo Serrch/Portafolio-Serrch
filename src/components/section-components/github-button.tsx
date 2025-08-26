@@ -6,15 +6,13 @@ export default function GithubButton({ link }: { link?: string }) {
     return link ? window.open(link) : window.open("https://github.com/Serrch");
   }
   return (
-    <div>
-      <Button
-        variant="outline"
-        size="sm"
-        className="cursor-pointer"
-        onClick={click}
-      >
-        <SiGithub /> {link ? "Código" : "Github"}
-      </Button>
-    </div>
+    <Button
+      variant="outline"
+      size="sm"
+      className="cursor-pointer"
+      onClick={click}
+    >
+      <SiGithub /> {link ? "Código" : "Github"}
+    </Button>
   );
 }

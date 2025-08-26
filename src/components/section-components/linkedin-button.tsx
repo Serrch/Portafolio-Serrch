@@ -6,15 +6,13 @@ export default function LinkedinButton() {
     window.open("https://linkedin.com/in/serrrch");
   }
   return (
-    <div>
-      <Button
-        variant="outline"
-        size="sm"
-        className="cursor-pointer"
-        onClick={click}
-      >
-        <SiLinkedin /> LinkedIn
-      </Button>
-    </div>
+    <Button
+      variant="outline"
+      size="sm"
+      className="cursor-pointer"
+      onClick={click}
+    >
+      <SiLinkedin /> LinkedIn
+    </Button>
   );
 }
