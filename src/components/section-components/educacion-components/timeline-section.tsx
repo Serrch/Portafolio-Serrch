@@ -15,7 +15,7 @@ export default function TimelineSection({
           <SlGraduation className="w-4 h-4 text-emerald-800 dark:text-emerald-300" />
         )}
       </span>
-
+      <p className="mb-1">{educationInfo.stDate}</p>
       <EducationCards educationInfo={educationInfo}></EducationCards>
     </li>
   );

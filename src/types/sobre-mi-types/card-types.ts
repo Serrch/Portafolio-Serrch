@@ -5,7 +5,8 @@ export type CardTypes = {
   img: string;
   description: string;
   cargo: string;
-  date: string;
+  stDate: string;
+  endDate: string;
   techStack: TechOptions[];
 };
 

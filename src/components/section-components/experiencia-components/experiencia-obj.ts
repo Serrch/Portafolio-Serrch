@@ -9,7 +9,8 @@ export const experienciaCards: CardType = [
       "Con ayuda de los principios SOLID y Clean Code, me enfoqué en corregir la lógica, rehaciendo clases, dividiendo responsabilidades y aplicando una estructura limpia de controladores, accesos a datos, interfaces y servicios. " +
       "También propuse la estandarización en los formatos de respuesta.",
     cargo: "Practicante",
-    date: "Diciembre 2024 - Marzo 2025",
+    stDate: "Diciembre 2024",
+    endDate: "Marzo 2025",
     techStack: [".NET", "Swagger", "MSQL"],
   },
   {
@@ -20,7 +21,8 @@ export const experienciaCards: CardType = [
       "Me enfoqué en la creación de formularios dinámicos para cada endpoint desarrollado en la API. " +
       "El objetivo fue construir una página amigable para el usuario y fácilmente escalable para los desarrolladores del equipo.",
     cargo: "Practicante",
-    date: "Marzo 2025 - Junio 2025",
+    stDate: "Marzo 2025",
+    endDate: "Junio 2025",
     techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
   },
 ];
