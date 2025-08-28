@@ -34,7 +34,9 @@ export default function CardExperiencia2({
           <p className="text-center md:text-end">Tecnologias:</p>
           <div className="flex gap-2 justify-center md:justify-start">
             {CardProps.techStack.map((tech, index) => (
-              <div key={index}>{ChooseIcon(tech)}</div>
+              <div key={index}>
+                <ChooseIcon name={tech}></ChooseIcon>
+              </div>
             ))}
           </div>
         </div>

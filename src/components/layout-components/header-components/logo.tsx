@@ -9,7 +9,7 @@ export default function Logo() {
     <div className="justify-items-start md:justify-items-center content-center">
       <div className="transition duration-300 ease-in-out hover:scale-115">
         <Link href="/">
-          <LogoSVG></LogoSVG>
+          <LogoSVG />
         </Link>
       </div>
     </div>

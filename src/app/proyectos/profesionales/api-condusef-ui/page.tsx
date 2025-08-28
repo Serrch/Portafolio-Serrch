@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import ChooseIcon from "@/components/section-components/experiencia-components/choose-icon-function";
+import { TechOptions } from "@/types/sobre-mi-types/card-types";
+import LogoCondusef from "../../../../../public/assets/img-proyectos/profesionales/api-condusef-ui/logo-condusef";
 export default function ApiCondusefUi() {
+  const arrTech: TechOptions[] = ["React", "NextJS", "Typescript", "NodeJS"];
   return (
     <main className="max-w-5xl mx-auto p-6">
       <h1 className="text-4xl font-bold mb-4">API Condusef Nueva UI</h1>
@@ -17,24 +20,21 @@ export default function ApiCondusefUi() {
         reutilizables, consumo de endpoints REST, autenticación y optimización
         de rendimiento.
       </p>
-
-      <div className="relative w-full h-80 mb-10 rounded-xl overflow-hidden shadow-lg">
-        <Image
-          src="/assets/img-experiencia/api-condusef-ui.jpg"
-          alt="Vista previa del proyecto"
-          fill
-          className="object-cover"
-        />
+      <div className="flex justify-center">
+        <div className="relative w-6xl h-80 mb-10 rounded-xl overflow-hidden shadow-lg flex justify-center items-center bg-white">
+          <LogoCondusef></LogoCondusef>
+        </div>
       </div>
 
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-4">Tecnologías utilizadas</h2>
         <ul className="flex flex-wrap gap-3">
-          {["React", "Next.js", "TypeScript", "Node.js"].map((tech) => (
+          {arrTech.map((tech) => (
             <li
               key={tech}
-              className="px-4 py-2 rounded-lg bg-gray-800 text-sm text-white shadow-md"
+              className="px-4 py-2 rounded-2xl border dark:border-zinc-700  shadow-md flex flex-col gap-1 items-center justify-center"
             >
+              <ChooseIcon name={tech}></ChooseIcon>
               {tech}
             </li>
           ))}
@@ -46,7 +46,7 @@ export default function ApiCondusefUi() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="/assets/proyectos/api-condusef-ui-1.jpg"
+              src="/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-3.jpg"
               alt="Captura 1"
               fill
               className="object-cover"
@@ -54,7 +54,7 @@ export default function ApiCondusefUi() {
           </div>
           <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-md">
             <Image
-              src="/assets/proyectos/api-condusef-ui-2.jpg"
+              src="/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-4.jpg"
               alt="Captura 2"
               fill
               className="object-cover"

@@ -40,6 +40,6 @@ const iconMap: Record<TechOptions, React.ReactNode> = {
   Gitlab: <SiGitlab className="text-orange-500 w-6 h-6" />,
 };
 
-export default function ChooseIcon(name: TechOptions) {
+export default function ChooseIcon({ name }: { name: TechOptions }) {
   return iconMap[name] ?? <p>{name}</p>;
 }
