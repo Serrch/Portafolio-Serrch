@@ -1,11 +1,5 @@
 import EducationCards from "./education-cards";
-import {
-  educationObj,
-  cursosObj,
-  certificacionesObj,
-  titulosObj,
-} from "./education-obj";
-import EducationTimeline from "./education-timeline";
+import { cursosObj, certificacionesObj, titulosObj } from "./education-obj";
 
 export default function Educacion() {
   return (

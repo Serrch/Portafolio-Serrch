@@ -8,4 +8,5 @@ export type CardProyectoTypes = {
   techStack: TechOptions[];
   githubLink?: string;
   pageLink?: string;
+  detailPage: string;
 };
