@@ -1,40 +1,126 @@
 import Image from "next/image";
-import Link from "next/link";
 import ChooseIcon from "@/components/section-components/experiencia-components/choose-icon-function";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import LogoCondusef from "../../../../../public/assets/img-proyectos/profesionales/api-condusef-ui/logo-condusef";
+
 export default function ApiCondusefUi() {
   const arrTech: TechOptions[] = ["React", "NextJS", "Typescript", "NodeJS"];
+  const arrImagenes: string[] = [
+    "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-3.jpg",
+    "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-4.jpg",
+  ];
+
   return (
     <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4">API Condusef Nueva UI</h1>
+      <h1 className="text-4xl font-bold mb-4">API CONDUSEF - Nueva UI</h1>
 
-      <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-200 text-green-800 mb-6">
-        Terminado
-      </span>
+      <div className="flex gap-2 items-start justify-between">
+        <span className="inline-block px-3 py-1 text-sm rounded-full bg-green-200 text-green-800 mb-6">
+          Terminado
+        </span>
+        <p>
+          <strong className="text-sm dark:text-zinc-400">
+            Marzo 2025 - Junio 2025
+          </strong>
+        </p>
+      </div>
 
-      <p className="text-lg leading-relaxed text-gray-300 mb-8">
-        Proyecto de frontend creado para consumir la API Condusef previamente
-        refactorizada, migrando el proyecto de Blazor a una interfaz moderna
-        hecha con Next.js y React. Incluyó la implementación de componentes UI
-        reutilizables, consumo de endpoints REST, autenticación y optimización
-        de rendimiento.
+      <p className="text-lg text-justify leading-relaxed mb-8">
+        El proyecto <strong>API CONDUSEF UI</strong> consiste en una aplicación
+        frontend desarrollada con <strong>Next.js</strong>,{" "}
+        <strong>React</strong>y <strong>TypeScript</strong>. Su objetivo es
+        consumir la API previamente refactorizada de CONDUSEF y presentar la
+        información a través de tablas y formularios dinámicos, que representan
+        los distintos trámites que los usuarios pueden realizar en la plataforma
+        oficial.
       </p>
+
       <div className="flex justify-center">
         <div className="relative w-6xl h-80 mb-10 rounded-xl overflow-hidden shadow-lg flex justify-center items-center bg-white">
-          <LogoCondusef></LogoCondusef>
+          <LogoCondusef />
         </div>
       </div>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Tecnologías utilizadas</h2>
-        <ul className="flex flex-wrap gap-3">
+        <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
+          ¿Cuál fue mi trabajo?
+        </h3>
+
+        <div>
+          <strong className="text-lg">Descripción</strong>
+          <p className="text-lg text-justify leading-relaxed mb-8">
+            Mis actividades consistieron en establecer la base técnica del
+            proyecto, diseñando las estructuras principales que se utilizarían
+            durante el desarrollo. Esto incluyó desde el layout principal hasta
+            la integración con el backend, así como el diseño de formularios e
+            inputs dinámicos.
+          </p>
+        </div>
+
+        <div>
+          <strong className="text-lg">Actividades</strong>
+          <ul className="my-3 ml-6 list-disc [&>li]:mt-1">
+            <li>Configurar el enrutado de las secciones REDECO y REUNE.</li>
+            <li>Diseñar las tablas correspondientes a cada tipo de trámite.</li>
+            <li>Crear formularios dinámicos adaptados al trámite.</li>
+            <li>Diseñar inputs personalizados para cada caso.</li>
+            <li>
+              Implementar una función para identificar el tipo de trámite y
+              mostrar la tabla e inputs correspondientes.
+            </li>
+            <li>
+              Desarrollar los DTOs necesarios para transformar los formularios
+              en objetos válidos para la API.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
+          Contexto
+        </h3>
+        <strong className="text-lg">¿Qué es CONDUSEF?</strong>
+        <p className="text-lg text-justify leading-relaxed mb-4">
+          Es una institución del Gobierno de México encargada de proteger y
+          defender los derechos de los usuarios de servicios financieros, como
+          bancos, aseguradoras, Afores, entre otros.
+        </p>
+        <strong className="text-lg">¿Qué es la API CONDUSEF?</strong>
+        <p className="text-lg text-justify leading-relaxed mb-4">
+          La <strong>API CONDUSEF</strong> es una interfaz que permite a las
+          instituciones financieras intercambiar datos de forma segura con la
+          entidad. Opera principalmente con dos sistemas:
+        </p>
+        <ul className="ml-6 list-disc [&>li]:mt-1">
+          <li>
+            <p>
+              <strong>REDECO:</strong> Recepción de quejas
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>REUNE: </strong>Recepción de trámites como aclaraciones,
+              reclamaciones y consultas
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-10">
+        <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
+          Tecnologías utilizadas
+        </h3>
+        <ul
+          className="flex flex-wrap gap-3"
+          aria-label="Lista de tecnologías utilizadas en el proyecto"
+        >
           {arrTech.map((tech) => (
             <li
               key={tech}
-              className="px-4 py-2 rounded-2xl border dark:border-zinc-700  shadow-md flex flex-col gap-1 items-center justify-center"
+              className="px-4 py-2 rounded-2xl border dark:border-zinc-700 shadow-md flex flex-col gap-1 items-center justify-center"
             >
-              <ChooseIcon name={tech}></ChooseIcon>
+              <ChooseIcon name={tech} />
               {tech}
             </li>
           ))}
@@ -42,43 +128,27 @@ export default function ApiCondusefUi() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Galería</h2>
+        <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
+          Galería
+        </h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-3.jpg"
-              alt="Captura 1"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-4.jpg"
-              alt="Captura 2"
-              fill
-              className="object-cover"
-            />
-          </div>
+          {arrImagenes.map((imagen, index) => (
+            <div
+              key={index}
+              className="relative w-full h-60 rounded-lg overflow-hidden shadow-md"
+            >
+              <Image
+                src={imagen}
+                alt={`Vista del proyecto API CONDUSEF UI - Captura ${
+                  index + 1
+                }`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
         </div>
       </section>
-
-      <div className="flex gap-4">
-        <Link
-          href="https://github.com/tu-repo"
-          target="_blank"
-          className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition"
-        >
-          Ver código en GitHub
-        </Link>
-        <Link
-          href="https://demo-del-proyecto.com"
-          target="_blank"
-          className="px-5 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-md transition"
-        >
-          Ver demo en vivo
-        </Link>
-      </div>
     </main>
   );
 }
