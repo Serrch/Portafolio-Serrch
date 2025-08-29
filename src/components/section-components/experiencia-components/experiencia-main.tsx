@@ -1,6 +1,7 @@
 "use client";
 import CardExperiencia2 from "./card-experiencia2";
 import { experienciaCards } from "./experiencia-obj";
+import TimelineContainer from "./experiencia-timeline/timeline-container";
 export default function Experiencia() {
   return (
     <section
@@ -11,10 +12,15 @@ export default function Experiencia() {
         <h2 className="text-4xl font-bold text-start mb-2">Experiencia</h2>
         <div className="flex flex-col md:grid md:grid-cols-1 gap-2 md:gap-6">
           {experienciaCards.map((experiencia, index) => (
-            <div key={index}>
+            <div className="hidden" key={index}>
               <CardExperiencia2 CardProps={experiencia} />
             </div>
           ))}
+        </div>
+        <div className="">
+          <TimelineContainer
+            experienciaInfo={experienciaCards}
+          ></TimelineContainer>
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ export type CardProyectoTypes = {
   description: string;
   img: string;
   techStack: TechOptions[];
-  githubLink: string;
+  githubLink?: string;
   pageLink?: string;
+  detailPage: string;
 };

@@ -4,51 +4,52 @@ import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
 import GithubButton from "../github-button";
 import NewPageButton from "../new-page-button";
 import ChooseIcon from "../experiencia-components/choose-icon-function";
+import RedirectButton from "../redirect-button";
+
 export default function CardProyectos2({
   proyectoObj,
 }: {
   proyectoObj: CardProyectoTypes;
 }) {
   return (
-    <div className="flex flex-col gap-2 rounded-2xl p-4 shadow-md border dark:border-zinc-700 h-full">
-      <div className="flex items-center justify-center overflow-hidden rounded-lg h-full">
+    <div className="flex flex-col gap-4 rounded-2xl p-4 shadow-md border dark:border-zinc-700 h-full">
+      <div className="flex items-center justify-center overflow-hidden rounded-lg">
         <Image
           src={proyectoObj.img}
           alt={`Imagen-${proyectoObj.title}`}
           width={600}
           height={600}
-          className="w-full h-full object-cover"
+          className="w-full h-60 object-cover"
         />
       </div>
 
-      <div className="flex flex-col justify-around h-full">
-        <div className="mb-2 f">
+      <div className="flex flex-col flex-1">
+        <div className="mb-2">
           <h2 className="text-2xl font-bold">{proyectoObj.title}</h2>
           <p className="text-sm dark:text-zinc-400">{proyectoObj.status}</p>
         </div>
 
-        <p className="text-sm md:text-base dark:text-zinc-300 mb-4 text-justify">
+        <p className="text-sm md:text-base dark:text-zinc-300 text-justify">
           {proyectoObj.description}
         </p>
 
-        <div className="flex flex-col gap-3 md:grid grid-cols-2 justify-between items-center md:items-start">
-          <div className="flex gap-2 ">
-            <GithubButton link={proyectoObj.githubLink} />
-            {proyectoObj.pageLink ? (
-              <NewPageButton link={proyectoObj.pageLink} />
-            ) : (
-              <div></div>
+        <div className="flex flex-col items-start justify-center flex-1 gap-4 mt-4">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {proyectoObj.githubLink && (
+              <GithubButton link={proyectoObj.githubLink} />
             )}
+            {proyectoObj.pageLink && (
+              <NewPageButton link={proyectoObj.pageLink} />
+            )}
+            <RedirectButton link={proyectoObj.detailPage} texto="Ver más" />
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-0 justify-end">
-            <div className="flex justify-center md:justify-end">
-              <p>Tecnologias: </p>
-            </div>
-
-            <div className="flex gap-2 justify-center md:justify-center ">
+          <div className="w-full">
+            <p className="font-medium mb-2 text-start">Tecnologías:</p>
+            <div className="flex flex-wrap gap-2 justify-start">
               {proyectoObj.techStack.map((tech, index) => (
-                <div key={index}>{ChooseIcon(tech)}</div>
+                <div key={index}>
+                  <ChooseIcon name={tech} />
+                </div>
               ))}
             </div>
           </div>

@@ -22,7 +22,6 @@ export default function CardExperiencia2({
         <div className="mb-2">
           <div className="md:flex gap-2 items-center md:justify-between">
             <h2 className="text-2xl font-bold">{CardProps.title}</h2>
-            <p className="text-sm mt-2 dark:text-zinc-400">{CardProps.date}</p>
           </div>
           <p className="text-sm dark:text-zinc-400">
             <strong> Cargo: {CardProps.cargo} </strong>
@@ -35,7 +34,9 @@ export default function CardExperiencia2({
           <p className="text-center md:text-end">Tecnologias:</p>
           <div className="flex gap-2 justify-center md:justify-start">
             {CardProps.techStack.map((tech, index) => (
-              <div key={index}>{ChooseIcon(tech)}</div>
+              <div key={index}>
+                <ChooseIcon name={tech}></ChooseIcon>
+              </div>
             ))}
           </div>
         </div>

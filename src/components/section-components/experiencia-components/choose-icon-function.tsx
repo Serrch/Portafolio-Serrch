@@ -14,8 +14,9 @@ import {
   SiExpress,
   SiMysql,
   SiGithub,
+  SiGitlab,
 } from "react-icons/si";
-import Image from "next/image";
+import { TbBrandCSharp } from "react-icons/tb";
 import { DiMsqlServer } from "react-icons/di";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
@@ -35,16 +36,10 @@ const iconMap: Record<TechOptions, React.ReactNode> = {
   MySQL: <SiMysql className="text-blue-300 w-6 h-6" />,
   Express: <SiExpress className="text-green-500 w-6 h-6" />,
   Github: <SiGithub className="dark:text-white w-6 h-6" />,
-  "C#": (
-    <Image
-      width={25}
-      height={25}
-      src="/assets/icons/language/csharp.png"
-      alt="C# logo"
-    ></Image>
-  ),
+  "C#": <TbBrandCSharp className="text-purple-500 w-6 h-6" />,
+  Gitlab: <SiGitlab className="text-orange-500 w-6 h-6" />,
 };
 
-export default function ChooseIcon(name: TechOptions) {
+export default function ChooseIcon({ name }: { name: TechOptions }) {
   return iconMap[name] ?? <p>{name}</p>;
 }

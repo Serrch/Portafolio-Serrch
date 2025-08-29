@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -6,15 +7,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import CardProyectos2 from "./card-proyectos2";
-import { proyectosObj } from "./proyectos-obj";
+import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
 
-export default function CarrouselProyectos() {
+export default function CarrouselProyectos({
+  arrProyectos,
+}: {
+  arrProyectos: CardProyectoTypes[];
+}) {
   return (
-    <Carousel className="">
+    <Carousel className="p-5">
       <CarouselContent className="w-full">
-        {proyectosObj.map((proyecto, index) => (
+        {arrProyectos.map((arrProyectos, index) => (
           <CarouselItem key={index} className="basis-full md:basis-1/2">
-            <CardProyectos2 proyectoObj={proyecto} />
+            <CardProyectos2 proyectoObj={arrProyectos} />
           </CarouselItem>
         ))}
       </CarouselContent>
