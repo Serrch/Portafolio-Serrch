@@ -3,36 +3,40 @@ import ChooseIcon from "@/components/section-components/experiencia-components/c
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import LogoCondusef from "../../../../../public/assets/img-proyectos/profesionales/api-condusef-ui/logo-condusef";
 import LabelTerminado from "@/components/proyectos-components/label-terminado";
-export default function ApiCondusefUi() {
+
+export default function ApiCondusefRefactor() {
   const rutaImagenes: string =
-    "/assets/img-proyectos/profesionales/api-condusef-ui/";
-  const arrTech: TechOptions[] = ["React", "NextJS", "Typescript", "NodeJS"];
+    "/assets/img-proyectos/profesionales/api-condusef-refactor/";
+  const arrTech: TechOptions[] = [".NET", "Swagger", "MSQL"];
   const arrImagenes: string[] = [
-    rutaImagenes + "api-condusef-ui-3.jpg",
-    rutaImagenes + "api-condusef-ui-4.jpg",
+    rutaImagenes + "api-condusef.jpg",
+    "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-4.jpg",
   ];
 
   return (
     <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4">API CONDUSEF - Nueva UI</h1>
+      <h1 className="text-4xl font-bold mb-4">
+        API CONDUSEF - Refactorización
+      </h1>
 
-      <div className="flex gap-2 items-start justify-between">
+      <div className="flex flex-wrap gap-2 items-start justify-between mb-6">
         <LabelTerminado />
         <p>
           <strong className="text-sm dark:text-zinc-400">
-            Marzo 2025 - Junio 2025
+            Diciembre 2024 - Marzo 2025
           </strong>
         </p>
       </div>
 
       <p className="text-lg text-justify leading-relaxed mb-8">
-        El proyecto <strong>API CONDUSEF UI</strong> consiste en una aplicación
-        frontend desarrollada con <strong>Next.js</strong>,{" "}
-        <strong>React</strong>y <strong>TypeScript</strong>. Su objetivo es
-        consumir la API previamente refactorizada de CONDUSEF y presentar la
-        información a través de tablas y formularios dinámicos, que representan
-        los distintos trámites que los usuarios pueden realizar en la plataforma
-        oficial.
+        El proyecto <strong>API CONDUSEF Refactor</strong> consiste en una
+        aplicación backend desarrollada con <strong>.NET</strong>,{" "}
+        <strong>Swagger</strong> y <strong>MSQL</strong>. Se trata de una API
+        propia de <em>Radical Software</em> que actúa como intermediario entre
+        las instituciones financieras y la API oficial de CONDUSEF proporcionada
+        por el Gobierno. Surge de la necesidad de ofrecer a los usuarios un
+        medio más amigable para gestionar localmente diversos trámites de los
+        sistemas <strong>REDECO</strong> y <strong>REUNE</strong>.
       </p>
 
       <div className="flex justify-center">
@@ -49,28 +53,34 @@ export default function ApiCondusefUi() {
         <div>
           <strong className="text-lg">Descripción</strong>
           <p className="text-lg text-justify leading-relaxed mb-8">
-            Mis actividades consistieron en establecer la base técnica del
-            proyecto, diseñando las estructuras principales que se utilizarían
-            durante el desarrollo. Esto incluyó desde el layout principal hasta
-            la integración con el backend, así como el diseño de formularios e
-            inputs dinámicos.
+            Mi trabajo consistió en la refactorización de distintos módulos
+            responsables de las operaciones CRUD de la API, tanto a nivel local
+            como en la comunicación con la API del Gobierno.
           </p>
         </div>
 
         <div>
           <strong className="text-lg">Actividades</strong>
           <ul className="my-3 ml-6 list-disc [&>li]:mt-1">
-            <li>Configurar el enrutado de las secciones REDECO y REUNE.</li>
-            <li>Diseñar las tablas correspondientes a cada tipo de trámite.</li>
-            <li>Crear formularios dinámicos adaptados al trámite.</li>
-            <li>Diseñar inputs personalizados para cada caso.</li>
             <li>
-              Implementar una función para identificar el tipo de trámite y
-              mostrar la tabla e inputs correspondientes.
+              Refactoricé el flujo completo de la aplicación, incluyendo
+              controladores, servicios y capa de acceso a datos.
             </li>
             <li>
-              Desarrollar los DTOs necesarios para transformar los formularios
-              en objetos válidos para la API.
+              Diseñé interfaces para las clases clave, aplicando principios de
+              arquitectura <strong>SOLID</strong>.
+            </li>
+            <li>
+              Implementé el ORM <strong>Dapper</strong> para optimizar la
+              gestión de datos y mejorar el rendimiento en consultas.
+            </li>
+            <li>
+              Desarrollé <em>Stored Procedures</em> para estandarizar y
+              simplificar las operaciones de acceso a base de datos.
+            </li>
+            <li>
+              Definí un formato unificado de respuestas para asegurar la
+              consistencia en la comunicación de la API.
             </li>
           </ul>
         </div>
@@ -95,13 +105,13 @@ export default function ApiCondusefUi() {
         <ul className="ml-6 list-disc [&>li]:mt-1">
           <li>
             <p>
-              <strong>REDECO:</strong> Recepción de quejas
+              <strong>REDECO:</strong> Recepción de quejas.
             </p>
           </li>
           <li>
             <p>
-              <strong>REUNE: </strong>Recepción de trámites como aclaraciones,
-              reclamaciones y consultas
+              <strong>REUNE:</strong> Recepción de trámites como aclaraciones,
+              reclamaciones y consultas.
             </p>
           </li>
         </ul>
@@ -118,7 +128,7 @@ export default function ApiCondusefUi() {
           {arrTech.map((tech) => (
             <li
               key={tech}
-              className="px-4 py-2 rounded-2xl border dark:border-zinc-700 shadow-md flex flex-col gap-1 items-center justify-center"
+              className="px-4 py-2 rounded-2xl border dark:border-zinc-700 bg-accent shadow-md flex flex-col gap-1 items-center justify-center"
             >
               <ChooseIcon name={tech} />
               {tech}
@@ -139,7 +149,7 @@ export default function ApiCondusefUi() {
             >
               <Image
                 src={imagen}
-                alt={`Vista del proyecto API CONDUSEF UI - Captura ${
+                alt={`Vista del proyecto API CONDUSEF Refactor - Captura ${
                   index + 1
                 }`}
                 fill
