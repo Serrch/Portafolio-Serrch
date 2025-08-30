@@ -15,6 +15,7 @@ import {
   SiMysql,
   SiGithub,
   SiGitlab,
+  SiPostman,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { DiMsqlServer } from "react-icons/di";
@@ -38,6 +39,7 @@ const iconMap: Record<TechOptions, React.ReactNode> = {
   Github: <SiGithub className="dark:text-white w-6 h-6" />,
   "C#": <TbBrandCSharp className="text-purple-500 w-6 h-6" />,
   Gitlab: <SiGitlab className="text-orange-500 w-6 h-6" />,
+  Postman: <SiPostman className="text-orange-500 w-6 h-6" />,
 };
 
 export default function ChooseIcon({ name }: { name: TechOptions }) {

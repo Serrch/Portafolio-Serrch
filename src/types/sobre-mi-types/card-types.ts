@@ -27,4 +27,5 @@ export type TechOptions =
   | "Tailwind"
   | "Github"
   | "C#"
-  | "Gitlab";
+  | "Gitlab"
+  | "Postman";

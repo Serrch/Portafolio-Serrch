@@ -11,7 +11,7 @@ export const proyectosObj: CardProyectoTypes[] = [
     techStack: ["Javascript", "NodeJS", "Express", "MySQL"],
     githubLink: "https://github.com/Serrch/StreetFighterAPI",
     pageLink: "",
-    detailPage: "",
+    detailPage: "/proyectos/personales/street-fighter-api/",
   },
   {
     title: "Arcade Tester",
