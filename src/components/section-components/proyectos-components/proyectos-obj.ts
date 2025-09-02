@@ -22,18 +22,7 @@ export const proyectosObj: CardProyectoTypes[] = [
     techStack: [".NET"],
     githubLink: "https://github.com/Serrch/Arcade-tester",
     pageLink: "",
-    detailPage: "",
-  },
-  {
-    title: "Marvel API",
-    status: "Remake en proceso",
-    description:
-      "Proyecto de frontend creado para consumir la Marvel API. Esta versión utiliza HTML, CSS y JavaScript básicos para realizar peticiones y mostrar datos de los personajes y cómics.",
-    img: "/assets/img-proyectos/personales/marvel-api/marvel-api-layout.png",
-    techStack: ["HTML", "CSS", "Javascript"],
-    githubLink: "https://github.com/Serrch/MarvelAPI",
-    pageLink: "https://serrch.github.io/MarvelAPI",
-    detailPage: "",
+    detailPage: "/proyectos/personales/arcade-tester/",
   },
 ];
 
@@ -57,3 +46,17 @@ export const proyectosPro: CardProyectoTypes[] = [
     detailPage: "/proyectos/profesionales/api-condusef-ui/",
   },
 ];
+
+/*
+{
+    title: "Marvel API",
+    status: "Remake en proceso",
+    description:
+      "Proyecto de frontend creado para consumir la Marvel API. Esta versión utiliza HTML, CSS y JavaScript básicos para realizar peticiones y mostrar datos de los personajes y cómics.",
+    img: "/assets/img-proyectos/personales/marvel-api/marvel-api-layout.png",
+    techStack: ["HTML", "CSS", "Javascript"],
+    githubLink: "https://github.com/Serrch/MarvelAPI",
+    pageLink: "https://serrch.github.io/MarvelAPI",
+    detailPage: "",
+  },
+  */

@@ -13,7 +13,7 @@ export default function ApiCondusefUi() {
   ];
 
   return (
-    <main className="max-w-5xl mx-auto p-6">
+    <main className="max-w-6xl mx-auto p-6">
       <h1 className="text-4xl font-bold mb-4">API CONDUSEF - Nueva UI</h1>
 
       <div className="flex gap-2 items-start justify-between">
