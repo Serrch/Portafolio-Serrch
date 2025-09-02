@@ -1,10 +1,11 @@
+"use client";
 import EducationCards from "./education-cards";
 import { cursosObj, certificacionesObj, titulosObj } from "./education-obj";
 
 export default function Educacion() {
   return (
     <section
-      id="educacion"
+      id="4"
       className="min-h-screen 
     snap-start 
     flex flex-col items-center 

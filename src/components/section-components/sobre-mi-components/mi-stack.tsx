@@ -9,7 +9,7 @@ import {
 import { DiMsqlServer } from "react-icons/di";
 export default function MiStack() {
   return (
-    <div className="border rounded-2xl p-2 shadow-md dark:bg-emerald-950 md:max-w-min">
+    <div className="border rounded-2xl p-2 shadow-md  dark:border-emerald-500 border-emerald-600  bg-accent   md:max-w-min">
       <p className="text-md md:text-xl font-bold mb-1">Mi stack </p>
       <div className="flex gap-2">
         <SiJavascript className="text-yellow-400 w-8 h-8" />

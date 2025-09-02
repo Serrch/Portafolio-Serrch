@@ -9,7 +9,7 @@ import MiStack from "./mi-stack";
 export default function SobreMi() {
   return (
     <section
-      id="sobre-mi"
+      id="1"
       className=" md:min-h-screen snap-start flex items-center justify-center"
     >
       <div className="grid grid-cols-3 gap-6 max-w-6xl">
@@ -19,7 +19,7 @@ export default function SobreMi() {
             alt="Mi foto"
             width={200}
             height={200}
-            className="rounded-lg object-cover scale-100 md:scale-140 xl:scale-170 "
+            className="rounded-lg object-cover scale-100 md:scale-140 xl:scale-170  "
           />
         </div>
 

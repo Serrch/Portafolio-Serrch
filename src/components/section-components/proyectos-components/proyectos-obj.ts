@@ -19,7 +19,7 @@ export const proyectosObj: CardProyectoTypes[] = [
     description:
       "Proyecto enfocado en probar la conexión de controles arcade construidos con Arduino o placas Raspberry.",
     img: "/assets/img-proyectos/personales/arcade/arcade-layout.png",
-    techStack: [".NET"],
+    techStack: [".NET", "Arduino"],
     githubLink: "https://github.com/Serrch/Arcade-tester",
     pageLink: "",
     detailPage: "/proyectos/personales/arcade-tester/",

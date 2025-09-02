@@ -5,7 +5,7 @@ import TimelineContainer from "./experiencia-timeline/timeline-container";
 export default function Experiencia() {
   return (
     <section
-      id="experiencia"
+      id="2"
       className="md:min-h-screen snap-start flex items-center justify-center md:py-40 pt-8 border-t"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full px-4">

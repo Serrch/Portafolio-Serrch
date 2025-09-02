@@ -28,4 +28,5 @@ export type TechOptions =
   | "Github"
   | "C#"
   | "Gitlab"
-  | "Postman";
+  | "Postman"
+  | "Arduino";

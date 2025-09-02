@@ -1,9 +1,10 @@
+"use client";
 import { proyectosObj, proyectosPro } from "./proyectos-obj";
 import CarrouselProyectos from "./carrousel-proyectos";
 export default function Proyectos() {
   return (
     <section
-      id="proyectos"
+      id="3"
       className="min-h-screen snap-start flex flex-col items-center justify-start pt-8 md:pt-30 md:pb-10 border-t
   md:max-h-screen md:overflow-y-auto md:scrollbar-thin md:scrollbar-thumb-gray-400 md:scrollbar-track-transparent md:scrollbar-thumb-rounded-full"
     >
