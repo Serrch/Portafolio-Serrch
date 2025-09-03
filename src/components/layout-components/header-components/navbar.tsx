@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const sectionIds = sections.map((seccion) => seccion.id);
-  const activeSection = pathname === "/" ? useActiveSection(sectionIds) : null;
+  const sectionIds = pathname === "/" ? sections.map((s) => s.id) : [];
+  const activeSection = useActiveSection(sectionIds);
 
   return (
     <div className="hidden md:flex justify-start md:justify-center items-center">

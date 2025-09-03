@@ -1,8 +1,8 @@
-import Image from "next/image";
 import ChooseIcon from "@/components/section-components/experiencia-components/choose-icon-function";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import LogoCondusef from "../../../../../public/assets/img-proyectos/profesionales/api-condusef-ui/logo-condusef";
 import LabelTerminado from "@/components/proyectos-components/label-terminado";
+import ImagenZoom from "@/components/image-zoom";
 export default function ApiCondusefUi() {
   const rutaImagenes: string =
     "/assets/img-proyectos/profesionales/api-condusef-ui/";
@@ -131,19 +131,12 @@ export default function ApiCondusefUi() {
         <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
           Galería
         </h3>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="flex flex-wrap gap-6 justify-start">
           {arrImagenes.map((imagen, index) => (
-            <div
-              key={index}
-              className="relative w-full h-60 rounded-lg overflow-hidden shadow-md"
-            >
-              <Image
+            <div key={index} className="flex w-lg items-stretch">
+              <ImagenZoom
                 src={imagen}
-                alt={`Vista del proyecto API CONDUSEF UI - Captura ${
-                  index + 1
-                }`}
-                fill
-                className="object-cover"
+                alt={`Arcade-Tester-Captura ${index + 1}`}
               />
             </div>
           ))}

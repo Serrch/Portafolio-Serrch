@@ -10,45 +10,48 @@ export default function SobreMi() {
   return (
     <section
       id="1"
-      className=" md:min-h-screen snap-start flex items-center justify-center"
+      className="md:min-h-screen snap-start flex items-center justify-center"
     >
       <div className="grid grid-cols-3 gap-6 max-w-6xl">
-        <div className=" col-span-1 flex justify-center items-center ">
+        <div className="col-span-1 flex justify-center items-center">
           <Image
             src="/assets/img-portafolio/yo.jpg"
             alt="Mi foto"
-            width={200}
-            height={200}
-            className="rounded-lg object-cover scale-100 md:scale-140 xl:scale-170  "
+            width={180}
+            height={180}
+            className="rounded-lg object-cover h-auto w-auto scale-100 md:scale-120 xl:scale-140"
+            priority
           />
         </div>
 
         <div className="col-span-2 flex flex-col gap-1 md:gap-4">
-          <h1 className="text-4xl font-bold">Sobre mi</h1>
-          <p className="text-justify text-sm md:text-xl md:pb-2">
-            Mi nombre es{" "}
-            <strong className="underline">Perez Rivas Sergio E.</strong> soy un
-            Ingeniero en software - Desarrollador fullstack.
+          <h1 className="text-4xl font-bold">Sobre mí</h1>
+          <p className="text-justify text-sm md:text-xl md:pb-2 p-2">
+            Hola, mi nombre es{" "}
+            <strong className="underline">Perez Rivas Sergio E.</strong> Soy
+            Ingeniero en Software y Desarrollador Fullstack apasionado por crear
+            soluciones tecnológicas eficientes y fáciles de mantener.
             <br />
-            Me enfoco en crear soluciones prácticas, limpias así como fáciles de
-            entender y escalar con la ayuda de los principios de Clean Code y
-            SOLID.
+            Me especializo en desarrollar aplicaciones limpias y escalables,
+            aplicando los principios de Clean Code y SOLID para garantizar
+            calidad y sostenibilidad en cada proyecto.
             <br />
-            Me gusta trabajar en proyectos que involucren la creacion de un
-            backend robusto y bien diseñado para poder consumirlo a traves de
-            una interfaz atractiva, responsiva y amigable desde el frontend.
+            Disfruto trabajando en proyectos que integren un backend robusto y
+            bien estructurado con interfaces frontend atractivas, responsivas y
+            fáciles de usar, ofreciendo así experiencias completas y funcionales
+            para los usuarios.
           </p>
           <MiStack />
           <div>
-            <p className="text-md md:text-xl font-bold mb-1 pt-2 ">Contacto</p>
-            <div className="grid grid-cols-2 gap-2  md:flex md:gap-2 ">
+            <p className="text-md md:text-xl font-bold mb-1 pt-2">Contacto</p>
+            <div className="grid grid-cols-2 gap-2 md:flex md:gap-2">
               <GithubButton />
               <LinkedinButton />
               <CopyButton />
             </div>
             <div>
               <p className="text-md md:text-xl font-bold mb-1 mt-2">
-                Descargar curriculum
+                Descargar currículum
               </p>
               <div className="flex">
                 <DownloadCVButton />
