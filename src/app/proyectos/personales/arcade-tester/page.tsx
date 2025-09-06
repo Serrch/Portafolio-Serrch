@@ -7,7 +7,7 @@ import GithubButton from "@/components/section-components/github-button";
 import ImagenZoom from "@/components/image-zoom";
 export default function ArcadeTesterDetail() {
   const rutaImagenes: string = "/assets/img-proyectos/personales/arcade/";
-  const arrTech: TechOptions[] = [".NET"];
+  const arrTech: TechOptions[] = [".NET", "Arduino"];
   const arrImagenes: string[] = [
     rutaImagenes + "arcade-layout.png",
     rutaImagenes + "arcade-diagrama.png",
@@ -39,8 +39,10 @@ export default function ArcadeTesterDetail() {
           <Image
             src={rutaImagenes + "arcade-tester.gif"}
             alt="Arcade Tester en acción - detección de inputs"
-            width={400}
-            height={100}
+            fill
+            sizes="(max-width: 768px) 100vw, 800px"
+            priority
+            unoptimized
             className="object-cover rounded-xl"
           />
         </div>
@@ -141,11 +143,11 @@ export default function ArcadeTesterDetail() {
         </h3>
         <div className="flex flex-wrap gap-6 justify-start">
           {arrImagenes.map((imagen, index) => (
-            <div key={index} className="flex w-lg items-stretch">
+            <div key={index} className="relative w-80 h-64">
               <ImagenZoom
                 src={imagen}
                 alt={`Arcade-Tester-Captura ${index + 1}`}
-              ></ImagenZoom>
+              />
             </div>
           ))}
         </div>

@@ -9,14 +9,14 @@ export default function ApiCondusefUi() {
   const arrTech: TechOptions[] = ["React", "NextJS", "Typescript", "NodeJS"];
   const arrImagenes: string[] = [
     rutaImagenes + "api-condusef-ui-3.jpg",
-    rutaImagenes + "api-condusef-ui-4.jpg",
+    rutaImagenes + "api-condusef-ui-2.jpg",
   ];
 
   return (
     <main className="max-w-6xl mx-auto p-6">
       <h1 className="text-4xl font-bold mb-4">API CONDUSEF - Nueva UI</h1>
 
-      <div className="flex gap-2 items-start justify-between">
+      <div className="flex gap-2 items-start justify-between mb-6">
         <LabelTerminado />
         <p>
           <strong className="text-sm dark:text-zinc-400">
@@ -133,7 +133,7 @@ export default function ApiCondusefUi() {
         </h3>
         <div className="flex flex-wrap gap-6 justify-start">
           {arrImagenes.map((imagen, index) => (
-            <div key={index} className="flex w-lg items-stretch">
+            <div key={index} className="relative w-80 h-64">
               <ImagenZoom
                 src={imagen}
                 alt={`Arcade-Tester-Captura ${index + 1}`}

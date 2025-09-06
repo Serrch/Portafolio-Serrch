@@ -36,13 +36,14 @@ export default function StreetFighterDetail() {
       </p>
 
       <div className="flex justify-center">
-        <div className="relative h-80 mb-10 rounded-xl overflow-hidden shadow-lg flex justify-center items-center">
+        <div className="relative h-80 w-[400px] mb-10 rounded-xl overflow-hidden shadow-lg flex justify-center items-center">
           <Image
             src={rutaImagenes + "sf-logo.png"}
             alt="Street Fighter API - Logo"
-            width={400}
-            height={100}
-            className="object-cover"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 400px"
+            className="object-contain rounded-xl"
           />
         </div>
       </div>
@@ -139,11 +140,11 @@ export default function StreetFighterDetail() {
         </h3>
         <div className="flex flex-wrap gap-6 justify-start">
           {arrImagenes.map((imagen, index) => (
-            <div key={index} className="flex w-lg items-stretch">
+            <div key={index} className="relative w-80 h-64">
               <ImagenZoom
                 src={imagen}
                 alt={`Arcade-Tester-Captura ${index + 1}`}
-              ></ImagenZoom>
+              />
             </div>
           ))}
         </div>

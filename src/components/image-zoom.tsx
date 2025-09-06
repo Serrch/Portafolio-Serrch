@@ -11,9 +11,9 @@ export default function ImagenZoom({ src, alt }: { src: string; alt: string }) {
       <Image
         src={src}
         alt={alt}
-        width={400}
-        height={400}
-        className="cursor-pointer rounded-lg hover:opacity-80 transition h-auto w-auto"
+        fill
+        sizes="(max-width: 768px) 100vw, 256px"
+        className="object-cover cursor-pointer rounded-lg hover:opacity-80 transition"
         onClick={() => setOpen(true)}
       />
 

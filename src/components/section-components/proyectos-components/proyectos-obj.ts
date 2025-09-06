@@ -32,7 +32,7 @@ export const proyectosPro: CardProyectoTypes[] = [
     status: "Terminado",
     description:
       "Proyecto realizado durante mi estancia en Radical Software, consistió en una refactorización de una API que actúa como intermediario con la API del gobierno encargada de Redeco y Reune.",
-    img: "/assets/img-proyectos/profesionales/api-condusef-refactor/api-condusef.jpg",
+    img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: [".NET", "MSQL", "Swagger"],
     detailPage: "/proyectos/profesionales/api-condusef-refactor/",
   },
@@ -41,7 +41,7 @@ export const proyectosPro: CardProyectoTypes[] = [
     status: "Terminado",
     description:
       "Proyecto de frontend creado para consumir la API Condusef previamente refactorizada, migrando el proyecto de Blazor a una interfaz moderna hecha con Next.js y React.",
-    img: "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui.jpg",
+    img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: ["React", "NextJS", "Typescript", "NodeJS"],
     detailPage: "/proyectos/profesionales/api-condusef-ui/",
   },

@@ -5,7 +5,7 @@ export default function useActiveSection(sectionIds: number[]) {
   const [activeSection, setActiveSection] = useState<number | null>(null);
 
   useEffect(() => {
-    if (!sectionIds || sectionIds.length === 0) return;
+    if (sectionIds.length === 0) return;
 
     const observers: IntersectionObserver[] = [];
 

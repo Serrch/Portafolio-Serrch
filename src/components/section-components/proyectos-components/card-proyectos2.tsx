@@ -12,7 +12,7 @@ export default function CardProyectos2({
   proyectoObj: CardProyectoTypes;
 }) {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl p-4 shadow-md border dark:border-zinc-700 h-full">
+    <div className="flex flex-col gap-4 rounded-xl p-4 shadow-md border dark:border-zinc-700 h-full">
       <div className="flex items-center justify-center overflow-hidden rounded-lg relative w-full h-60">
         <Image
           src={proyectoObj.img}

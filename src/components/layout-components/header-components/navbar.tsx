@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
+
   const sectionIds = pathname === "/" ? sections.map((s) => s.id) : [];
   const activeSection = useActiveSection(sectionIds);
 

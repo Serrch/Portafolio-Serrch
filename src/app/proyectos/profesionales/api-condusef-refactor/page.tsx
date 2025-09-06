@@ -6,10 +6,10 @@ import ImagenZoom from "@/components/image-zoom";
 export default function ApiCondusefRefactor() {
   const rutaImagenes: string =
     "/assets/img-proyectos/profesionales/api-condusef-refactor/";
-  const arrTech: TechOptions[] = [".NET", "Swagger", "MSQL"];
+  const arrTech: TechOptions[] = [".NET", "Swagger", "MSQL", "Postman"];
   const arrImagenes: string[] = [
     rutaImagenes + "api-condusef.jpg",
-    "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui-4.jpg",
+    rutaImagenes + "api-condusef-ui-2.jpg",
   ];
 
   return (
@@ -142,7 +142,7 @@ export default function ApiCondusefRefactor() {
         </h3>
         <div className="flex flex-wrap gap-6 justify-start">
           {arrImagenes.map((imagen, index) => (
-            <div key={index} className="flex w-lg items-stretch">
+            <div key={index} className="relative w-80 h-64">
               <ImagenZoom
                 src={imagen}
                 alt={`Arcade-Tester-Captura ${index + 1}`}
