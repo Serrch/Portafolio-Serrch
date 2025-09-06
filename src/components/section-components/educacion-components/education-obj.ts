@@ -28,7 +28,7 @@ export const educationObj: EducationCardType[] = [
       "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
     stDate: "Diciembre 2024",
     endDate: "Enero 2025",
-    img: "/assets/img-experiencia/radical_logo_solo.png",
+    img: "/assets/img-experiencia/radical-logo-s.svg",
   },
 ];
 
@@ -41,7 +41,7 @@ export const titulosObj: EducationCardType[] = [
       "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino. \nTítulo en trámite.",
     stDate: "Agosto 2021",
     endDate: "Mayo 2025",
-    img: "https://ues.mx/Docs/conocenos/identidad_UES/LogoUesVinoFondoTransparente.png?0.13975010473019678",
+    img: "/assets/img-portafolio/ues-logo.png",
   },
 ];
 
@@ -53,7 +53,7 @@ export const cursosObj: EducationCardType[] = [
       "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
     stDate: "Diciembre 2024",
     endDate: "Enero 2025",
-    img: "/assets/img-experiencia/radical_logo_solo.png",
+    img: "/assets/img-experiencia/radical-logo-s.svg",
   },
 ];
 

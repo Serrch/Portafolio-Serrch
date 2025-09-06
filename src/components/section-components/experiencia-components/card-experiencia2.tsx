@@ -10,14 +10,17 @@ export default function CardExperiencia2({
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 rounded-xl p-4 shadow-md border dark:border-zinc-700">
       <div className="col-span-1 flex items-center justify-center">
-        <Image
-          src={CardProps.img}
-          alt={`imagen ${CardProps.title}`}
-          width={100}
-          height={100}
-          className="md:w-xl h-auto rounded-lg object-cover"
-        />
+        <div className="relative w-40 h-20 md:w-70 md:h-60 flex items-center justify-center">
+          <Image
+            src={CardProps.img}
+            alt={`imagen ${CardProps.title}`}
+            fill
+            className="object-contain p-2"
+            sizes="(max-width: 768px) 96px, 160px"
+          />
+        </div>
       </div>
+
       <div className="col-span-2 flex flex-col justify-around md:gap-4">
         <div className="mb-2">
           <div className="md:flex gap-2 items-center md:justify-between">

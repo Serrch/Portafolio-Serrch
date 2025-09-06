@@ -16,7 +16,7 @@ export default function ContactGrid() {
       className="
             grid grid-cols-2 md:grid-cols-5
             divide-x md:divide-y-0 divide-y md:divide-x
-            border rounded-xl overflow-hidden
+            border rounded-xl overflow-hidden shadow-md
           "
     >
       <DialogContacto IsCorreo={true}>

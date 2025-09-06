@@ -8,6 +8,9 @@ import { Toaster } from "sonner";
 export const metadata: Metadata = {
   title: "Portafolio Serch",
   description: "Portafolio creado con NextJS",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
