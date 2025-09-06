@@ -11,7 +11,7 @@ export const proyectosObj: CardProyectoTypes[] = [
     techStack: ["Javascript", "NodeJS", "Express", "MySQL"],
     githubLink: "https://github.com/Serrch/StreetFighterAPI",
     pageLink: "",
-    detailPage: "",
+    detailPage: "/proyectos/personales/street-fighter-api/",
   },
   {
     title: "Arcade Tester",
@@ -19,12 +19,36 @@ export const proyectosObj: CardProyectoTypes[] = [
     description:
       "Proyecto enfocado en probar la conexión de controles arcade construidos con Arduino o placas Raspberry.",
     img: "/assets/img-proyectos/personales/arcade/arcade-layout.png",
-    techStack: [".NET"],
+    techStack: [".NET", "Arduino"],
     githubLink: "https://github.com/Serrch/Arcade-tester",
     pageLink: "",
-    detailPage: "",
+    detailPage: "/proyectos/personales/arcade-tester/",
+  },
+];
+
+export const proyectosPro: CardProyectoTypes[] = [
+  {
+    title: "API Condusef Refactorización",
+    status: "Terminado",
+    description:
+      "Proyecto realizado durante mi estancia en Radical Software, consistió en una refactorización de una API que actúa como intermediario con la API del gobierno encargada de Redeco y Reune.",
+    img: "/assets/img-proyectos/profesionales/condusef-logo.png",
+    techStack: [".NET", "MSQL", "Swagger"],
+    detailPage: "/proyectos/profesionales/api-condusef-refactor/",
   },
   {
+    title: "API Condusef Nueva UI",
+    status: "Terminado",
+    description:
+      "Proyecto de frontend creado para consumir la API Condusef previamente refactorizada, migrando el proyecto de Blazor a una interfaz moderna hecha con Next.js y React.",
+    img: "/assets/img-proyectos/profesionales/condusef-logo.png",
+    techStack: ["React", "NextJS", "Typescript", "NodeJS"],
+    detailPage: "/proyectos/profesionales/api-condusef-ui/",
+  },
+];
+
+/*
+{
     title: "Marvel API",
     status: "Remake en proceso",
     description:
@@ -35,25 +59,4 @@ export const proyectosObj: CardProyectoTypes[] = [
     pageLink: "https://serrch.github.io/MarvelAPI",
     detailPage: "",
   },
-];
-
-export const proyectosPro: CardProyectoTypes[] = [
-  {
-    title: "API Condusef Refactorización",
-    status: "Terminado",
-    description:
-      "Proyecto realizado durante mi estancia en Radical Software, consistió en una refactorización de una API que actúa como intermediario con la API del gobierno encargada de Redeco y Reune.",
-    img: "/assets/img-proyectos/profesionales/api-condusef-refactor/api-condusef.jpg",
-    techStack: [".NET", "MSQL", "Swagger"],
-    detailPage: "",
-  },
-  {
-    title: "API Condusef Nueva UI",
-    status: "Terminado",
-    description:
-      "Proyecto de frontend creado para consumir la API Condusef previamente refactorizada, migrando el proyecto de Blazor a una interfaz moderna hecha con Next.js y React.",
-    img: "/assets/img-proyectos/profesionales/api-condusef-ui/api-condusef-ui.jpg",
-    techStack: ["React", "NextJS", "Typescript", "NodeJS"],
-    detailPage: "/proyectos/profesionales/api-condusef-ui/",
-  },
-];
+  */

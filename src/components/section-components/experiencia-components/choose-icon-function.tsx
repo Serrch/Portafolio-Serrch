@@ -15,31 +15,57 @@ import {
   SiMysql,
   SiGithub,
   SiGitlab,
+  SiPostman,
+  SiArduino,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { DiMsqlServer } from "react-icons/di";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
-const iconMap: Record<TechOptions, React.ReactNode> = {
-  Javascript: <SiJavascript className="text-yellow-400 w-6 h-6" />,
-  HTML: <SiHtml5 className="text-orange-400 w-6 h-6" />,
-  CSS: <SiCss3 className="text-blue-400 w-6 h-6" />,
-  Angular: <SiAngular className="text-red-400 w-6 h-6" />,
-  Typescript: <SiTypescript className="text-blue-500 w-6 h-6" />,
-  NodeJS: <SiNodedotjs className="text-green-500 w-6 h-6" />,
-  NextJS: <SiNextdotjs className="dark:text-white w-6 h-6" />,
-  React: <SiReact className="text-blue-500 w-6 h-6" />,
-  ".NET": <SiDotnet className="text-purple-500 w-6 h-6" />,
-  MSQL: <DiMsqlServer className="text-orange-500 w-6 h-6" />,
-  Swagger: <SiSwagger className="text-green-500 w-6 h-6" />,
-  Tailwind: <SiTailwindcss className="text-blue-500 w-6 h-6" />,
-  MySQL: <SiMysql className="text-blue-300 w-6 h-6" />,
-  Express: <SiExpress className="text-green-500 w-6 h-6" />,
-  Github: <SiGithub className="dark:text-white w-6 h-6" />,
-  "C#": <TbBrandCSharp className="text-purple-500 w-6 h-6" />,
-  Gitlab: <SiGitlab className="text-orange-500 w-6 h-6" />,
-};
+type size = "sm" | "md" | "lg";
 
-export default function ChooseIcon({ name }: { name: TechOptions }) {
+export default function ChooseIcon({
+  name,
+  size,
+}: {
+  name: TechOptions;
+  size?: size;
+}) {
+  const sizeMap = {
+    sm: "w-6 h-6 md:w-8 md:h-8",
+    md: "w-10 h-10 md:w-12 md:h-12",
+    lg: "w-12 h-12 md:w-16 md:h-16",
+  } as const;
+
+  let classSize: string = `${size ? sizeMap[size] : sizeMap["sm"]}`;
+
+  const iconMap: Record<TechOptions, React.ReactNode> = {
+    Javascript: <SiJavascript className={`${classSize} text-yellow-400`} />,
+    HTML: <SiHtml5 className={`${classSize} text-orange-400`} />,
+    CSS: <SiCss3 className={`${classSize} text-blue-400`} />,
+    Angular: <SiAngular className={`${classSize} text-red-500`} />,
+    Typescript: <SiTypescript className={`${classSize} text-blue-500`} />,
+    NodeJS: <SiNodedotjs className={`${classSize} text-green-500`} />,
+    NextJS: (
+      <SiNextdotjs className={`${classSize} text-black dark:text-white`} />
+    ),
+    React: <SiReact className={`${classSize} text-cyan-400`} />,
+    ".NET": <SiDotnet className={`${classSize} text-purple-500`} />,
+    MSQL: <DiMsqlServer className={`${classSize} text-red-500`} />,
+    Swagger: <SiSwagger className={`${classSize} text-green-500`} />,
+    Tailwind: <SiTailwindcss className={`${classSize} text-sky-400`} />,
+    MySQL: <SiMysql className={`${classSize} text-blue-300`} />,
+    Express: (
+      <SiExpress className={`${classSize} text-gray-300 dark:text-white`} />
+    ),
+    Github: <SiGithub className={`${classSize} text-black dark:text-white`} />,
+    "C#": <TbBrandCSharp className={`${classSize} text-purple-500`} />,
+    Gitlab: <SiGitlab className={`${classSize} text-orange-500`} />,
+    Postman: <SiPostman className={`${classSize} text-orange-400`} />,
+    Arduino: (
+      <SiArduino className={`${classSize} text-blue-500 dark:text-blue-300`} />
+    ),
+  };
+
   return iconMap[name] ?? <p>{name}</p>;
 }

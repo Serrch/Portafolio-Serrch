@@ -1,8 +1,9 @@
+"use client";
 import ContactGrid from "./contact-grid";
 export default function Contacto() {
   return (
     <section
-      id="contacto"
+      id="6"
       className="md:min-h-screen snap-start flex items-center justify-center pt-8 md:pt-30 border-t"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full px-4">

@@ -6,20 +6,20 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import CardProyectos2 from "./card-proyectos2";
-import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
-
-export default function CarrouselProyectos({
-  arrProyectos,
+import ImagenZoom from "./image-zoom";
+export default function ImageCarrousel({
+  arrImagenes,
+  alt,
 }: {
-  arrProyectos: CardProyectoTypes[];
+  arrImagenes: string[];
+  alt: string;
 }) {
   return (
     <Carousel className="p-5 ">
-      <CarouselContent className="w-full">
-        {arrProyectos.map((arrProyectos, index) => (
+      <CarouselContent className="">
+        {arrImagenes.map((imagen, index) => (
           <CarouselItem key={index} className="basis-full md:basis-1/2">
-            <CardProyectos2 proyectoObj={arrProyectos} />
+            <ImagenZoom src={imagen} alt={`Captura-${alt}-${index + 1}`} />
           </CarouselItem>
         ))}
       </CarouselContent>

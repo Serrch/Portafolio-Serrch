@@ -12,14 +12,14 @@ export default function CardProyectos2({
   proyectoObj: CardProyectoTypes;
 }) {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl p-4 shadow-md border dark:border-zinc-700 h-full">
-      <div className="flex items-center justify-center overflow-hidden rounded-lg">
+    <div className="flex flex-col gap-4 rounded-xl p-4 shadow-md border dark:border-zinc-700 h-full">
+      <div className="flex items-center justify-center overflow-hidden rounded-lg relative w-full h-60">
         <Image
           src={proyectoObj.img}
           alt={`Imagen-${proyectoObj.title}`}
-          width={600}
-          height={600}
-          className="w-full h-60 object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover rounded-lg"
         />
       </div>
 
@@ -35,13 +35,13 @@ export default function CardProyectos2({
 
         <div className="flex flex-col items-start justify-center flex-1 gap-4 mt-4">
           <div className="flex flex-wrap gap-2 justify-center">
+            <RedirectButton link={proyectoObj.detailPage} texto="Ver más" />
             {proyectoObj.githubLink && (
               <GithubButton link={proyectoObj.githubLink} />
             )}
             {proyectoObj.pageLink && (
               <NewPageButton link={proyectoObj.pageLink} />
             )}
-            <RedirectButton link={proyectoObj.detailPage} texto="Ver más" />
           </div>
           <div className="w-full">
             <p className="font-medium mb-2 text-start">Tecnologías:</p>

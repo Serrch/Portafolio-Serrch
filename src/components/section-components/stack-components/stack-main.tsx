@@ -3,7 +3,7 @@ import TechCards from "./tech-cards";
 export default function Stack() {
   return (
     <section
-      id="stack"
+      id="5"
       className="min-h-screen 
     snap-start 
     flex flex-col items-center 
