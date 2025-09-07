@@ -12,13 +12,11 @@ export default function MiStack() {
   ];
 
   return (
-    <div className="border rounded-2xl p-2 shadow-md dark:bg-accent dark:border-zinc-600 border-zinc-300 md:max-w-min">
+    <div className="border rounded-2xl p-2 shadow-md dark:bg-accent dark:border-zinc-600 border-zinc-300 max-w-fit">
       <p className="text-md md:text-xl font-bold mb-1">Mi stack </p>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         {stack.map((tech, index) => (
-          <div key={index}>
-            <ChooseIcon name={tech}></ChooseIcon>
-          </div>
+          <ChooseIcon key={index} name={tech} size="sm"></ChooseIcon>
         ))}
       </div>
     </div>
