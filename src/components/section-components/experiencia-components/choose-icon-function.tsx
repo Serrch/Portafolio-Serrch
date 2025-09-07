@@ -37,7 +37,7 @@ export default function ChooseIcon({
     lg: "w-12 h-12 md:w-16 md:h-16",
   } as const;
 
-  let classSize: string = `${size ? sizeMap[size] : sizeMap["sm"]}`;
+  const classSize: string = `${size ? sizeMap[size] : sizeMap["sm"]}`;
 
   const iconMap: Record<TechOptions, React.ReactNode> = {
     Javascript: <SiJavascript className={`${classSize} text-yellow-400`} />,
@@ -56,7 +56,9 @@ export default function ChooseIcon({
     Tailwind: <SiTailwindcss className={`${classSize} text-sky-400`} />,
     MySQL: <SiMysql className={`${classSize} text-blue-300`} />,
     Express: (
-      <SiExpress className={`${classSize} text-gray-300 dark:text-white`} />
+      <SiExpress
+        className={`${classSize} text-green-600 dark:text-green-400`}
+      />
     ),
     Github: <SiGithub className={`${classSize} text-black dark:text-white`} />,
     "C#": <TbBrandCSharp className={`${classSize} text-purple-500`} />,

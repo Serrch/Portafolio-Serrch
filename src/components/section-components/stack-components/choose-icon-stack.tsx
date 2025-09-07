@@ -15,6 +15,8 @@ import {
   SiMysql,
   SiGithub,
   SiGitlab,
+  SiPostman,
+  SiArduino,
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -65,6 +67,8 @@ export default function ChooseIconStack({
     Github: <SiGithub className={clases} />,
     "C#": <TbBrandCSharp className={clases} />,
     Gitlab: <SiGitlab className={clases} />,
+    Postman: <SiPostman className={clases} />,
+    Arduino: <SiArduino className={clases} />,
   };
 
   return iconMap[name] ?? <p>{name}</p>;
