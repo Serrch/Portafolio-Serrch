@@ -33,7 +33,7 @@ export const proyectosPro: CardProyectoTypes[] = [
     description:
       "Proyecto realizado durante mi estancia en Radical Software, consistió en una refactorización de una API que actúa como intermediario con la API del gobierno encargada de Redeco y Reune.",
     img: "/assets/img-proyectos/profesionales/condusef-logo.png",
-    techStack: [".NET", "MSQL", "Swagger"],
+    techStack: [".NET", "MSQL", "Postman", "Swagger"],
     detailPage: "/proyectos/profesionales/api-condusef-refactor/",
   },
   {

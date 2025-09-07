@@ -93,7 +93,7 @@ export default function ArcadeTesterDetail() {
         <p className="text-lg text-justify leading-relaxed mb-4">
           Un <strong>Arcade Controller</strong> es una adaptación de los
           tableros de máquinas recreativas para consolas o PC, que permite jugar
-          de manera más "clásica". Su uso se popularizó en la escena competitiva
+          de manera más clásica. Su uso se popularizó en la escena competitiva
           de juegos de pelea, ya que muchos profesionales preferían estos
           controles frente a los de consolas como Xbox 360 o PlayStation 3.
         </p>

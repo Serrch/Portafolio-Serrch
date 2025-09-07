@@ -1,5 +1,4 @@
 "use client";
-import CardExperiencia2 from "./card-experiencia2";
 import { experienciaCards } from "./experiencia-obj";
 import TimelineContainer from "./experiencia-timeline/timeline-container";
 export default function Experiencia() {

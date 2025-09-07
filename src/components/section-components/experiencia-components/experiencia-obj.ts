@@ -11,7 +11,7 @@ export const experienciaCards: CardType = [
     cargo: "Practicante",
     stDate: "Diciembre 2024",
     endDate: "Marzo 2025",
-    techStack: [".NET", "Swagger", "MSQL"],
+    techStack: [".NET", "MSQL", "Postman", "Swagger"],
   },
   {
     title: "Radical Software",
