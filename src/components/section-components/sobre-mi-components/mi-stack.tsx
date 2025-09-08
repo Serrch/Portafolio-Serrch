@@ -4,7 +4,6 @@ export default function MiStack() {
   const stack: TechOptions[] = [
     "Javascript",
     "Typescript",
-    "NodeJS",
     "NextJS",
     "React",
     ".NET",

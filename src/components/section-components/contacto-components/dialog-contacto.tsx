@@ -20,7 +20,9 @@ export default function DialogContacto({
 
   async function copyContent() {
     toast(
-      `${IsCorreo ? "Correo copiado con exito" : "Telefono copiado con exito"}`,
+      `${
+        IsCorreo ? "Correo copiado con exito" : "Teléfono  copiado con exito"
+      }`,
       {
         action: {
           label: "Cerrar",
@@ -37,7 +39,7 @@ export default function DialogContacto({
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="flex flex-col gap-2 items-center justify-center text-xl md:text-3xl font-bold">
-            {IsCorreo ? "Correo" : "Telefono"}
+            {IsCorreo ? "Correo" : "Teléfono "}
           </DialogTitle>
           <div className="flex items-center justify-center">
             {IsCorreo ? (

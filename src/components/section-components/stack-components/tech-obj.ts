@@ -29,28 +29,11 @@ export const languageObj: TechStackTypes[] = [
 
 export const frameworkObj: TechStackTypes[] = [
   {
-    name: "Express",
-    shortDesc: "Desarrollo Back End",
-    desc: "Suelo utilizar Express para la elaboración de APIs, aplicaciones y servidores con requerimientos sencillos y de rápida implementación, en conjunción con MySQL.",
-    color: "text-emerald-400 dark:text-emerald-300",
-    hoverColor:
-      "group-hover:text-emerald-400 dark:group-hover:text-emerald-300",
-    type: "framework",
-  },
-  {
     name: "NextJS",
     shortDesc: "Desarrollo web",
     desc: "NextJS es mi herramienta principal para diseñar páginas que requieren un manejo profesional, ya que agrega muchas funcionalidades útiles a la librería de React, así como el tipado fuerte de Typescript.",
     color: "",
     hoverColor: "group-hover:text-stone-950 dark:group-hover:text-stone-300",
-    type: "framework",
-  },
-  {
-    name: ".NET",
-    shortDesc: "Desarrollo Back End",
-    desc: "Uso .NET y ASP.NET cuando necesito que mis aplicaciones de Back End cuenten con una estructura profesional y más orientada al ámbito organizacional, por su facilidad al trabajar con el modelo MVC.",
-    color: "text-purple-500 dark:text-purple-400",
-    hoverColor: "group-hover:text-purple-500 dark:group-hover:text-purple-400",
     type: "framework",
   },
   {
@@ -61,17 +44,27 @@ export const frameworkObj: TechStackTypes[] = [
     hoverColor: "group-hover:text-sky-500 dark:group-hover:text-sky-400",
     type: "framework",
   },
+  {
+    name: ".NET",
+    shortDesc: "Desarrollo Back End",
+    desc: "Uso .NET y ASP.NET cuando necesito que mis aplicaciones de Back End cuenten con una estructura profesional y más orientada al ámbito organizacional, por su facilidad al trabajar con el modelo MVC.",
+    color: "text-purple-500 dark:text-purple-400",
+    hoverColor: "group-hover:text-purple-500 dark:group-hover:text-purple-400",
+    type: "framework",
+  },
+
+  {
+    name: "Express",
+    shortDesc: "Desarrollo Back End",
+    desc: "Suelo utilizar Express para la elaboración de APIs, aplicaciones y servidores con requerimientos sencillos y de rápida implementación, en conjunción con MySQL.",
+    color: "text-emerald-400 dark:text-emerald-300",
+    hoverColor:
+      "group-hover:text-emerald-400 dark:group-hover:text-emerald-300",
+    type: "framework",
+  },
 ];
 
 export const databaseObj: TechStackTypes[] = [
-  {
-    name: "MySQL",
-    shortDesc: "Motor de base de datos",
-    desc: "Utilizo MySQL junto con ExpressJS para el desarrollo de aplicaciones sencillas desde el Back End que requieren una base de datos pequeña pero confiable.",
-    color: "text-orange-600 dark:text-orange-500 ",
-    hoverColor: "group-hover:text-orange-600 dark:group-hover:text-orange-500",
-    type: "otro",
-  },
   {
     name: "MSQL",
     shortDesc: "Motor de base de datos",
@@ -106,6 +99,14 @@ export const otrosObj: TechStackTypes[] = [
     desc: "Tailwind es mi framework de clases de bajo nivel preferido, ya que me permite una gran personalización en mis páginas, además de que se integra fácilmente con distintas librerías de componentes.",
     color: "text-sky-500 dark:text-sky-400",
     hoverColor: "group-hover:text-blue-500 dark:group-hover:text-blue-400",
+    type: "otro",
+  },
+  {
+    name: "Postman",
+    shortDesc: "Gestion de API's",
+    desc: "Utilizo frecuentemente Postman para probar las respuestas de mis API's cuando ThuderClient no es suficiente. Me ayuda mucho la gestion de entornos de valores ademas de las distintas colecciones que se pueden guardar.",
+    color: "text-orange-500 dark:text-orange-400",
+    hoverColor: "group-hover:text-orange-500 dark:group-hover:text-orange-400",
     type: "otro",
   },
 ];

@@ -31,7 +31,7 @@ export default function ContactGrid() {
         <div className={groupClass}>
           <FiPhone className={iconClass} />
           <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-            Telefono
+            Teléfono
           </h4>
         </div>
       </DialogContacto>
