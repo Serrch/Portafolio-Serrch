@@ -24,7 +24,7 @@ export default function CardExperiencia2({
       <div className="col-span-2 flex flex-col justify-around md:gap-4">
         <div className="mb-2">
           <div className="md:flex gap-2 items-center md:justify-between">
-            <h2 className="text-2xl font-bold">{CardProps.title}</h2>
+            <h3 className="text-2xl font-bold">{CardProps.title}</h3>
           </div>
           <p className="text-sm dark:text-zinc-400">
             <strong> Cargo: {CardProps.cargo} </strong>

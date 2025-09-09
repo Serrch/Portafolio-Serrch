@@ -13,9 +13,11 @@ export default function SobreMi() {
       className="md:min-h-screen flex  snap-start items-center justify-center"
     >
       <div className="flex flex-col max-w-6xl">
-        <h1 className="text-4xl font-bold text-center -mb-12 md:mb-0 md:text-start md:ms-4 ">
+        <h1 className="sr-only">Bienvenido a mi portafolio</h1>
+
+        <h2 className="text-4xl font-bold text-center -mb-12 md:mb-0 md:text-start md:ms-4 ">
           Sobre mí
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
           <div className="md:col-span-1 flex justify-center items-center ">
             <Image
@@ -44,18 +46,22 @@ export default function SobreMi() {
               y fáciles de usar, ofreciendo así experiencias completas y
               funcionales para los usuarios.
             </p>
-            <MiStack />
+            <div className="flex justify-center md:justify-start">
+              <MiStack />
+            </div>
             <div>
-              <p className="text-md md:text-xl font-bold mb-1 pt-2">Contacto</p>
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight mb-1 mt-2">
+                Contacto
+              </h3>
               <div className="grid grid-cols-2 gap-2 md:flex md:gap-2 mb-5 md:mb-0">
                 <GithubButton />
                 <LinkedinButton />
                 <CopyButton />
               </div>
               <div>
-                <p className="text-md md:text-xl font-bold mb-1 mt-2">
+                <h3 className="scroll-m-20 text-xl font-semibold tracking-tight mb-1 mt-2">
                   Descargar currículum
-                </p>
+                </h3>
                 <div className="flex">
                   <DownloadCVButton />
                 </div>
