@@ -12,7 +12,7 @@ export default function Stack() {
     md:max-h-screen md:overflow-y-auto no-scrollbar"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full px-4">
-        <h2 className="text-4xl font-bold text-center -mb-12 md:mb-0 md:text-start md:ms-4 ">
+        <h2 className="text-4xl font-bold text-center md:text-start md:ms-4 ">
           Tech Stack
         </h2>
         <div className="grid gap-4 ms-5">
