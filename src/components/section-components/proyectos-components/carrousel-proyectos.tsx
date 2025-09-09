@@ -23,8 +23,12 @@ export default function CarrouselProyectos({
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious
+        className={`${arrProyectos.length > 2 ? "" : "md:hidden"}`}
+      />
+      <CarouselNext
+        className={`${arrProyectos.length > 2 ? "" : "md:hidden"}`}
+      />
     </Carousel>
   );
 }

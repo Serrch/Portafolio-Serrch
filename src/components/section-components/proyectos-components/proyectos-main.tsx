@@ -6,7 +6,7 @@ export default function Proyectos() {
     <section
       id="3"
       className="min-h-screen snap-start flex flex-col items-center justify-start pt-8 md:pt-30 md:pb-10 border-t
-  md:max-h-screen md:overflow-y-auto md:scrollbar-thin md:scrollbar-thumb-gray-400 md:scrollbar-track-transparent md:scrollbar-thumb-rounded-full"
+  md:max-h-screen md:overflow-y-auto no-scrollbar"
     >
       <div className="grid grid-cols-1 gap-4 max-w-6xl w-full px-4">
         <div className="flex flex-col gap-4">

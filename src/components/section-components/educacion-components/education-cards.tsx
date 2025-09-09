@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SlGraduation, SlCheck, SlExclamation, SlBadge } from "react-icons/sl";
 import { EducationCardType } from "@/types/education-types/education-types";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 export default function EducationCards({
   educationInfo,
 }: {
@@ -14,15 +14,20 @@ export default function EducationCards({
   const toggleDescription = () => setExpanded((prev) => !prev);
 
   return (
-    <div className="grid grid-cols-5 gap-2 border dark:border-zinc-700 shadow-md rounded-xl p-2 md:p-4 h-full max-w-xl col-span-2">
+    <div
+      className={`grid grid-cols-5 gap-2 border dark:border-zinc-700 shadow-md rounded-xl p-2 md:p-4 h-full max-w-xl xl:max-w-4xl col-span-2`}
+    >
       <div className="col-span-1 flex items-center justify-center">
         {educationInfo.img ? (
-          <img
-            src={educationInfo.img}
-            width={1000}
-            height={800}
-            alt="imagen-certificado"
-          />
+          <div className="relative w-16 h-16 md:w-24 md:h-24">
+            <Image
+              src={educationInfo.img}
+              alt="imagen-certificado"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 64px, (max-width: 1280px) 96px, 128px"
+            />
+          </div>
         ) : educationInfo.certificationLink ? (
           <SlBadge className="w-12 h-auto" />
         ) : (

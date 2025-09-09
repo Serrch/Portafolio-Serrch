@@ -10,40 +10,42 @@ export default function Educacion() {
     snap-start 
     flex flex-col items-center 
     pt-8 md:pt-30 md:pb-10 border-t
-
-    md:max-h-screen md:overflow-y-auto md:scrollbar-thin md:scrollbar-thumb-gray-400 md:scrollbar-track-transparent md:scrollbar-thumb-rounded-full"
+    md:max-h-screen md:overflow-y-auto no-scrollbar"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full">
-        <h2 className="text-4xl font-bold text-start">Educacion</h2>
+        <h2 className="text-4xl font-bold text-start">Educación </h2>
         <div className="grid  gap-4 ms-5">
-          <div className="flex flex-col gap-4 pb-5 border-b">
+          <div className="flex flex-col gap-4 pb-5 border-b items-center">
             <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
               Titulos
             </h3>
             {titulosObj.map((titulo, index) => (
-              <div key={index}>
-                <EducationCards educationInfo={titulo}></EducationCards>
-              </div>
+              <EducationCards
+                key={index}
+                educationInfo={titulo}
+              ></EducationCards>
             ))}
           </div>
-          <div className="flex flex-col gap-4 pb-5 border-b">
+          <div className="flex flex-col gap-4 pb-5 border-b items-center">
             <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
               Certificaciones
             </h3>
             {certificacionesObj.map((certificacion, index) => (
-              <div key={index}>
-                <EducationCards educationInfo={certificacion}></EducationCards>
-              </div>
+              <EducationCards
+                key={index}
+                educationInfo={certificacion}
+              ></EducationCards>
             ))}
           </div>
-          <div className="flex flex-col gap-4 pb-5">
+          <div className="flex flex-col gap-4 pb-5 items-center">
             <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
               Cursos
             </h3>
             {cursosObj.map((curso, index) => (
-              <div key={index}>
-                <EducationCards educationInfo={curso}></EducationCards>
-              </div>
+              <EducationCards
+                key={index}
+                educationInfo={curso}
+              ></EducationCards>
             ))}
           </div>
         </div>
