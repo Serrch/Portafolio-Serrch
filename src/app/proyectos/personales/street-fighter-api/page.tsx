@@ -5,6 +5,7 @@ import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import LabelTerminado from "@/components/proyectos-components/label-terminado";
 import GithubButton from "@/components/section-components/github-button";
 import ImagenZoom from "@/components/image-zoom";
+
 export default function StreetFighterDetail() {
   const rutaImagenes: string = "/assets/img-proyectos/personales/sf-api/";
   const arrTech: TechOptions[] = ["NodeJS", "Express", "MySQL", "Postman"];
