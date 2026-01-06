@@ -14,7 +14,6 @@ export default function SobreMi() {
     >
       <div className="flex flex-col max-w-6xl">
         <h1 className="sr-only">Bienvenido a mi portafolio</h1>
-
         <h2 className="text-4xl font-bold text-center -mb-12 md:mb-0 md:text-start md:ms-4 ">
           Sobre mí
         </h2>
