@@ -2,11 +2,11 @@ import ChooseIcon from "../experiencia-components/choose-icon-function";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 export default function MiStack() {
   const stack: TechOptions[] = [
+    ".NET",
     "Javascript",
     "Typescript",
     "NextJS",
     "React",
-    ".NET",
     "MSQL",
   ];
 

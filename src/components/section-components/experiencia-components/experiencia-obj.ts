@@ -15,22 +15,22 @@ export const experienciaCards: CardType = [
     title: "Radical Software",
     img: "/assets/img-experiencia/logo-leyenda-radical.svg",
     description:
-      "Participé en la refactorización de una API desarrollada en ASP.NET, aplicando principios SOLID y Clean Code para mejorar la mantenibilidad y escalabilidad del sistema. Realicé la reorganización de la lógica de negocio, separación de responsabilidades y reestructuración de controladores, servicios e interfaces. Además, propuse la estandarización de los formatos de respuesta para mejorar la consistencia de la API.",
-
-    cargo: "Practicante",
-    stDate: "Diciembre 2024",
-    endDate: "Marzo 2025",
-    techStack: [".NET", "MSQL", "Postman", "Swagger"],
-  },
-  {
-    title: "Radical Software",
-    img: "/assets/img-experiencia/logo-leyenda-radical.svg",
-    description:
       "Tras concluir la refactorización del backend, participé en la migración de una aplicación de Blazor a React con Next.js. Me enfoqué en el desarrollo de formularios dinámicos alineados con los endpoints de la API, priorizando una experiencia de usuario clara y una arquitectura escalable que facilitara el mantenimiento y la evolución del proyecto.",
 
     cargo: "Practicante",
     stDate: "Marzo 2025",
     endDate: "Junio 2025",
     techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
+  },
+  {
+    title: "Radical Software",
+    img: "/assets/img-experiencia/logo-leyenda-radical.svg",
+    description:
+      "Participé en la refactorización de una API desarrollada en ASP.NET, aplicando principios SOLID y Clean Code para mejorar la mantenibilidad y escalabilidad del sistema. Realicé la reorganización de la lógica de negocio, separación de responsabilidades y reestructuración de controladores, servicios e interfaces. Además, propuse la estandarización de los formatos de respuesta para mejorar la consistencia de la API.",
+
+    cargo: "Practicante",
+    stDate: "Diciembre 2024",
+    endDate: "Marzo 2025",
+    techStack: [".NET", "MSQL", "Postman", "Swagger"],
   },
 ];
