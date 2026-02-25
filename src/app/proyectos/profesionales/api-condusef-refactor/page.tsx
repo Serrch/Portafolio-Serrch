@@ -2,15 +2,17 @@ import ChooseIcon from "@/components/section-components/experiencia-components/c
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import LogoCondusef from "../../../../../public/assets/img-proyectos/profesionales/api-condusef-ui/logo-condusef";
 import LabelTerminado from "@/components/proyectos-components/label-terminado";
-import ImagenZoom from "@/components/image-zoom";
+//import ImagenZoom from "@/components/image-zoom";
 export default function ApiCondusefRefactor() {
-  const rutaImagenes: string =
-    "/assets/img-proyectos/profesionales/api-condusef-refactor/";
   const arrTech: TechOptions[] = [".NET", "Swagger", "MSQL", "Postman"];
-  const arrImagenes: string[] = [
-    rutaImagenes + "api-condusef.jpg",
-    rutaImagenes + "api-condusef-ui-2.jpg",
-  ];
+
+  // const rutaImagenes: string =
+  //   "/assets/img-proyectos/profesionales/api-condusef-refactor/";
+
+  // const arrImagenes: string[] = [
+  //   rutaImagenes + "api-condusef.jpg",
+  //   rutaImagenes + "api-condusef-ui-2.jpg",
+  // ];
 
   return (
     <main className="max-w-6xl mx-auto p-6">
@@ -136,7 +138,7 @@ export default function ApiCondusefRefactor() {
         </ul>
       </section>
 
-      <section className="mb-10">
+      {/* <section className="mb-10">
         <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
           Galería
         </h3>
@@ -150,7 +152,7 @@ export default function ApiCondusefRefactor() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

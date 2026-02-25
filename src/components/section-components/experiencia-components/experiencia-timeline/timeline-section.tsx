@@ -12,7 +12,7 @@ export default function TimelineSection({
         <MdOutlineWorkOutline className="w-4 h-4 text-emerald-800 dark:text-emerald-300" />
       </span>
       <p className="mb-1 ms-2 md:ms-1">
-        {experienciaInfo.stDate} - {experienciaInfo.endDate}
+        {experienciaInfo.stDate} {experienciaInfo.endDate}
       </p>
       <CardExperiencia2 CardProps={experienciaInfo}></CardExperiencia2>
     </li>

@@ -7,7 +7,7 @@ export const experienciaCards: CardType = [
     description:
       "Formo parte del equipo de desarrollo del ERP principal de la empresa, participando activamente en el desarrollo de nuevos módulos y vistas, así como en el mantenimiento y soporte del sistema. Mi trabajo incluye la atención a incidencias, corrección de errores y mejora continua de funcionalidades para asegurar la estabilidad y usabilidad de la plataforma.",
     cargo: "Desarrollador Fullstack",
-    stDate: "Diciembre 2025",
+    stDate: "Diciembre 2025 - ",
     endDate: "Actualidad",
     techStack: [".NET", "Javascript", "MSQL"],
   },
@@ -18,7 +18,7 @@ export const experienciaCards: CardType = [
       "Tras concluir la refactorización del backend, participé en la migración de una aplicación de Blazor a React con Next.js. Me enfoqué en el desarrollo de formularios dinámicos alineados con los endpoints de la API, priorizando una experiencia de usuario clara y una arquitectura escalable que facilitara el mantenimiento y la evolución del proyecto.",
 
     cargo: "Practicante",
-    stDate: "Marzo 2025",
+    stDate: "",
     endDate: "Junio 2025",
     techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
   },
@@ -30,7 +30,7 @@ export const experienciaCards: CardType = [
 
     cargo: "Practicante",
     stDate: "Diciembre 2024",
-    endDate: "Marzo 2025",
+    endDate: "",
     techStack: [".NET", "MSQL", "Postman", "Swagger"],
   },
 ];
