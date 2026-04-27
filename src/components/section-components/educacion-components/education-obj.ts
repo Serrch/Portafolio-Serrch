@@ -35,10 +35,10 @@ export const educationObj: EducationCardType[] = [
 export const titulosObj: EducationCardType[] = [
   {
     title: "Ingeniería en Software - UES",
-    status: false,
+    status: true,
     description:
       "Título universitario de la carrera Ingeniería en Software. Durante el transcurso de la carrera aprendí los conceptos básicos de programación, " +
-      "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino. \nTítulo en trámite.",
+      "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino.",
     stDate: "Agosto 2021",
     endDate: "Mayo 2025",
     img: "/assets/img-portafolio/ues-logo.png",

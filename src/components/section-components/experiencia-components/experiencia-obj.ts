@@ -7,7 +7,7 @@ export const experienciaCards: CardType = [
     description:
       "Formo parte del equipo de desarrollo del ERP principal de la empresa, participando activamente en el desarrollo de nuevos módulos y vistas, así como en el mantenimiento y soporte del sistema. Mi trabajo incluye la atención a incidencias, corrección de errores y mejora continua de funcionalidades para asegurar la estabilidad y usabilidad de la plataforma.",
     cargo: "Desarrollador Fullstack",
-    stDate: "Diciembre 2025 - ",
+    stDate: "Octubre 2025 - ",
     endDate: "Actualidad",
     techStack: [".NET", "Javascript", "MSQL"],
   },
