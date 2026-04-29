@@ -38,9 +38,9 @@ export default function RootLayout({
           </main>
         </ThemeProvider>
         <Script
-          defer
           src="https://cloud.umami.is/script.js"
           data-website-id="b76579dc-b129-491c-a0dd-5e1b6745057f"
+          strategy="afterInteractive"
         />
       </body>
     </html>
