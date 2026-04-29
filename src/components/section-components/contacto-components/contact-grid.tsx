@@ -4,7 +4,8 @@ import { FiDownload, FiPhone, FiGithub, FiLinkedin } from "react-icons/fi";
 import DialogContacto from "./dialog-contacto";
 
 export default function ContactGrid() {
-  function openPage(link: string) {
+  function openPage(link: string, event?: string) {
+    if (event) window.umami?.track(event);
     return window.open(link);
   }
   const iconClass: string =
@@ -20,7 +21,10 @@ export default function ContactGrid() {
           "
     >
       <DialogContacto IsCorreo={true}>
-        <div className={groupClass}>
+        <div
+          className={groupClass}
+          onClick={() => window.umami?.track("contacto-correo")}
+        >
           <SiMaildotru className={iconClass} />
           <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
             Correo
@@ -28,14 +32,21 @@ export default function ContactGrid() {
         </div>
       </DialogContacto>
       <DialogContacto IsCorreo={false}>
-        <div className={groupClass}>
+        <div
+          className={groupClass}
+          onClick={() => window.umami?.track("contacto-telefono")}
+        >
           <FiPhone className={iconClass} />
           <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
             Teléfono
           </h4>
         </div>
       </DialogContacto>
-      <a href="/cv.pdf" download={"CV_Sergio_Enrique_Perez_Rivas.pdf"}>
+      <a
+        href="/cv.pdf"
+        download={"CV_Sergio_Enrique_Perez_Rivas.pdf"}
+        onClick={() => window.umami?.track("descarga-cv-contacto")}
+      >
         <div className={groupClass}>
           <FiDownload className={iconClass} />
           <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
@@ -45,7 +56,7 @@ export default function ContactGrid() {
       </a>
       <div
         className={groupClass}
-        onClick={() => openPage("https://github.com/Serrch")}
+        onClick={() => openPage("https://github.com/Serrch", "contacto-github")}
       >
         <FiGithub className={iconClass} />
         <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
@@ -54,7 +65,9 @@ export default function ContactGrid() {
       </div>
       <div
         className={groupClass + " col-span-2 md:col-span-1"}
-        onClick={() => openPage("https://linkedin.com/in/serrrch")}
+        onClick={() =>
+          openPage("https://linkedin.com/in/serrrch", "contacto-linkedin")
+        }
       >
         <FiLinkedin className={iconClass} />
         <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">

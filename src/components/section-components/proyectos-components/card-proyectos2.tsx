@@ -35,9 +35,24 @@ export default function CardProyectos2({
 
         <div className="flex flex-col items-start justify-center flex-1 gap-4 mt-4">
           <div className="flex flex-wrap gap-2 justify-center">
-            <RedirectButton link={proyectoObj.detailPage} texto="Ver más" />
+            <RedirectButton
+              link={proyectoObj.detailPage}
+              texto="Ver más"
+              onClick={() =>
+                window.umami?.track("ver-proyecto", {
+                  proyecto: proyectoObj.title,
+                })
+              }
+            />
             {proyectoObj.githubLink && (
-              <GithubButton link={proyectoObj.githubLink} />
+              <GithubButton
+                link={proyectoObj.githubLink}
+                onClick={() =>
+                  window.umami?.track("ver-github", {
+                    proyecto: proyectoObj.title,
+                  })
+                }
+              />
             )}
             {proyectoObj.pageLink && (
               <NewPageButton link={proyectoObj.pageLink} />

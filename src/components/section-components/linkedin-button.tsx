@@ -1,8 +1,9 @@
 import { Button } from "../ui/button";
 import { SiLinkedin } from "react-icons/si";
 
-export default function LinkedinButton() {
+export default function LinkedinButton({ onClick }: { onClick?: () => void }) {
   function click() {
+    onClick?.();
     window.open("https://linkedin.com/in/serrrch");
   }
   return (

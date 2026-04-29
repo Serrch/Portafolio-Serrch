@@ -33,8 +33,8 @@ export default function SobreMi() {
             <p className="text-justify text-md md:text-xl md:pb-2 p-2 -mt-12 mb-2 md:mb-0 md:mt-5  ">
               Hola, mi nombre es{" "}
               <strong className="underline">Perez Rivas Sergio E.</strong> Soy
-              Ingeniero en Software y Desarrollador Backend apasionado por crear
-              soluciones tecnológicas eficientes y fáciles de mantener.
+              Ingeniero en Software y Desarrollador FullStack apasionado por
+              crear soluciones tecnológicas eficientes y fáciles de mantener.
               <br />
               Me especializo en desarrollar aplicaciones limpias y escalables,
               aplicando los principios de Clean Code y SOLID para garantizar
@@ -53,8 +53,12 @@ export default function SobreMi() {
                 Contacto
               </h3>
               <div className="grid grid-cols-2 gap-2 md:flex md:gap-2 mb-5 md:mb-0">
-                <GithubButton />
-                <LinkedinButton />
+                <GithubButton
+                  onClick={() => window.umami?.track("contacto-github")}
+                />
+                <LinkedinButton
+                  onClick={() => window.umami?.track("contacto-linkedin")}
+                />
                 <CopyButton />
               </div>
               <div>

@@ -4,6 +4,7 @@ import Header from "@/components/layout-components/header-components/header";
 import "./globals.css";
 import { outfit } from "./fonts";
 import { Toaster } from "sonner";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Portafolio Serch",
@@ -36,6 +37,11 @@ export default function RootLayout({
             </div>
           </main>
         </ThemeProvider>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="b76579dc-b129-491c-a0dd-5e1b6745057f"
+        />
       </body>
     </html>
   );
