@@ -38,7 +38,8 @@ export default function RootLayout({
           </main>
         </ThemeProvider>
         <Script
-          src="https://cloud.umami.is/script.js"
+          src="/stats/script.js"
+          data-host-url="https://portafolio-sergio-ruby.vercel.app/stats"
           data-website-id="b76579dc-b129-491c-a0dd-5e1b6745057f"
           strategy="afterInteractive"
         />
