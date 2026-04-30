@@ -39,7 +39,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Script
           src="/stats/script.js"
-          data-host-url="https://portafolio-sergio-ruby.vercel.app/stats"
+          data-host-url="https://portafolio-sergio-ruby.vercel.app"
           data-website-id="b76579dc-b129-491c-a0dd-5e1b6745057f"
           strategy="afterInteractive"
         />
