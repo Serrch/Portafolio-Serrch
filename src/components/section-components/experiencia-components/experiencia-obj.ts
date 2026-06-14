@@ -2,35 +2,33 @@ import { CardType } from "@/types/sobre-mi-types/card-types";
 
 export const experienciaCards: CardType = [
   {
+    title: "Velarizon",
+    img: "/assets/img-experiencia/velarizon-logo.png",
+    description:
+      "Desarrollo de plataformas web y aplicaciones multiplataforma con TypeScript y React, con despliegue en entornos cloud (Vercel, Supabase). Diseno e implementacion de APIs REST con Python (FastAPI), gestion de bases de datos PostgreSQL y colaboracion en equipo con Git bajo metodologia agil.",
+    cargo: "Desarrollador Fullstack",
+    stDate: "Abril 2026 - ",
+    endDate: "Actualidad",
+    techStack: ["Typescript", "React", "Python", "FastAPI", "PostgreSQL", "Supabase", "Docker"],
+  },
+  {
     title: "Construplan",
     img: "/assets/img-experiencia/construplan-logo.svg",
     description:
-      "Formo parte del equipo de desarrollo del ERP principal de la empresa, participando activamente en el desarrollo de nuevos módulos y vistas, así como en el mantenimiento y soporte del sistema. Mi trabajo incluye la atención a incidencias, corrección de errores y mejora continua de funcionalidades para asegurar la estabilidad y usabilidad de la plataforma.",
+      "Desarrollo y mantenimiento del ERP principal de la empresa. Construccion de nuevos modulos y vistas, integracion de APIs REST, correccion de bugs, atencion a incidentes y soporte a usuarios internos. Documentacion de cambios tecnicos y procedimientos operativos.",
     cargo: "Desarrollador Fullstack",
     stDate: "Octubre 2025 - ",
-    endDate: "Actualidad",
+    endDate: "Abril 2026",
     techStack: [".NET", "Javascript", "MSQL"],
   },
   {
     title: "Radical Software",
     img: "/assets/img-experiencia/logo-leyenda-radical.svg",
     description:
-      "Tras concluir la refactorización del backend, participé en la migración de una aplicación de Blazor a React con Next.js. Me enfoqué en el desarrollo de formularios dinámicos alineados con los endpoints de la API, priorizando una experiencia de usuario clara y una arquitectura escalable que facilitara el mantenimiento y la evolución del proyecto.",
-
-    cargo: "Practicante",
-    stDate: "",
-    endDate: "Junio 2025",
-    techStack: ["Javascript", "Typescript", "NextJS", "React", "Tailwind"],
-  },
-  {
-    title: "Radical Software",
-    img: "/assets/img-experiencia/logo-leyenda-radical.svg",
-    description:
-      "Participé en la refactorización de una API desarrollada en ASP.NET, aplicando principios SOLID y Clean Code para mejorar la mantenibilidad y escalabilidad del sistema. Realicé la reorganización de la lógica de negocio, separación de responsabilidades y reestructuración de controladores, servicios e interfaces. Además, propuse la estandarización de los formatos de respuesta para mejorar la consistencia de la API.",
-
-    cargo: "Practicante",
-    stDate: "Diciembre 2024",
-    endDate: "",
-    techStack: [".NET", "MSQL", "Postman", "Swagger"],
+      "Desarrollo frontend y backend para sistemas financieros (SOFOMES). Refactorizacion de API REST con ASP.NET aplicando Clean Code y SOLID, migracion de interfaz de Blazor a Next.js con React, e implementacion de pruebas unitarias para aseguramiento de calidad.",
+    cargo: "Desarrollador Fullstack",
+    stDate: "Diciembre 2024 - ",
+    endDate: "Septiembre 2025",
+    techStack: ["Typescript", "React", "NextJS", ".NET", "MSQL"],
   },
 ];

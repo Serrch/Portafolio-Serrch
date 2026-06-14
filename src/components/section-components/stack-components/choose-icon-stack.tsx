@@ -1,22 +1,9 @@
 "use client";
 import {
-  SiHtml5,
-  SiCss3,
-  SiTypescript,
-  SiAngular,
-  SiJavascript,
-  SiNodedotjs,
-  SiReact,
-  SiNextdotjs,
-  SiDotnet,
-  SiSwagger,
-  SiTailwindcss,
-  SiExpress,
-  SiMysql,
-  SiGithub,
-  SiGitlab,
-  SiPostman,
-  SiArduino,
+  SiHtml5, SiCss3, SiTypescript, SiAngular, SiJavascript, SiNodedotjs,
+  SiReact, SiNextdotjs, SiDotnet, SiSwagger, SiTailwindcss, SiExpress,
+  SiMysql, SiGithub, SiGitlab, SiPostman, SiArduino,
+  SiPostgresql, SiPython, SiFastapi, SiSupabase, SiDocker, SiExpo,
 } from "react-icons/si";
 import { DiMsqlServer } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -38,37 +25,37 @@ type ChooseIconStackProps = {
   originalColor?: boolean;
 };
 
-export default function ChooseIconStack({
-  name,
-  color,
-  hoverColor,
-  size = "md",
-  originalColor,
-}: ChooseIconStackProps) {
+export default function ChooseIconStack({ name, color, hoverColor, size = "md", originalColor }: ChooseIconStackProps) {
   const clases = originalColor
     ? `${sizeMap[size]} ${color}`
     : `${sizeMap[size]} text-emerald-700 dark:text-emerald-500 transition duration-200 ease-in-out transition-colors ${hoverColor}`;
 
   const iconMap: Record<TechOptions, React.ReactNode> = {
-    Javascript: <SiJavascript className={clases} />,
-    HTML: <SiHtml5 className={clases} />,
-    CSS: <SiCss3 className={clases} />,
-    Angular: <SiAngular className={clases} />,
-    Typescript: <SiTypescript className={clases} />,
-    NodeJS: <SiNodedotjs className={clases} />,
-    NextJS: <SiNextdotjs className={clases} />,
-    React: <SiReact className={clases} />,
-    ".NET": <SiDotnet className={clases} />,
-    MSQL: <DiMsqlServer className={clases} />,
-    Swagger: <SiSwagger className={clases} />,
-    Tailwind: <SiTailwindcss className={clases} />,
-    MySQL: <SiMysql className={clases} />,
-    Express: <SiExpress className={clases} />,
-    Github: <SiGithub className={clases} />,
-    "C#": <TbBrandCSharp className={clases} />,
-    Gitlab: <SiGitlab className={clases} />,
-    Postman: <SiPostman className={clases} />,
-    Arduino: <SiArduino className={clases} />,
+    Javascript:  <SiJavascript  className={clases} />,
+    HTML:        <SiHtml5       className={clases} />,
+    CSS:         <SiCss3        className={clases} />,
+    Angular:     <SiAngular     className={clases} />,
+    Typescript:  <SiTypescript  className={clases} />,
+    NodeJS:      <SiNodedotjs   className={clases} />,
+    NextJS:      <SiNextdotjs   className={clases} />,
+    React:       <SiReact       className={clases} />,
+    ".NET":      <SiDotnet      className={clases} />,
+    MSQL:        <DiMsqlServer  className={clases} />,
+    Swagger:     <SiSwagger     className={clases} />,
+    Tailwind:    <SiTailwindcss className={clases} />,
+    MySQL:       <SiMysql       className={clases} />,
+    Express:     <SiExpress     className={clases} />,
+    Github:      <SiGithub      className={clases} />,
+    "C#":        <TbBrandCSharp className={clases} />,
+    Gitlab:      <SiGitlab      className={clases} />,
+    Postman:     <SiPostman     className={clases} />,
+    Arduino:     <SiArduino     className={clases} />,
+    PostgreSQL:  <SiPostgresql  className={clases} />,
+    Python:      <SiPython      className={clases} />,
+    FastAPI:     <SiFastapi     className={clases} />,
+    Supabase:    <SiSupabase    className={clases} />,
+    Docker:      <SiDocker      className={clases} />,
+    Expo:        <SiExpo        className={clases} />,
   };
 
   return iconMap[name] ?? <p>{name}</p>;

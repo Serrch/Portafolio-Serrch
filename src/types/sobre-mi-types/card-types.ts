@@ -29,4 +29,10 @@ export type TechOptions =
   | "C#"
   | "Gitlab"
   | "Postman"
-  | "Arduino";
+  | "Arduino"
+  | "PostgreSQL"
+  | "Python"
+  | "FastAPI"
+  | "Supabase"
+  | "Docker"
+  | "Expo";

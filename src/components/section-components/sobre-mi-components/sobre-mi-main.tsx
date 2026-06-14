@@ -15,7 +15,7 @@ export default function SobreMi() {
       <div className="flex flex-col max-w-6xl">
         <h1 className="sr-only">Bienvenido a mi portafolio</h1>
         <h2 className="text-4xl font-bold text-center -mb-12 md:mb-0 md:text-start md:ms-4 ">
-          Sobre mí
+          Sobre mi
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
           <div className="md:col-span-1 flex justify-center items-center ">
@@ -33,17 +33,19 @@ export default function SobreMi() {
             <p className="text-justify text-md md:text-xl md:pb-2 p-2 -mt-12 mb-2 md:mb-0 md:mt-5  ">
               Hola, mi nombre es{" "}
               <strong className="underline">Perez Rivas Sergio E.</strong> Soy
-              Ingeniero en Software y Desarrollador FullStack apasionado por
-              crear soluciones tecnológicas eficientes y fáciles de mantener.
+              Ingeniero en Software y Desarrollador Fullstack con experiencia
+              profesional en desarrollo web, plataformas empresariales y
+              aplicaciones multiplataforma.
               <br />
-              Me especializo en desarrollar aplicaciones limpias y escalables,
-              aplicando los principios de Clean Code y SOLID para garantizar
-              calidad y sostenibilidad en cada proyecto.
+              Me especializo en construir soluciones escalables con TypeScript,
+              React, Next.js y PostgreSQL, integrando backends robustos con
+              interfaces funcionales y bien estructuradas. Aplico principios de
+              Clean Code y SOLID para garantizar calidad y mantenibilidad en
+              cada proyecto.
               <br />
-              Disfruto trabajando en proyectos que integren un backend robusto y
-              bien estructurado con interfaces frontend atractivas, responsivas
-              y fáciles de usar, ofreciendo así experiencias completas y
-              funcionales para los usuarios.
+              He trabajado en entornos de mejora continua, soporte de
+              plataformas ERP, sistemas financieros y aplicaciones con
+              despliegue en entornos cloud como Vercel y Supabase.
             </p>
             <div className="flex justify-center md:justify-start">
               <MiStack />
@@ -63,7 +65,7 @@ export default function SobreMi() {
               </div>
               <div>
                 <h3 className="scroll-m-20 text-xl font-semibold tracking-tight mb-1 mt-2">
-                  Descargar currículum
+                  Descargar curriculum
                 </h3>
                 <div className="flex">
                   <DownloadCVButton />

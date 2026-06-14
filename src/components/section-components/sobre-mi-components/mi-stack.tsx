@@ -3,6 +3,7 @@ import { TechOptions } from "@/types/sobre-mi-types/card-types";
 export default function MiStack() {
   const stack: TechOptions[] = [
     ".NET",
+    "PostgreSQL",
     "Javascript",
     "Typescript",
     "NextJS",
