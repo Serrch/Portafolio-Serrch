@@ -41,7 +41,7 @@ export const proyectosPro: CardProyectoTypes[] = [
     status: "Terminado",
     description:
       "Sistema de trazabilidad para gestion de campos de cultivo, pallets y flujo de exportacion de alimentos. Incluye control de inventario, seguimiento de productos y logica transaccional de exportacion.",
-    img: "/assets/img-proyectos/profesionales/agroeasy.png",
+    img: "/assets/img-proyectos/profesionales/agroeasy2.png",
     techStack: [
       "Typescript",
       "React",
