@@ -4,9 +4,11 @@ import Experiencia from "@/components/section-components/experiencia-components/
 import Stack from "@/components/section-components/stack-components/stack-main";
 import Educacion from "@/components/section-components/educacion-components/educacion-main";
 import Contacto from "@/components/section-components/contacto-components/contacto-main";
+import SectionTracker from "@/components/section-components/section-tracker";
 export default function Home() {
   return (
     <div className="bg-background flex flex-col gap-12 ">
+      <SectionTracker />
       <SobreMi></SobreMi>
       <Experiencia></Experiencia>
       <Proyectos></Proyectos>
