@@ -1,68 +1,59 @@
 "use client";
-import { SiMaildotru } from "react-icons/si";
-import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
-import DialogContacto from "./dialog-contacto";
+import { useState } from "react";
+import { FiCopy, FiCheck } from "react-icons/fi";
+import { CORREO, GITHUB_URL, LINKEDIN_URL } from "@/lib/site";
+
+const ENLACES = [
+  { label: "Correo", texto: CORREO, href: `mailto:${CORREO}`, evento: "contacto-correo" },
+  { label: "GitHub", texto: "github.com/Serrch", href: GITHUB_URL, evento: "contacto-github" },
+  { label: "LinkedIn", texto: "in/serrrch", href: LINKEDIN_URL, evento: "contacto-linkedin" },
+];
 
 export default function ContactGrid() {
-  function openPage(link: string, event?: string) {
-    if (event) window.umami?.track(event);
-    return window.open(link);
+  const [copiado, setCopiado] = useState(false);
+
+  async function copiarCorreo() {
+    await navigator.clipboard.writeText(CORREO);
+    setCopiado(true);
+    setTimeout(() => setCopiado(false), 2000);
   }
-  const iconClass: string =
-    "w-10 h-10 md:w-12 md:h-12 transition duration-200 ease-in-out text-emerald-700 dark:text-emerald-500 group-hover:text-stone-800 dark:group-hover:text-stone-300";
-  const groupClass: string =
-    "group flex flex-col gap-2 items-center justify-center p-2 aspect-square md:aspect-auto md:h-24 transition duration-200 ease-in-out hover:bg-accent hover:scale-105 cursor-pointer";
+
   return (
-    <div
-      className="
-            grid grid-cols-2 md:grid-cols-4
-            divide-x md:divide-y-0 divide-y md:divide-x
-            border rounded-xl overflow-hidden shadow-md
-          "
-    >
-      <DialogContacto>
+    <dl className="divide-y divide-border">
+      {ENLACES.map((enlace) => (
         <div
-          className={groupClass}
-          onClick={() => window.umami?.track("contacto-correo")}
+          key={enlace.label}
+          className="flex items-center justify-between gap-4 py-4"
         >
-          <SiMaildotru className={iconClass} />
-          <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-            Correo
-          </h4>
+          <dt className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            {enlace.label}
+          </dt>
+          <dd className="flex items-center gap-2">
+            <a
+              href={enlace.href}
+              {...(enlace.href.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              onClick={() => window.umami?.track(enlace.evento)}
+              className="rounded-sm text-sm font-medium break-all transition-colors hover:text-brand"
+            >
+              {enlace.texto}
+            </a>
+            {enlace.label === "Correo" && (
+              // mailto: no hace nada si el visitante no tiene cliente de correo
+              // configurado, que en escritorio es lo comun.
+              <button
+                type="button"
+                onClick={copiarCorreo}
+                aria-label={copiado ? "Correo copiado" : "Copiar correo"}
+                className="shrink-0 cursor-pointer rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {copiado ? <FiCheck className="text-brand" /> : <FiCopy />}
+              </button>
+            )}
+          </dd>
         </div>
-      </DialogContacto>
-      <a
-        href="/cv.pdf"
-        download={"CV_Sergio_Enrique_Perez_Rivas.pdf"}
-        onClick={() => window.umami?.track("descarga-cv-contacto")}
-      >
-        <div className={groupClass}>
-          <FiDownload className={iconClass} />
-          <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-            Curriculum
-          </h4>
-        </div>
-      </a>
-      <div
-        className={groupClass}
-        onClick={() => openPage("https://github.com/Serrch", "contacto-github")}
-      >
-        <FiGithub className={iconClass} />
-        <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-          Github
-        </h4>
-      </div>
-      <div
-        className={groupClass}
-        onClick={() =>
-          openPage("https://linkedin.com/in/serrrch", "contacto-linkedin")
-        }
-      >
-        <FiLinkedin className={iconClass} />
-        <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-          LinkedIn
-        </h4>
-      </div>
-    </div>
+      ))}
+    </dl>
   );
 }

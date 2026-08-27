@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "../ui/button";
 import { SiGithub } from "react-icons/si";
+import { GITHUB_URL } from "@/lib/site";
 
 export default function GithubButton({
   link,
@@ -15,7 +16,7 @@ export default function GithubButton({
 }) {
   function click() {
     onClick?.();
-    return link ? window.open(link) : window.open("https://github.com/Serrch");
+    return link ? window.open(link) : window.open(GITHUB_URL);
   }
   return (
     <Button
