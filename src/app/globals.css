@@ -124,10 +124,18 @@ html {
   scroll-behavior: smooth;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* Snap suave: acomoda la sección al soltar cerca de un borde, pero nunca
+   atrapa a quien se queda leyendo a mitad de una sección larga. */
+@media (min-width: 768px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
 }
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+
+/* Snap + scroll suave son disparadores conocidos de mareo. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
 }

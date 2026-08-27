@@ -5,11 +5,7 @@ export default function Stack() {
   return (
     <section
       id="5"
-      className="min-h-screen 
-    snap-start 
-    flex flex-col items-center 
-    pt-8 md:pt-30 md:pb-10 border-t
-    md:max-h-screen md:overflow-y-auto no-scrollbar"
+      className="min-h-[calc(100vh_-_7rem)] flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t snap-start scroll-mt-28"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full px-4">
         <h2 className="text-4xl font-bold text-center md:text-start md:ms-4 ">

@@ -1,4 +1,6 @@
 "use client";
+// Sin uso: los proyectos se muestran en GridProyectos. Se conserva a propósito
+// para volver al carrusel o reutilizarlo en galerías de imágenes.
 import {
   Carousel,
   CarouselContent,

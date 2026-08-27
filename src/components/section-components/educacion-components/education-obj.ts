@@ -25,7 +25,7 @@ export const educationObj: EducationCardType[] = [
     title: "Curso Radical Software - SOLID",
     status: true,
     description:
-      "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
+      "Curso que realicé durante mi estancia en Radical Software donde aprendí los principios SOLID para aplicarlos en los proyectos donde trabajé.",
     stDate: "Diciembre 2024",
     endDate: "Enero 2025",
     img: "/assets/img-experiencia/radical-logo-s.svg",
@@ -50,7 +50,7 @@ export const cursosObj: EducationCardType[] = [
     title: "Curso Radical Software - SOLID",
     status: true,
     description:
-      "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
+      "Curso que realicé durante mi estancia en Radical Software donde aprendí los principios SOLID para aplicarlos en los proyectos donde trabajé.",
     stDate: "Diciembre 2024",
     endDate: "Enero 2025",
     img: "/assets/img-experiencia/radical-logo-s.svg",
