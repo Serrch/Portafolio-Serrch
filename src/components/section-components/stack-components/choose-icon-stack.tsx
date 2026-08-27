@@ -10,6 +10,7 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
 const sizeMap = {
+  xs: "w-4 h-4",
   sm: "w-6 h-6 md:w-8 md:h-8",
   md: "w-10 h-10 md:w-12 md:h-12",
   lg: "w-12 h-12 md:w-16 md:h-16",

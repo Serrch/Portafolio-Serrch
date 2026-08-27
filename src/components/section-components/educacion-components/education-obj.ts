@@ -1,39 +1,33 @@
 import { EducationCardType } from "@/types/education-types/education-types";
 
-export const titulosObj: EducationCardType[] = [
+// Una sola lista: el tipo lo dice la etiqueta de la tarjeta, no el array.
+export const educacionObj: EducationCardType[] = [
   {
-    title: "Ingeniería en Software - UES",
-    status: true,
+    kind: "Título",
+    title: "Ingeniería en Software",
+    institution: "Universidad Estatal de Sonora",
     description:
-      "Título universitario de la carrera Ingeniería en Software. Durante el transcurso de la carrera aprendí los conceptos básicos de programación, " +
-      "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino.",
+      "Fundamentos de programación, desarrollo y arquitectura de software, con introducción a la electrónica con Arduino.",
     stDate: "Agosto 2021",
     endDate: "Mayo 2025",
-    img: "/assets/img-portafolio/ues-logo.png",
   },
-];
-
-export const cursosObj: EducationCardType[] = [
   {
-    title: "Curso Radical Software - SOLID",
-    status: true,
+    kind: "Certificación",
+    title: "JavaScript",
+    institution: "Scrimba",
     description:
-      "Curso que realicé durante mi estancia en Radical Software donde aprendí los principios SOLID para aplicarlos en los proyectos donde trabajé.",
-    stDate: "Diciembre 2024",
-    endDate: "Enero 2025",
-    img: "/assets/img-experiencia/radical-logo-s.svg",
-  },
-];
-
-export const certificacionesObj: EducationCardType[] = [
-  {
-    title: "Certificación Scrimba - JavaScript",
-    status: true,
-    description:
-      "Durante el curso aprendí en profundidad los conceptos fundamentales del lenguaje JavaScript para desarrollar páginas " +
-      "de manera profesional. \nCertificación obtenida al completar el curso.",
+      "Conceptos fundamentales del lenguaje JavaScript aplicados al desarrollo profesional de páginas web.",
     stDate: "Julio 2024",
     certificationLink:
       "https://www.coursera.org/account/accomplishments/verify/5RYVLCV97Y3M",
+  },
+  {
+    kind: "Curso",
+    title: "Principios SOLID",
+    institution: "Radical Software",
+    description:
+      "Aplicación de los principios SOLID en los proyectos desarrollados durante mi estancia en la empresa.",
+    stDate: "Diciembre 2024",
+    endDate: "Enero 2025",
   },
 ];

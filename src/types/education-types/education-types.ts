@@ -1,8 +1,8 @@
 export type EducationCardType = {
+  kind: "Título" | "Certificación" | "Curso";
   title: string;
-  status: boolean;
+  institution: string;
   description: string;
-  img?: string;
   stDate: string;
   endDate?: string;
   certificationLink?: string;

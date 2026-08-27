@@ -1,11 +1,11 @@
 import SectionHeading from "@/components/ui/section-heading";
 import { experienciaCards } from "../experiencia-components/experiencia-obj";
-import { titulosObj } from "../educacion-components/education-obj";
+import { educacionObj } from "../educacion-components/education-obj";
 
 // Se derivan del mismo dato que pintan las otras secciones para que no se
 // desincronicen al actualizar el CV.
 const desde = experienciaCards.at(-1)?.stDate.replace(/\s*-\s*$/, "");
-const formacion = titulosObj[0]?.title;
+const formacion = educacionObj.find((e) => e.kind === "Título")?.title;
 
 const RESUMEN = [
   { label: "Experiencia", value: `Desde ${desde?.toLowerCase()}` },

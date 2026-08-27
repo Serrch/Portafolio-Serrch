@@ -1,50 +1,16 @@
-"use client";
-import EducationCards from "./education-cards";
 import SectionHeading from "@/components/ui/section-heading";
-import { cursosObj, certificacionesObj, titulosObj } from "./education-obj";
+import EducationCards from "./education-cards";
+import { educacionObj } from "./education-obj";
 
 export default function Educacion() {
   return (
-    <section
-      id="educacion"
-      className="flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t scroll-mt-20"
-    >
-      <div className="flex flex-col gap-4 max-w-6xl w-full px-4 sm:px-6 lg:px-8">
+    <section id="educacion" className="scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading index="04" eyebrow="Formación" title="Educación" />
-        <div className="grid  gap-4 ms-5">
-          <div className="flex flex-col gap-4 pb-5 border-b items-center">
-            <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
-              Titulos
-            </h3>
-            {titulosObj.map((titulo, index) => (
-              <EducationCards
-                key={index}
-                educationInfo={titulo}
-              ></EducationCards>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4 pb-5 border-b items-center">
-            <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
-              Certificaciones
-            </h3>
-            {certificacionesObj.map((certificacion, index) => (
-              <EducationCards
-                key={index}
-                educationInfo={certificacion}
-              ></EducationCards>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4 pb-5 items-center">
-            <h3 className="scroll-m-20  pb-2 text-3xl  tracking-tight first:mt-0">
-              Cursos
-            </h3>
-            {cursosObj.map((curso, index) => (
-              <EducationCards
-                key={index}
-                educationInfo={curso}
-              ></EducationCards>
-            ))}
-          </div>
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {educacionObj.map((item) => (
+            <EducationCards key={item.title} educationInfo={item} />
+          ))}
         </div>
       </div>
     </section>
