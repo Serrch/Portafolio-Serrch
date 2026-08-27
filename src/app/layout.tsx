@@ -63,7 +63,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <main>
           <Header />
-          <div className="pt-30 pb-10 px-4 sm:px-8 md:px-20 lg:px-30">
+          <div className="pt-16 pb-16">
             {children}
             <Toaster position="top-center" className="bg-background" />
           </div>

@@ -38,34 +38,33 @@
 :root {
   --radius: 0.625rem;
 
-  --background: #0e0e13;
-  --foreground: #f2f2f5;
+  --background: #1b1b25;
+  --foreground: #f8f3f4;
 
   /* Superficie elevada: tarjetas, popovers, dialogos. */
-  --card: #16161d;
-  --card-foreground: #f2f2f5;
-  --popover: #16161d;
-  --popover-foreground: #f2f2f5;
+  --card: #22222e;
+  --card-foreground: #f8f3f4;
+  --popover: #22222e;
+  --popover-foreground: #f8f3f4;
 
   /* El boton primario es el verde de marca. */
   --primary: #10b981;
   --primary-foreground: #06120d;
 
-  --secondary: #1c1c25;
-  --secondary-foreground: #f2f2f5;
+  /* Superficie de hover / relleno de pastillas. */
+  --secondary: #252533;
+  --secondary-foreground: #f8f3f4;
+  --muted: #252533;
+  --muted-foreground: #a5a5b4; /* 7.0:1 sobre el fondo */
+  --accent: #252533;
+  --accent-foreground: #f8f3f4;
 
-  --muted: #1c1c25;
-  --muted-foreground: #9a9aa8; /* 6.9:1 sobre el fondo */
-
-  --accent: #1c1c25;
-  --accent-foreground: #f2f2f5;
-
-  --brand: #10b981; /* 7.6:1 sobre el fondo */
+  --brand: #10b981; /* 6.7:1 sobre el fondo */
 
   --destructive: #f87171;
 
-  --border: #26262f;
-  --input: #2e2e39;
+  --border: #30303f;
+  --input: #3a3a4b;
   --ring: #10b981;
 }
 

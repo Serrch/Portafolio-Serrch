@@ -4,7 +4,7 @@ export default function LogoSVG() {
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
       viewBox="0 0 800 800"
-      className="w-20 h-20  text-emerald-700 hover:text-emerald-600  dark:text-emerald-500 transition-colors dark:hover:text-emerald-400"
+      className="w-9 h-9 shrink-0 text-brand transition-opacity hover:opacity-80"
     >
       <path
         fill="currentColor"

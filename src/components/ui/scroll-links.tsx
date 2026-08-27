@@ -6,11 +6,8 @@ export function ScrollLink({
   href,
   children,
   className,
-}: {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
+  ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -20,9 +17,11 @@ export function ScrollLink({
       <a
         href={href}
         className={className}
+        {...props}
         onClick={(e) => {
           e.preventDefault();
           document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          props.onClick?.(e);
         }}
       >
         {children}
@@ -31,7 +30,7 @@ export function ScrollLink({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href} className={className} {...props}>
       {children}
     </Link>
   );

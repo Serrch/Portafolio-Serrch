@@ -1,7 +1,14 @@
+"use client";
 import { Button } from "../ui/button";
 import { SiLinkedin } from "react-icons/si";
 
-export default function LinkedinButton({ onClick }: { onClick?: () => void }) {
+export default function LinkedinButton({
+  size = "sm",
+  onClick,
+}: {
+  size?: "sm" | "default" | "lg";
+  onClick?: () => void;
+}) {
   function click() {
     onClick?.();
     window.open("https://linkedin.com/in/serrrch");
@@ -9,7 +16,7 @@ export default function LinkedinButton({ onClick }: { onClick?: () => void }) {
   return (
     <Button
       variant="outline"
-      size="sm"
+      size={size}
       className="cursor-pointer"
       onClick={click}
     >

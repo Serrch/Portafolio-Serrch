@@ -5,9 +5,9 @@ export default function Stack() {
   return (
     <section
       id="stack"
-      className="flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t scroll-mt-28"
+      className="flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t scroll-mt-20"
     >
-      <div className="flex flex-col gap-4 max-w-6xl w-full px-4">
+      <div className="flex flex-col gap-4 max-w-6xl w-full px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center md:text-start md:ms-4 ">
           Tech Stack
         </h2>

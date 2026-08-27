@@ -12,25 +12,23 @@ export default function Navbar() {
   );
 
   return (
-    <div className="hidden md:flex justify-start md:justify-center items-center">
-      <nav>
-        <ul className="flex gap-4">
-          {sections.map((section) => (
-            <li key={section.id}>
-              <ScrollLink
-                href={section.link}
-                className={`transition duration-300 ease-in-out hover:text-emerald-600 hover:dark:text-emerald-400 hover:scale-105 hover:underline text-lg ${
-                  activeSection === section.id
-                    ? "text-emerald-600 dark:text-emerald-400 font-bold underline"
-                    : ""
-                }`}
-              >
-                {section.title}
-              </ScrollLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav className="hidden md:block">
+      <ul className="flex items-center gap-6">
+        {sections.map((section) => (
+          <li key={section.id}>
+            <ScrollLink
+              href={section.link}
+              className={`text-sm transition-colors ${
+                activeSection === section.id
+                  ? "text-brand"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {section.title}
+            </ScrollLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }

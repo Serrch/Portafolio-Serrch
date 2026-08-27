@@ -1,9 +1,10 @@
+"use client";
 import { Button } from "../ui/button";
 import { SiGithub } from "react-icons/si";
 
 export default function GithubButton({
   link,
-  size,
+  size = "sm",
   onClick,
 }: {
   link?: string;
@@ -17,7 +18,7 @@ export default function GithubButton({
   return (
     <Button
       variant="outline"
-      size={size ? size : "sm"}
+      size={size}
       className="cursor-pointer"
       onClick={click}
     >
