@@ -4,8 +4,8 @@ import GridProyectos from "./grid-proyectos";
 export default function Proyectos() {
   return (
     <section
-      id="3"
-      className="min-h-[calc(100vh_-_7rem)] flex flex-col items-center justify-start pt-8 md:pt-12 md:pb-10 border-t snap-start scroll-mt-28"
+      id="proyectos"
+      className="flex flex-col items-center justify-start pt-8 md:pt-12 md:pb-10 border-t scroll-mt-28"
     >
       <div className="grid grid-cols-1 gap-4 max-w-6xl w-full px-4">
         <div className="flex flex-col gap-4">

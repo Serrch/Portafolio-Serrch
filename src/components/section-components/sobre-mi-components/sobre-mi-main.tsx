@@ -9,8 +9,8 @@ import MiStack from "./mi-stack";
 export default function SobreMi() {
   return (
     <section
-      id="1"
-      className="md:min-h-[calc(100vh_-_7rem)] flex items-center justify-center snap-start scroll-mt-28"
+      id="sobre-mi"
+      className="flex items-center justify-center scroll-mt-28"
     >
       <div className="flex flex-col max-w-6xl">
         <h1 className="sr-only">Bienvenido a mi portafolio</h1>

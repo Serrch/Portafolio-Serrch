@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/layout-components/header-components/header";
 import "./globals.css";
-import { outfit } from "./fonts";
+import { outfit, jetbrainsMono } from "./fonts";
 import { Toaster } from "sonner";
 import Script from "next/script";
+import { SITE_URL } from "@/lib/site";
 
-// Cambia esto por tu dominio real cuando lo tengas (afecta OG, canonical y sitemap).
-export const SITE_URL = "https://portafolio-serrch.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -57,23 +55,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html
+      lang="es"
+      className={`dark ${outfit.variable} ${jetbrainsMono.variable}`}
+    >
       <head />
-      <body className={`${outfit.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="text-foreground">
-            <Header />
-            <div className="pt-30 pb-10 px-4 sm:px-8 md:px-20 lg:px-30">
-              {children}
-              <Toaster position="top-center" className="bg-background" />
-            </div>
-          </main>
-        </ThemeProvider>
+      <body className="font-sans antialiased">
+        <main>
+          <Header />
+          <div className="pt-30 pb-10 px-4 sm:px-8 md:px-20 lg:px-30">
+            {children}
+            <Toaster position="top-center" className="bg-background" />
+          </div>
+        </main>
         <Script
           src="/umami/script.js"
           data-website-id="b76579dc-b129-491c-a0dd-5e1b6745057f"

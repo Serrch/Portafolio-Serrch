@@ -1,6 +1,6 @@
 "use client";
 import { SiMaildotru } from "react-icons/si";
-import { FiDownload, FiPhone, FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiDownload, FiGithub, FiLinkedin } from "react-icons/fi";
 import DialogContacto from "./dialog-contacto";
 
 export default function ContactGrid() {
@@ -15,12 +15,12 @@ export default function ContactGrid() {
   return (
     <div
       className="
-            grid grid-cols-2 md:grid-cols-5
+            grid grid-cols-2 md:grid-cols-4
             divide-x md:divide-y-0 divide-y md:divide-x
             border rounded-xl overflow-hidden shadow-md
           "
     >
-      <DialogContacto IsCorreo={true}>
+      <DialogContacto>
         <div
           className={groupClass}
           onClick={() => window.umami?.track("contacto-correo")}
@@ -28,17 +28,6 @@ export default function ContactGrid() {
           <SiMaildotru className={iconClass} />
           <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
             Correo
-          </h4>
-        </div>
-      </DialogContacto>
-      <DialogContacto IsCorreo={false}>
-        <div
-          className={groupClass}
-          onClick={() => window.umami?.track("contacto-telefono")}
-        >
-          <FiPhone className={iconClass} />
-          <h4 className="scroll-m-20 md:text-xl font-semibold tracking-tight">
-            Teléfono
           </h4>
         </div>
       </DialogContacto>
@@ -64,7 +53,7 @@ export default function ContactGrid() {
         </h4>
       </div>
       <div
-        className={groupClass + " col-span-2 md:col-span-1"}
+        className={groupClass}
         onClick={() =>
           openPage("https://linkedin.com/in/serrrch", "contacto-linkedin")
         }

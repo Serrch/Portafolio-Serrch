@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function useActiveSection(sectionIds: number[]) {
-  const [activeSection, setActiveSection] = useState<number | null>(null);
+export default function useActiveSection(sectionIds: string[]) {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   useEffect(() => {
     if (sectionIds.length === 0) return;
@@ -10,7 +10,7 @@ export default function useActiveSection(sectionIds: number[]) {
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
-      const el = document.getElementById(String(id));
+      const el = document.getElementById(id);
       if (!el) return;
 
       const observer = new IntersectionObserver(

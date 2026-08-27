@@ -5,8 +5,8 @@ import { cursosObj, certificacionesObj, titulosObj } from "./education-obj";
 export default function Educacion() {
   return (
     <section
-      id="4"
-      className="min-h-[calc(100vh_-_7rem)] flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t snap-start scroll-mt-28"
+      id="educacion"
+      className="flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t scroll-mt-28"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full">
         <h2 className="text-4xl font-bold text-start">Educación </h2>

@@ -1,5 +1,5 @@
 "use client";
-import { sections } from "@/routes/routes";
+import { sections, sectionIds, noSectionIds } from "@/routes/routes";
 import { ScrollLink } from "@/components/ui/scroll-links";
 import useActiveSection from "@/components/intersection-observer";
 import { usePathname } from "next/navigation";
@@ -7,8 +7,9 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const sectionIds = pathname === "/" ? sections.map((s) => s.id) : [];
-  const activeSection = useActiveSection(sectionIds);
+  const activeSection = useActiveSection(
+    pathname === "/" ? sectionIds : noSectionIds
+  );
 
   return (
     <div className="hidden md:flex justify-start md:justify-center items-center">

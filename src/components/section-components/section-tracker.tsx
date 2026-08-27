@@ -2,14 +2,13 @@
 import { useEffect } from "react";
 
 const SECCIONES: Record<string, string> = {
-  "1": "Sobre Mi",
-  "2": "Experiencia",
-  "3": "Proyectos",
-  "4": "Educacion",
-  "5": "Stack",
-  "6": "Contacto",
+  "sobre-mi": "Sobre Mi",
+  experiencia: "Experiencia",
+  proyectos: "Proyectos",
+  educacion: "Educacion",
+  stack: "Stack",
+  contacto: "Contacto",
 };
-
 export default function SectionTracker() {
   useEffect(() => {
     const vistas = new Set<string>();
@@ -32,7 +31,7 @@ export default function SectionTracker() {
         }
       },
       // Banda central del viewport: funciona igual si la sección es más
-      // alta que la pantalla (en móvil no son min-h-screen).
+      // alta que la pantalla (ya ninguna mide una pantalla).
       { rootMargin: "-40% 0px -40% 0px" }
     );
 
