@@ -5,10 +5,12 @@ import { SiGithub } from "react-icons/si";
 export default function GithubButton({
   link,
   size = "sm",
+  variant = "outline",
   onClick,
 }: {
   link?: string;
   size?: "sm" | "default" | "lg";
+  variant?: "outline" | "link";
   onClick?: () => void;
 }) {
   function click() {
@@ -17,9 +19,9 @@ export default function GithubButton({
   }
   return (
     <Button
-      variant="outline"
+      variant={variant}
       size={size}
-      className="cursor-pointer"
+      className={`cursor-pointer ${variant === "link" ? "h-auto px-0" : ""}`}
       onClick={click}
     >
       <SiGithub /> {link ? "Código" : "Github"}

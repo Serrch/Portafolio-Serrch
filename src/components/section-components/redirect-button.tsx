@@ -1,7 +1,7 @@
+"use client";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { GoProjectSymlink } from "react-icons/go";
-import { FiExternalLink } from "react-icons/fi";
+import { Button } from "@/components/ui/button";
+import { FiExternalLink, FiArrowRight } from "react-icons/fi";
 
 export default function RedirectButton({
   link,
@@ -13,33 +13,36 @@ export default function RedirectButton({
   onClick?: () => void;
 }) {
   // Los proyectos con sitio publicado apuntan fuera del portafolio: abrirlos en
-  // la misma pestaña deja al visitante sin camino de vuelta.
+  // la misma pestana deja al visitante sin camino de vuelta.
   const esExterno = link.startsWith("http");
 
-  const boton = (
-    <Button variant="outline" size="sm" className="cursor-pointer">
-      {esExterno ? <FiExternalLink /> : <GoProjectSymlink />}
-      {texto ?? (esExterno ? "Visitar sitio" : "Ver más")}
-    </Button>
+  const contenido = (
+    <>
+      {texto ?? (esExterno ? "Visitar sitio" : "Ver proyecto")}
+      {esExterno ? <FiExternalLink /> : <FiArrowRight />}
+    </>
   );
 
   if (esExterno) {
     return (
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex"
-        onClick={onClick}
-      >
-        {boton}
-      </a>
+      <Button asChild variant="link" size="sm" className="h-auto px-0">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClick}
+        >
+          {contenido}
+        </a>
+      </Button>
     );
   }
 
   return (
-    <Link href={link} className="flex" onClick={onClick}>
-      {boton}
-    </Link>
+    <Button asChild variant="link" size="sm" className="h-auto px-0">
+      <Link href={link} onClick={onClick}>
+        {contenido}
+      </Link>
+    </Button>
   );
 }

@@ -22,7 +22,7 @@ export default function Proyectos() {
           Proyectos personales
         </h3>
         <div className="mt-6">
-          <GridProyectos arrProyectos={proyectosObj} />
+          <GridProyectos arrProyectos={proyectosObj} horizontal />
         </div>
       </div>
     </section>
