@@ -1,5 +1,6 @@
 import { languageObj, frameworkObj, databaseObj, otrosObj } from "./tech-obj";
 import TechCards from "./tech-cards";
+import SectionHeading from "@/components/ui/section-heading";
 
 export default function Stack() {
   return (
@@ -8,9 +9,7 @@ export default function Stack() {
       className="flex flex-col items-center pt-8 md:pt-12 md:pb-10 border-t scroll-mt-20"
     >
       <div className="flex flex-col gap-4 max-w-6xl w-full px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center md:text-start md:ms-4 ">
-          Tech Stack
-        </h2>
+        <SectionHeading index="05" eyebrow="Herramientas" title="Tech stack" />
         <div className="grid gap-4 ms-5">
           <div className="flex flex-col gap-4 pb-5 border-b">
             <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">

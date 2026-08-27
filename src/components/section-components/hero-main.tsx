@@ -2,6 +2,7 @@ import Image from "next/image";
 import GithubButton from "./github-button";
 import LinkedinButton from "./linkedin-button";
 import DownloadCVButton from "./download-cv-button";
+import Pill from "@/components/ui/pill";
 
 const STACK_PRINCIPAL = [
   "TypeScript",
@@ -45,12 +46,7 @@ export default function Hero() {
             </p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {STACK_PRINCIPAL.map((tech) => (
-                <li
-                  key={tech}
-                  className="rounded-md border border-border bg-secondary px-3 py-1.5 font-mono text-xs text-muted-foreground"
-                >
-                  {tech}
-                </li>
+                <Pill key={tech}>{tech}</Pill>
               ))}
             </ul>
           </div>
