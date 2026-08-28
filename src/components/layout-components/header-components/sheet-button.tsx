@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { AlignJustify } from "lucide-react";
 import { sections, sectionIds, noSectionIds } from "@/routes/routes";
-import useActiveSection from "@/components/intersection-observer";
+import useActiveSection from "@/lib/use-active-section";
 import { usePathname } from "next/navigation";
 import { ScrollLink } from "@/components/ui/scroll-links";
 

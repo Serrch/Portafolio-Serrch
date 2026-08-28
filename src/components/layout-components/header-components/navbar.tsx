@@ -1,7 +1,7 @@
 "use client";
 import { sections, sectionIds, noSectionIds } from "@/routes/routes";
 import { ScrollLink } from "@/components/ui/scroll-links";
-import useActiveSection from "@/components/intersection-observer";
+import useActiveSection from "@/lib/use-active-section";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
