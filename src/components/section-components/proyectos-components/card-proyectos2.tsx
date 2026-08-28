@@ -4,7 +4,6 @@ import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
 import GithubButton from "../github-button";
 import RedirectButton from "../redirect-button";
 import Pill from "@/components/ui/pill";
-import { techLabel } from "@/lib/tech-label";
 
 export default function CardProyectos2({
   proyectoObj,
@@ -59,7 +58,7 @@ export default function CardProyectos2({
 
       <ul className="mt-4 flex flex-wrap gap-2">
         {proyectoObj.techStack.map((tech) => (
-          <Pill key={tech}>{techLabel(tech)}</Pill>
+          <Pill key={tech} tech={tech} />
         ))}
       </ul>
 

@@ -1,4 +1,5 @@
 import { TechStackTypes } from "@/types/tech-stack-types/tech-stack-types";
+import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
 export const languageObj: TechStackTypes[] = [
   {
@@ -147,3 +148,12 @@ export const otrosObj: TechStackTypes[] = [
     type: "otro",
   },
 ];
+
+// Índice por nombre: lo usa la pastilla para pintar el icono con su color real
+// y para abrir el modal cuando es interactiva.
+export const TECHS: Partial<Record<TechOptions, TechStackTypes>> =
+  Object.fromEntries(
+    [...languageObj, ...frameworkObj, ...databaseObj, ...otrosObj].map(
+      (tech) => [tech.name, tech],
+    ),
+  );

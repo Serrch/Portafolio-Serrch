@@ -3,11 +3,12 @@ import GithubButton from "./github-button";
 import LinkedinButton from "./linkedin-button";
 import DownloadCVButton from "./download-cv-button";
 import Pill from "@/components/ui/pill";
+import { TechOptions } from "@/types/sobre-mi-types/card-types";
 
-const STACK_PRINCIPAL = [
-  "TypeScript",
+const STACK_PRINCIPAL: TechOptions[] = [
+  "Typescript",
   "React",
-  "Next.js",
+  "NextJS",
   ".NET",
   "Python",
   "FastAPI",
@@ -46,7 +47,7 @@ export default function Hero() {
             </p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {STACK_PRINCIPAL.map((tech) => (
-                <Pill key={tech}>{tech}</Pill>
+                <Pill key={tech} tech={tech} />
               ))}
             </ul>
           </div>

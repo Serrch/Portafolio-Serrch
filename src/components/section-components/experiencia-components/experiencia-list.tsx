@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Pill from "@/components/ui/pill";
-import { techLabel } from "@/lib/tech-label";
 import { CardTypes } from "@/types/sobre-mi-types/card-types";
 
 export default function ExperienciaList({
@@ -28,12 +27,12 @@ export default function ExperienciaList({
                 {exp.stDate}
                 {exp.endDate}
               </p>
-              <div className="relative mt-4 h-10 w-32">
+              <div className="relative mt-4 h-16 w-full">
                 <Image
                   src={exp.img}
                   alt={exp.title}
                   fill
-                  sizes="128px"
+                  sizes="208px"
                   className="object-contain object-left"
                 />
               </div>
@@ -49,7 +48,7 @@ export default function ExperienciaList({
               </p>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {exp.techStack.map((tech) => (
-                  <Pill key={tech}>{techLabel(tech)}</Pill>
+                  <Pill key={tech} tech={tech} />
                 ))}
               </ul>
             </div>

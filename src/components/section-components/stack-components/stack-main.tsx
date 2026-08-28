@@ -1,6 +1,6 @@
 import SectionHeading from "@/components/ui/section-heading";
 import { languageObj, frameworkObj, databaseObj, otrosObj } from "./tech-obj";
-import TechCards from "./tech-cards";
+import Pill from "@/components/ui/pill";
 
 const CATEGORIAS = [
   { label: "Lenguajes", techs: languageObj },
@@ -24,9 +24,7 @@ export default function Stack() {
               <h3 className="font-semibold">{categoria.label}</h3>
               <ul className="flex flex-wrap gap-2">
                 {categoria.techs.map((tech) => (
-                  <li key={tech.name}>
-                    <TechCards techObj={tech} />
-                  </li>
+                  <Pill key={tech.name} tech={tech.name} interactive />
                 ))}
               </ul>
             </div>
