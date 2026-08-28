@@ -2,6 +2,15 @@ import Image from "next/image";
 import Pill from "@/components/ui/pill";
 import { CardTypes } from "@/types/sobre-mi-types/card-types";
 
+// Igualar el alto no sirve: un wordmark horizontal ocupa mucha mas superficie
+// que un logo cuadrado. Se iguala el area, que es lo que el ojo compara.
+const AREA = 6400;
+
+const medidas = (ratio: number) => {
+  const height = Math.round(Math.sqrt(AREA / ratio));
+  return { width: Math.round(height * ratio), height };
+};
+
 export default function ExperienciaList({
   experiencias,
 }: {
@@ -27,12 +36,11 @@ export default function ExperienciaList({
                 {exp.stDate}
                 {exp.endDate}
               </p>
-              <div className="relative mt-4 h-16 w-full max-w-52">
+              <div className="mt-4 flex h-20 w-full max-w-52 items-center justify-center">
                 <Image
                   src={exp.img}
                   alt={exp.title}
-                  fill
-                  sizes="208px"
+                  {...medidas(exp.logoRatio)}
                   className="object-contain"
                 />
               </div>

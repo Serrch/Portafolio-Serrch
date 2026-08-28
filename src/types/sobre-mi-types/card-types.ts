@@ -7,6 +7,8 @@ export type CardTypes = {
   cargo: string;
   stDate: string;
   endDate: string;
+  /** Proporción ancho/alto del logo, para normalizar su área en pantalla. */
+  logoRatio: number;
   techStack: TechOptions[];
 };
 

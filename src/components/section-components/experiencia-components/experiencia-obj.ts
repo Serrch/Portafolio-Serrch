@@ -4,6 +4,7 @@ export const experienciaCards: CardType = [
   {
     title: "Velarizon",
     img: "/assets/img-experiencia/velarizon-logo.png",
+    logoRatio: 526 / 437,
     description:
       "Desarrollo de plataformas web y aplicaciones multiplataforma con TypeScript y React, con despliegue en entornos cloud (Vercel, Supabase). Diseño e implementación de APIs REST con Python (FastAPI), gestión de bases de datos PostgreSQL y colaboración en equipo con Git bajo metodología ágil.",
     cargo: "Desarrollador Fullstack",
@@ -14,6 +15,7 @@ export const experienciaCards: CardType = [
   {
     title: "Construplan",
     img: "/assets/img-experiencia/construplan-logo.svg",
+    logoRatio: 345.18 / 193.88,
     description:
       "Desarrollo y mantenimiento del ERP principal de la empresa. Construcción de nuevos módulos y vistas, integración de APIs REST, corrección de bugs, atención a incidentes y soporte a usuarios internos. Documentación de cambios técnicos y procedimientos operativos.",
     cargo: "Desarrollador Fullstack",
@@ -24,6 +26,7 @@ export const experienciaCards: CardType = [
   {
     title: "Radical Software",
     img: "/assets/img-experiencia/logo-leyenda-radical.svg",
+    logoRatio: 320 / 100,
     description:
       "Desarrollo frontend y backend para sistemas financieros (SOFOMES). Refactorización de API REST con ASP.NET aplicando Clean Code y SOLID, migración de interfaz de Blazor a Next.js con React, e implementación de pruebas unitarias para aseguramiento de calidad.",
     cargo: "Desarrollador Fullstack",
