@@ -27,13 +27,13 @@ export default function ExperienciaList({
                 {exp.stDate}
                 {exp.endDate}
               </p>
-              <div className="relative mt-4 h-16 w-full">
+              <div className="relative mt-4 h-16 w-full max-w-52">
                 <Image
                   src={exp.img}
                   alt={exp.title}
                   fill
                   sizes="208px"
-                  className="object-contain object-left"
+                  className="object-contain"
                 />
               </div>
             </div>
