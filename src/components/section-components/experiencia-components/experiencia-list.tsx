@@ -36,7 +36,7 @@ export default function ExperienciaList({
                 {exp.stDate}
                 {exp.endDate}
               </p>
-              <div className="mt-4 flex h-20 w-full max-w-52 items-center justify-center">
+              <div className="mt-4 flex h-20 w-full max-w-52 items-center">
                 <Image
                   src={exp.img}
                   alt={exp.title}
