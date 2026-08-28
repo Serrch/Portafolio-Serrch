@@ -4,7 +4,8 @@ import { CardTypes } from "@/types/sobre-mi-types/card-types";
 
 // Igualar el alto no sirve: un wordmark horizontal ocupa mucha mas superficie
 // que un logo cuadrado. Se iguala el area, que es lo que el ojo compara.
-const AREA = 6400;
+// El techo lo pone la columna de 208px: con esta area Radical llega a 195px.
+const AREA = 12000;
 
 const medidas = (ratio: number) => {
   const height = Math.round(Math.sqrt(AREA / ratio));
@@ -36,7 +37,7 @@ export default function ExperienciaList({
                 {exp.stDate}
                 {exp.endDate}
               </p>
-              <div className="mt-4 flex h-20 w-full max-w-52 items-center">
+              <div className="mt-4 flex h-28 w-full max-w-52 items-center">
                 <Image
                   src={exp.img}
                   alt={exp.title}
