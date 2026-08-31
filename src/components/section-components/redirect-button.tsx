@@ -1,7 +1,7 @@
+"use client";
 import Link from "next/link";
-import { Button } from "../ui/button";
-
-import { GoProjectSymlink } from "react-icons/go";
+import { Button } from "@/components/ui/button";
+import { FiExternalLink, FiArrowRight } from "react-icons/fi";
 
 export default function RedirectButton({
   link,
@@ -9,14 +9,40 @@ export default function RedirectButton({
   onClick,
 }: {
   link: string;
-  texto: string;
+  texto?: string;
   onClick?: () => void;
 }) {
-  return (
-    <Link href={link} className="flex" onClick={onClick}>
-      <Button variant="outline" size="sm" className="cursor-pointer">
-        <GoProjectSymlink /> {texto}
+  // Los proyectos con sitio publicado apuntan fuera del portafolio: abrirlos en
+  // la misma pestana deja al visitante sin camino de vuelta.
+  const esExterno = link.startsWith("http");
+
+  const contenido = (
+    <>
+      {texto ?? (esExterno ? "Visitar sitio" : "Ver proyecto")}
+      {esExterno ? <FiExternalLink /> : <FiArrowRight />}
+    </>
+  );
+
+  if (esExterno) {
+    return (
+      <Button asChild variant="link" size="sm" className="h-auto px-0">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClick}
+        >
+          {contenido}
+        </a>
       </Button>
-    </Link>
+    );
+  }
+
+  return (
+    <Button asChild variant="link" size="sm" className="h-auto px-0">
+      <Link href={link} onClick={onClick}>
+        {contenido}
+      </Link>
+    </Button>
   );
 }

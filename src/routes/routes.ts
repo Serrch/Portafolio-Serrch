@@ -1,14 +1,15 @@
 import { NavbarLinksType } from "@/types/header-types";
 
-export const routes: NavbarLinksType = [
-  { id: 1, title: "Proyectos", link: "#" },
+export const sections: NavbarLinksType = [
+  { id: "sobre-mi", title: "Sobre mí", link: "/#sobre-mi" },
+  { id: "experiencia", title: "Experiencia", link: "/#experiencia" },
+  { id: "proyectos", title: "Proyectos", link: "/#proyectos" },
+  { id: "educacion", title: "Educación", link: "/#educacion" },
+  { id: "stack", title: "Stack", link: "/#stack" },
+  { id: "contacto", title: "Contacto", link: "/#contacto" },
 ];
 
-export const sections: NavbarLinksType = [
-  { id: 1, title: "Sobre Mi", link: "/#1" },
-  { id: 2, title: "Experiencia", link: "/#2" },
-  { id: 3, title: "Proyectos", link: "/#3" },
-  { id: 4, title: "Educacion", link: "/#4" },
-  { id: 5, title: "Stack", link: "/#5" },
-  { id: 6, title: "Contacto", link: "/#6" },
-];
+// Constantes de módulo: pasarlas al observer como literales nuevas en cada
+// render reiniciaba su efecto en cada render.
+export const sectionIds = sections.map((s) => s.id);
+export const noSectionIds: string[] = [];

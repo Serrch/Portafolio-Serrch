@@ -1,70 +1,38 @@
+import SectionHeading from "@/components/ui/section-heading";
 import { languageObj, frameworkObj, databaseObj, otrosObj } from "./tech-obj";
-import TechCards from "./tech-cards";
+import Pill from "@/components/ui/pill";
+
+const CATEGORIAS = [
+  { label: "Lenguajes", techs: languageObj },
+  { label: "Frameworks y librerías", techs: frameworkObj },
+  { label: "Bases de datos", techs: databaseObj },
+  { label: "Herramientas y entorno", techs: otrosObj },
+];
 
 export default function Stack() {
   return (
-    <section
-      id="5"
-      className="min-h-screen 
-    snap-start 
-    flex flex-col items-center 
-    pt-8 md:pt-30 md:pb-10 border-t
-    md:max-h-screen md:overflow-y-auto no-scrollbar"
-    >
-      <div className="flex flex-col gap-4 max-w-6xl w-full px-4">
-        <h2 className="text-4xl font-bold text-center md:text-start md:ms-4 ">
-          Tech Stack
-        </h2>
-        <div className="grid gap-4 ms-5">
-          <div className="flex flex-col gap-4 pb-5 border-b">
-            <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
-              Lenguajes
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {languageObj.map((language, index) => (
-                <div key={index}>
-                  <TechCards techObj={language}></TechCards>
-                </div>
-              ))}
+    <section id="stack" className="scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading index="05" eyebrow="Herramientas" title="Tech stack" />
+
+        <div className="mt-4 divide-y divide-border">
+          {CATEGORIAS.map((categoria) => (
+            <div
+              key={categoria.label}
+              className="grid gap-3 py-6 md:grid-cols-[14rem_minmax(0,1fr)] md:items-start md:gap-8"
+            >
+              <h3 className="font-semibold">{categoria.label}</h3>
+              <ul className="flex flex-wrap gap-2">
+                {categoria.techs.map((tech) => (
+                  <Pill key={tech.name} tech={tech.name} interactive />
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="flex flex-col gap-2 pb-5 border-b">
-            <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
-              Frameworks y librerías
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {frameworkObj.map((framework, index) => (
-                <div key={index}>
-                  <TechCards techObj={framework}></TechCards>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 pb-5 border-b">
-            <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
-              Base de Datos
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {databaseObj.map((database, index) => (
-                <div key={index}>
-                  <TechCards techObj={database}></TechCards>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="scroll-m-20 pb-2 text-3xl tracking-tight first:mt-0">
-              Otros
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {otrosObj.map((otro, index) => (
-                <div key={index}>
-                  <TechCards techObj={otro}></TechCards>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
+        <p className="mt-2 text-xs text-muted-foreground">
+          Toca cualquier tecnología para ver cómo la uso.
+        </p>
       </div>
     </section>
   );

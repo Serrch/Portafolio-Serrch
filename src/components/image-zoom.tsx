@@ -3,17 +3,31 @@ import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
 
-export default function ImagenZoom({ src, alt }: { src: string; alt: string }) {
+export default function ImagenZoom({
+  src,
+  alt,
+  ancho,
+  alto,
+}: {
+  src: string;
+  alt: string;
+  ancho: number;
+  alto: number;
+}) {
   const [open, setOpen] = useState(false);
+  // El optimizador de Next se queda con el primer fotograma de un GIF.
+  const gif = src.endsWith(".gif");
 
   return (
     <>
       <Image
         src={src}
         alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 256px"
-        className="object-cover cursor-pointer rounded-lg hover:opacity-80 transition"
+        width={ancho}
+        height={alto}
+        sizes="(max-width: 768px) 100vw, 560px"
+        unoptimized={gif}
+        className="h-full w-full object-cover cursor-pointer transition hover:opacity-80"
         onClick={() => setOpen(true)}
       />
 
@@ -37,6 +51,7 @@ export default function ImagenZoom({ src, alt }: { src: string; alt: string }) {
               src={src}
               alt={alt}
               fill
+              unoptimized={gif}
               className="object-contain rounded-lg"
               priority={open}
             />

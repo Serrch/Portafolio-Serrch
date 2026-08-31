@@ -1,24 +1,28 @@
+"use client";
 import { Button } from "../ui/button";
 import { SiGithub } from "react-icons/si";
+import { GITHUB_URL } from "@/lib/site";
 
 export default function GithubButton({
   link,
-  size,
+  size = "sm",
+  variant = "outline",
   onClick,
 }: {
   link?: string;
   size?: "sm" | "default" | "lg";
+  variant?: "outline" | "link";
   onClick?: () => void;
 }) {
   function click() {
     onClick?.();
-    return link ? window.open(link) : window.open("https://github.com/Serrch");
+    return link ? window.open(link) : window.open(GITHUB_URL);
   }
   return (
     <Button
-      variant="outline"
-      size={size ? size : "sm"}
-      className="cursor-pointer"
+      variant={variant}
+      size={size}
+      className={`cursor-pointer ${variant === "link" ? "h-auto px-0" : ""}`}
       onClick={click}
     >
       <SiGithub /> {link ? "Código" : "Github"}

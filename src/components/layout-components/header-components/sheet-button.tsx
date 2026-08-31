@@ -8,16 +8,16 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { AlignJustify } from "lucide-react";
-import { sections } from "@/routes/routes";
-import useActiveSection from "@/components/intersection-observer";
+import { sections, sectionIds, noSectionIds } from "@/routes/routes";
+import useActiveSection from "@/lib/use-active-section";
 import { usePathname } from "next/navigation";
 import { ScrollLink } from "@/components/ui/scroll-links";
 
 export default function SheetButton() {
   const pathname = usePathname();
-  const sectionIds = pathname === "/" ? sections.map((s) => s.id) : [];
-
-  const activeSection = useActiveSection(sectionIds);
+  const activeSection = useActiveSection(
+    pathname === "/" ? sectionIds : noSectionIds
+  );
 
   return (
     <Sheet>

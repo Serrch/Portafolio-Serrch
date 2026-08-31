@@ -1,18 +1,18 @@
-"use client";
+import SectionHeading from "@/components/ui/section-heading";
 import { experienciaCards } from "./experiencia-obj";
-import TimelineContainer from "./experiencia-timeline/timeline-container";
+import ExperienciaList from "./experiencia-list";
+
 export default function Experiencia() {
   return (
-    <section
-      id="2"
-      className="min-h-screen snap-start flex flex-col items-center justify-start pt-8 md:pt-30 md:pb-10 border-t
-  md:max-h-screen md:overflow-y-auto no-scrollbar"
-    >
-      <div className="flex flex-col gap-4 max-w-6xl w-full px-4">
-        <h2 className="text-4xl font-bold text-start mb-2">Experiencia</h2>
-        <div className="">
-          <TimelineContainer experienciaInfo={experienciaCards} />
-        </div>
+    <section id="experiencia" className="scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          index="02"
+          eyebrow="Trayectoria"
+          title="Experiencia"
+          meta={`${experienciaCards.length} puestos`}
+        />
+        <ExperienciaList experiencias={experienciaCards} />
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 type NavbarLinkType = {
-  id: number;
+  id: string;
   title: string;
   link: string;
 };

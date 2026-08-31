@@ -1,71 +1,33 @@
 import { EducationCardType } from "@/types/education-types/education-types";
 
-export const educationObj: EducationCardType[] = [
+// Una sola lista: el tipo lo dice la etiqueta de la tarjeta, no el array.
+export const educacionObj: EducationCardType[] = [
   {
-    title: "Ingeniería en Software - UES",
-    status: false,
+    kind: "Título",
+    title: "Ingeniería en Software",
+    institution: "Universidad Estatal de Sonora",
     description:
-      "Título universitario de la carrera Ingeniería en Software. Durante el transcurso de la carrera aprendí los conceptos básicos de programación, " +
-      "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino. \nTítulo en trámite.",
+      "Fundamentos de programación, desarrollo y arquitectura de software, con introducción a la electrónica con Arduino.",
     stDate: "Agosto 2021",
     endDate: "Mayo 2025",
-    img: "https://ues.mx/Docs/conocenos/identidad_UES/LogoUesVinoFondoTransparente.png?0.13975010473019678",
   },
   {
-    title: "Certificación Scrimba - JavaScript",
-    status: true,
+    kind: "Certificación",
+    title: "JavaScript",
+    institution: "Scrimba",
     description:
-      "Durante el curso aprendí en profundidad los conceptos fundamentales del lenguaje JavaScript para desarrollar páginas " +
-      "de manera profesional. \nCertificación obtenida al completar el curso.",
+      "Conceptos fundamentales del lenguaje JavaScript aplicados al desarrollo profesional de páginas web.",
     stDate: "Julio 2024",
     certificationLink:
       "https://www.coursera.org/account/accomplishments/verify/5RYVLCV97Y3M",
   },
   {
-    title: "Curso Radical Software - SOLID",
-    status: true,
+    kind: "Curso",
+    title: "Principios SOLID",
+    institution: "Radical Software",
     description:
-      "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
+      "Aplicación de los principios SOLID en los proyectos desarrollados durante mi estancia en la empresa.",
     stDate: "Diciembre 2024",
     endDate: "Enero 2025",
-    img: "/assets/img-experiencia/radical-logo-s.svg",
-  },
-];
-
-export const titulosObj: EducationCardType[] = [
-  {
-    title: "Ingeniería en Software - UES",
-    status: true,
-    description:
-      "Título universitario de la carrera Ingeniería en Software. Durante el transcurso de la carrera aprendí los conceptos básicos de programación, " +
-      "desarrollo y arquitectura de software, además de un poco de electrónica con Arduino.",
-    stDate: "Agosto 2021",
-    endDate: "Mayo 2025",
-    img: "/assets/img-portafolio/ues-logo.png",
-  },
-];
-
-export const cursosObj: EducationCardType[] = [
-  {
-    title: "Curso Radical Software - SOLID",
-    status: true,
-    description:
-      "Curso que realice durante mi estancia en Radical Software donde aprendi los principios SOLID para aplicarlos en los proyectos donde trabaje.",
-    stDate: "Diciembre 2024",
-    endDate: "Enero 2025",
-    img: "/assets/img-experiencia/radical-logo-s.svg",
-  },
-];
-
-export const certificacionesObj: EducationCardType[] = [
-  {
-    title: "Certificación Scrimba - JavaScript",
-    status: true,
-    description:
-      "Durante el curso aprendí en profundidad los conceptos fundamentales del lenguaje JavaScript para desarrollar páginas " +
-      "de manera profesional. \nCertificación obtenida al completar el curso.",
-    stDate: "Julio 2024",
-    certificationLink:
-      "https://www.coursera.org/account/accomplishments/verify/5RYVLCV97Y3M",
   },
 ];

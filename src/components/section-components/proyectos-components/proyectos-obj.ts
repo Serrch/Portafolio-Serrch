@@ -5,78 +5,67 @@ export const proyectosObj: CardProyectoTypes[] = [
     title: "Street Fighter API",
     status: "Terminado",
     description:
-      "Proyecto de backend desarrollado con Express, enfocado en administrar informacion sobre los personajes de la saga Street Fighter, " +
-      "asi como sus diferentes versiones a lo largo de cada edicion.",
+      "API REST para consultar los personajes de Street Fighter y sus variantes en cada edición de la saga. " +
+      "Diseñé el modelo relacional en MySQL y expuse los endpoints con Node y Express.",
     img: "/assets/img-proyectos/personales/sf-api/sf-logo.png",
     techStack: ["Javascript", "NodeJS", "Express", "MySQL"],
     githubLink: "https://github.com/Serrch/StreetFighterAPI",
     pageLink: "",
-    detailPage: "/proyectos/personales/street-fighter-api/",
+    detailPage: "/proyectos/personales/street-fighter-api",
   },
   {
     title: "Arcade Tester",
     status: "Terminado",
     description:
-      "Proyecto enfocado en probar la conexion de controles arcade construidos con Arduino o placas Raspberry.",
+      "Herramienta de escritorio en .NET para validar controles arcade armados con Arduino o Raspberry. " +
+      "Lee la entrada de cada botón y muestra en pantalla si la conexión responde, sin abrir un juego para probarlo.",
     img: "/assets/img-proyectos/personales/arcade/arcade-layout.png",
     techStack: [".NET", "Arduino"],
     githubLink: "https://github.com/Serrch/Arcade-tester",
     pageLink: "",
-    detailPage: "/proyectos/personales/arcade-tester/",
+    detailPage: "/proyectos/personales/arcade-tester",
   },
 ];
 
 export const proyectosPro: CardProyectoTypes[] = [
   {
-    title: "Vitalify App (Plataforma de Gestion de Gimnasios)",
+    title: "Vitalify",
     status: "Terminado",
     description:
-      "Aplicacion web de gestion de gimnasios. Incluye modulos de alta y baja de miembros, gestion de turnos de empleados, sistema de login y control de pagos.",
+      "Plataforma de gestión de gimnasios en producción. Desarrollé los módulos de alta y baja de socios, turnos de empleados, " +
+      "autenticación y control de pagos, con Next.js y TypeScript sobre Supabase.",
     img: "/assets/img-proyectos/profesionales/vitalify.png",
     techStack: ["Typescript", "NextJS", "Supabase"],
     detailPage: "https://www.vitalify.app",
   },
   {
-    title: "Agroeasy (Plataforma de Gestion Agricola)",
+    title: "Face Recognition API",
     status: "Terminado",
     description:
-      "Sistema de trazabilidad para gestion de campos de cultivo, pallets y flujo de exportacion de alimentos. Incluye control de inventario, seguimiento de productos y logica transaccional de exportacion.",
-    img: "/assets/img-proyectos/profesionales/agroeasy2.png",
-    techStack: [
-      "Typescript",
-      "React",
-      "FastAPI",
-      "PostgreSQL",
-      "Supabase",
-      "Docker",
-    ],
-    detailPage: "https://www.agroeasy.com.mx",
-  },
-  {
-    title: "Sistema de Reconocimiento Facial",
-    status: "En proceso",
-    description:
-      "Plataforma multiplataforma para control de acceso biometrico en gimnasios. App movil con React Native (Expo) y version de escritorio con PySide6. Incluye registro de socios, control de asistencia en tiempo real y soporte online/offline.",
-    img: "/assets/img-proyectos/profesionales/face-recognition.png",
+      "API de control de acceso biométrico para gimnasios, construida con FastAPI y PostgreSQL. " +
+      "Resuelve el registro de socios, el reconocimiento facial y la asistencia en tiempo real para un cliente móvil en Expo y uno de escritorio en PySide6.",
+    img: "/assets/img-proyectos/profesionales/face-recognition/1.png",
     techStack: ["Expo", "Python", "FastAPI", "PostgreSQL", "Supabase"],
-    detailPage: "",
+    detailPage: "/proyectos/profesionales/face-recognition-api",
   },
   {
-    title: "API Condusef Refactorizacion",
+    title: "API Condusef Refactorización",
     status: "Terminado",
     description:
-      "Proyecto realizado durante mi estancia en Radical Software, consistio en una refactorizacion de una API que actua como intermediario con la API del gobierno encargada de Redeco y Reune.",
+      "Refactoricé en Radical Software la API .NET que actúa como intermediaria con los servicios de gobierno de Redeco y Reune. " +
+      "Reestructuré el proyecto sobre SQL Server, documenté los endpoints en Swagger y validé cada uno con Postman.",
     img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: [".NET", "MSQL", "Postman", "Swagger"],
-    detailPage: "/proyectos/profesionales/api-condusef-refactor/",
+    detailPage: "/proyectos/profesionales/api-condusef-refactor",
   },
   {
     title: "API Condusef Nueva UI",
     status: "Terminado",
     description:
-      "Proyecto de frontend creado para consumir la API Condusef previamente refactorizada, migrando el proyecto de Blazor a una interfaz moderna hecha con Next.js y React.",
+      "Migré de Blazor a Next.js la interfaz que consume la API Condusef refactorizada. " +
+      "Reconstruí las vistas con React y TypeScript, conservando la integración con los endpoints ya existentes.",
     img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: ["React", "NextJS", "Typescript", "NodeJS"],
-    detailPage: "/proyectos/profesionales/api-condusef-ui/",
+    detailPage: "/proyectos/profesionales/api-condusef-ui",
   },
 ];

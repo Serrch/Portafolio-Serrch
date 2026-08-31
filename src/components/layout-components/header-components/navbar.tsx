@@ -1,35 +1,34 @@
 "use client";
-import { sections } from "@/routes/routes";
+import { sections, sectionIds, noSectionIds } from "@/routes/routes";
 import { ScrollLink } from "@/components/ui/scroll-links";
-import useActiveSection from "@/components/intersection-observer";
+import useActiveSection from "@/lib/use-active-section";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  const sectionIds = pathname === "/" ? sections.map((s) => s.id) : [];
-  const activeSection = useActiveSection(sectionIds);
+  const activeSection = useActiveSection(
+    pathname === "/" ? sectionIds : noSectionIds
+  );
 
   return (
-    <div className="hidden md:flex justify-start md:justify-center items-center">
-      <nav>
-        <ul className="flex gap-4">
-          {sections.map((section) => (
-            <li key={section.id}>
-              <ScrollLink
-                href={section.link}
-                className={`transition duration-300 ease-in-out hover:text-emerald-600 hover:dark:text-emerald-400 hover:scale-105 hover:underline text-lg ${
-                  activeSection === section.id
-                    ? "text-emerald-600 dark:text-emerald-400 font-bold underline"
-                    : ""
-                }`}
-              >
-                {section.title}
-              </ScrollLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav className="hidden md:block">
+      <ul className="flex items-center gap-6">
+        {sections.map((section) => (
+          <li key={section.id}>
+            <ScrollLink
+              href={section.link}
+              className={`text-sm transition-colors ${
+                activeSection === section.id
+                  ? "text-brand"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {section.title}
+            </ScrollLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
