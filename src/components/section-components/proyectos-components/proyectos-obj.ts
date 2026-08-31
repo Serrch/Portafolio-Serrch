@@ -11,7 +11,7 @@ export const proyectosObj: CardProyectoTypes[] = [
     techStack: ["Javascript", "NodeJS", "Express", "MySQL"],
     githubLink: "https://github.com/Serrch/StreetFighterAPI",
     pageLink: "",
-    detailPage: "/proyectos/personales/street-fighter-api/",
+    detailPage: "/proyectos/personales/street-fighter-api",
   },
   {
     title: "Arcade Tester",
@@ -23,13 +23,13 @@ export const proyectosObj: CardProyectoTypes[] = [
     techStack: [".NET", "Arduino"],
     githubLink: "https://github.com/Serrch/Arcade-tester",
     pageLink: "",
-    detailPage: "/proyectos/personales/arcade-tester/",
+    detailPage: "/proyectos/personales/arcade-tester",
   },
 ];
 
 export const proyectosPro: CardProyectoTypes[] = [
   {
-    title: "Vitalify App (Plataforma de Gestión de Gimnasios)",
+    title: "Vitalify",
     status: "Terminado",
     description:
       "Plataforma de gestión de gimnasios en producción. Desarrollé los módulos de alta y baja de socios, turnos de empleados, " +
@@ -46,7 +46,7 @@ export const proyectosPro: CardProyectoTypes[] = [
       "Resuelve el registro de socios, el reconocimiento facial y la asistencia en tiempo real para un cliente móvil en Expo y uno de escritorio en PySide6.",
     img: "/assets/img-proyectos/profesionales/face-recognition/1.png",
     techStack: ["Expo", "Python", "FastAPI", "PostgreSQL", "Supabase"],
-    detailPage: "/proyectos/profesionales/face-recognition-api/",
+    detailPage: "/proyectos/profesionales/face-recognition-api",
   },
   {
     title: "API Condusef Refactorización",
@@ -56,7 +56,7 @@ export const proyectosPro: CardProyectoTypes[] = [
       "Reestructuré el proyecto sobre SQL Server, documenté los endpoints en Swagger y validé cada uno con Postman.",
     img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: [".NET", "MSQL", "Postman", "Swagger"],
-    detailPage: "/proyectos/profesionales/api-condusef-refactor/",
+    detailPage: "/proyectos/profesionales/api-condusef-refactor",
   },
   {
     title: "API Condusef Nueva UI",
@@ -66,6 +66,6 @@ export const proyectosPro: CardProyectoTypes[] = [
       "Reconstruí las vistas con React y TypeScript, conservando la integración con los endpoints ya existentes.",
     img: "/assets/img-proyectos/profesionales/condusef-logo.png",
     techStack: ["React", "NextJS", "Typescript", "NodeJS"],
-    detailPage: "/proyectos/profesionales/api-condusef-ui/",
+    detailPage: "/proyectos/profesionales/api-condusef-ui",
   },
 ];
