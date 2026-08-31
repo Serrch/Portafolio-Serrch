@@ -44,7 +44,7 @@ export const proyectosPro: CardProyectoTypes[] = [
     description:
       "API de control de acceso biométrico para gimnasios, construida con FastAPI y PostgreSQL. " +
       "Resuelve el registro de socios, el reconocimiento facial y la asistencia en tiempo real para un cliente móvil en Expo y uno de escritorio en PySide6.",
-    img: "/assets/img-proyectos/profesionales/face-recognition.png",
+    img: "/assets/img-proyectos/profesionales/face-recognition/1.png",
     techStack: ["Expo", "Python", "FastAPI", "PostgreSQL", "Supabase"],
     detailPage: "/proyectos/profesionales/face-recognition-api/",
   },
