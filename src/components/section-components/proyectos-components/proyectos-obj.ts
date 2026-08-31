@@ -39,14 +39,14 @@ export const proyectosPro: CardProyectoTypes[] = [
     detailPage: "https://www.vitalify.app",
   },
   {
-    title: "Sistema de Reconocimiento Facial",
-    status: "En proceso",
+    title: "Face Recognition API",
+    status: "Terminado",
     description:
-      "Control de acceso biométrico para gimnasios. Desarrollo la app móvil en React Native (Expo) y la de escritorio en PySide6 " +
-      "contra una API en FastAPI y PostgreSQL: registro de socios, asistencia en tiempo real y operación online/offline.",
+      "API de control de acceso biométrico para gimnasios, construida con FastAPI y PostgreSQL. " +
+      "Resuelve el registro de socios, el reconocimiento facial y la asistencia en tiempo real para un cliente móvil en Expo y uno de escritorio en PySide6.",
     img: "/assets/img-proyectos/profesionales/face-recognition.png",
     techStack: ["Expo", "Python", "FastAPI", "PostgreSQL", "Supabase"],
-    detailPage: "",
+    detailPage: "/proyectos/profesionales/face-recognition-api/",
   },
   {
     title: "API Condusef Refactorización",
