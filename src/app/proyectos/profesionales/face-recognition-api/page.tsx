@@ -27,6 +27,19 @@ const TRABAJO = [
   "Documenté los endpoints y validé cada uno antes de conectarlos con los clientes.",
 ];
 
+const CAPTURAS = [
+  {
+    src: "/assets/img-proyectos/profesionales/face-recognition/2.png",
+    alt: "Pantalla de check-in en la puerta del gimnasio con el rostro detectado",
+    pie: "Check-in en puerta: la cámara detecta el rostro y confirma el acceso sin que el socio tenga que hacer nada más.",
+  },
+  {
+    src: "/assets/img-proyectos/profesionales/face-recognition/1.png",
+    alt: "Ficha del socio con su ciclo de membresía y el calendario de visitas del mes",
+    pie: "Ficha del socio tras el acceso: estado de la membresía, próximo pago y calendario de visitas del mes.",
+  },
+];
+
 const CLIENTES = [
   {
     nombre: "API",
@@ -68,11 +81,16 @@ export default function FaceRecognitionApi() {
         Face Recognition API
       </h1>
 
+      <p className="mt-2 font-mono text-xs text-muted-foreground">
+        Velarizon · Abril 2026 — Julio 2026
+      </p>
+
       <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-        Control de acceso biométrico para gimnasios. La API resuelve el registro
-        de socios, el reconocimiento del rostro y la asistencia en tiempo real,
-        y sirve a dos clientes: una app móvil en Expo y una de escritorio en
-        PySide6.
+        Control de acceso biométrico. Solución completa que abarca desde el
+        registro de nuevos clientes en el gimnasio hasta la gestión de
+        membresías y accesos mediante modelos de reconocimiento facial. La API,
+        construida con FastAPI y PostgreSQL, es el núcleo del sistema: sirve
+        tanto a la app móvil en Expo como a la de escritorio en PySide6.
       </p>
 
       <ul className="mt-6 flex flex-wrap gap-2">
@@ -81,14 +99,24 @@ export default function FaceRecognitionApi() {
         ))}
       </ul>
 
-      <div className="mt-10 flex items-center justify-center rounded-xl border border-border bg-card p-10">
-        <Image
-          src="/assets/img-proyectos/profesionales/face-recognition.png"
-          alt="Face Recognition API"
-          width={240}
-          height={240}
-          className="object-contain"
-        />
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
+        {CAPTURAS.map((cap) => (
+          <figure key={cap.src}>
+            <div className="overflow-hidden rounded-xl border border-border bg-card">
+              <Image
+                src={cap.src}
+                alt={cap.alt}
+                width={886}
+                height={500}
+                sizes="(max-width: 768px) 100vw, 560px"
+                className="w-full"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              {cap.pie}
+            </figcaption>
+          </figure>
+        ))}
       </div>
 
       <section className="mt-14">
