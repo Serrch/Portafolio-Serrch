@@ -27,7 +27,7 @@ export default function ImagenZoom({
         height={alto}
         sizes="(max-width: 768px) 100vw, 560px"
         unoptimized={gif}
-        className="h-auto w-full cursor-pointer transition hover:opacity-80"
+        className="h-full w-full object-cover cursor-pointer transition hover:opacity-80"
         onClick={() => setOpen(true)}
       />
 

@@ -154,8 +154,12 @@ export function Tarjetas({
   );
 }
 
-/** Capturas con pie opcional. Cada una conserva su proporcion: encajarlas en
- *  una caja fija dejaba franjas vacias a los lados. */
+// Todas las capturas ocupan la misma caja y la rellenan recortando lo que
+// sobra: es lo unico que las deja parejas teniendo resoluciones distintas.
+// Este es el unico valor que hay que tocar si el recorte molesta.
+const PROPORCION = "aspect-[16/9]";
+
+/** Capturas con pie opcional, todas del mismo tamano. */
 export function Galeria({
   imagenes,
 }: {
@@ -171,7 +175,7 @@ export function Galeria({
     <div className="grid gap-6 md:grid-cols-2">
       {imagenes.map((img) => (
         <figure key={img.src}>
-          <div className="overflow-hidden rounded-xl">
+          <div className={`${PROPORCION} overflow-hidden rounded-xl`}>
             <ImagenZoom
               src={img.src}
               alt={img.alt}
