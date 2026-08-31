@@ -154,18 +154,30 @@ export function Tarjetas({
   );
 }
 
-/** Capturas con pie opcional. Se recuadran todas igual aunque no midan igual. */
+/** Capturas con pie opcional. Cada una conserva su proporcion: encajarlas en
+ *  una caja fija dejaba franjas vacias a los lados. */
 export function Galeria({
   imagenes,
 }: {
-  imagenes: { src: string; alt: string; pie?: string }[];
+  imagenes: {
+    src: string;
+    alt: string;
+    ancho: number;
+    alto: number;
+    pie?: string;
+  }[];
 }) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {imagenes.map((img) => (
         <figure key={img.src}>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-border bg-secondary">
-            <ImagenZoom src={img.src} alt={img.alt} />
+          <div className="overflow-hidden rounded-xl">
+            <ImagenZoom
+              src={img.src}
+              alt={img.alt}
+              ancho={img.ancho}
+              alto={img.alto}
+            />
           </div>
           {img.pie && (
             <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">

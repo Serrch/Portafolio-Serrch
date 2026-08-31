@@ -41,11 +41,15 @@ export default function StreetFighterDetail() {
           imagenes={[
             {
               src: RUTA + "sf-api-image-1.png",
+              ancho: 1920,
+              alto: 1080,
               alt: "Vista de la documentación de la Street Fighter API",
               pie: "Documentación de la API.",
             },
             {
               src: RUTA + "sf-api-json-1.png",
+              ancho: 1489,
+              alto: 1004,
               alt: "Respuesta JSON de un endpoint de la Street Fighter API",
               pie: "Respuesta de un endpoint con las versiones de un personaje.",
             },

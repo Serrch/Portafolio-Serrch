@@ -47,11 +47,15 @@ export default function FaceRecognitionApi() {
           imagenes={[
             {
               src: "/assets/img-proyectos/profesionales/face-recognition/2.png",
+              ancho: 887,
+              alto: 503,
               alt: "Pantalla de check-in en la puerta del gimnasio con el rostro detectado",
               pie: "Check-in en puerta: la cámara detecta el rostro y confirma el acceso sin que el socio tenga que hacer nada más.",
             },
             {
               src: "/assets/img-proyectos/profesionales/face-recognition/1.png",
+              ancho: 886,
+              alto: 500,
               alt: "Ficha del socio con su ciclo de membresía y el calendario de visitas del mes",
               pie: "Ficha del socio tras el acceso: estado de la membresía, próximo pago y calendario de visitas del mes.",
             },

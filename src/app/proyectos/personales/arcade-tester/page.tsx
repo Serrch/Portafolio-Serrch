@@ -41,21 +41,29 @@ export default function ArcadeTesterDetail() {
           imagenes={[
             {
               src: RUTA + "arcade-tester.gif",
+              ancho: 500,
+              alto: 281,
               alt: "Arcade Tester detectando los inputs del control en tiempo real",
               pie: "La aplicación marca cada botón en el momento en que se presiona.",
             },
             {
               src: RUTA + "arcade-diagrama.png",
+              ancho: 602,
+              alto: 339,
               alt: "Diagrama de conexión entre los switches del control y la placa Arduino",
               pie: "Diagrama de conexión de los switches a la placa.",
             },
             {
               src: RUTA + "arcade-layout.png",
+              ancho: 1280,
+              alto: 720,
               alt: "Vista del layout de botones en la aplicación",
               pie: "Layout de botones dentro de la aplicación.",
             },
             {
               src: RUTA + "arcade-layout-2.png",
+              ancho: 600,
+              alto: 339,
               alt: "Segunda vista del layout de botones en la aplicación",
             },
           ]}
