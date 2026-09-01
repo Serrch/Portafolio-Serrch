@@ -1,8 +1,16 @@
 import { ImageResponse } from "next/og";
+import { defaultLocale, isLocale, locales } from "@/i18n/config";
+import { content } from "@/i18n/content";
 
-export const alt = "Sergio Pérez Rivas — Desarrollador Fullstack";
+// `alt` es un export estatico, asi que no puede variar por idioma: se queda en
+// espanol. El texto pintado dentro de la imagen si cambia.
+export const alt = content[defaultLocale].og.alt;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 const STACK = [
   "TypeScript",
@@ -13,7 +21,14 @@ const STACK = [
   "PostgreSQL",
 ];
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = content[isLocale(locale) ? locale : defaultLocale].og;
+
   return new ImageResponse(
     (
       <div
@@ -30,7 +45,7 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", fontSize: 34, color: "#34d399" }}>
-          Portafolio
+          {t.antetitulo}
         </div>
         <div
           style={{
@@ -51,7 +66,7 @@ export default function OpenGraphImage() {
             color: "#c9c4c6",
           }}
         >
-          Ingeniero en Software · Desarrollador Fullstack
+          {t.subtitulo}
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 48 }}>
           {STACK.map((tech) => (

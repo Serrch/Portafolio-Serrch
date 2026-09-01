@@ -2,15 +2,36 @@
 import { useState } from "react";
 import { FiCopy, FiCheck } from "react-icons/fi";
 import { CORREO, GITHUB_URL, LINKEDIN_URL } from "@/lib/site";
-
-const ENLACES = [
-  { label: "Correo", texto: CORREO, href: `mailto:${CORREO}`, evento: "contacto-correo" },
-  { label: "GitHub", texto: "github.com/Serrch", href: GITHUB_URL, evento: "contacto-github" },
-  { label: "LinkedIn", texto: "in/serrrch", href: LINKEDIN_URL, evento: "contacto-linkedin" },
-];
+import { useLocale } from "@/i18n/use-locale";
+import { ui } from "@/i18n/ui";
 
 export default function ContactGrid() {
+  const t = ui[useLocale()];
   const [copiado, setCopiado] = useState(false);
+
+  const enlaces = [
+    {
+      label: t.secciones.contacto.correo,
+      texto: CORREO,
+      href: `mailto:${CORREO}`,
+      evento: "contacto-correo",
+      esCorreo: true,
+    },
+    {
+      label: "GitHub",
+      texto: "github.com/Serrch",
+      href: GITHUB_URL,
+      evento: "contacto-github",
+      esCorreo: false,
+    },
+    {
+      label: "LinkedIn",
+      texto: "in/serrrch",
+      href: LINKEDIN_URL,
+      evento: "contacto-linkedin",
+      esCorreo: false,
+    },
+  ];
 
   async function copiarCorreo() {
     await navigator.clipboard.writeText(CORREO);
@@ -20,7 +41,7 @@ export default function ContactGrid() {
 
   return (
     <dl className="divide-y divide-border">
-      {ENLACES.map((enlace) => (
+      {enlaces.map((enlace) => (
         <div
           key={enlace.label}
           className="flex items-center justify-between gap-4 py-4"
@@ -39,13 +60,13 @@ export default function ContactGrid() {
             >
               {enlace.texto}
             </a>
-            {enlace.label === "Correo" && (
+            {enlace.esCorreo && (
               // mailto: no hace nada si el visitante no tiene cliente de correo
               // configurado, que en escritorio es lo comun.
               <button
                 type="button"
                 onClick={copiarCorreo}
-                aria-label={copiado ? "Correo copiado" : "Copiar correo"}
+                aria-label={copiado ? t.contacto.copiado : t.contacto.copiar}
                 className="shrink-0 cursor-pointer rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground"
               >
                 {copiado ? <FiCheck className="text-brand" /> : <FiCopy />}

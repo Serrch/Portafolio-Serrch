@@ -1,3 +1,4 @@
+"use client";
 import {
   Sheet,
   SheetContent,
@@ -8,16 +9,19 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { AlignJustify } from "lucide-react";
-import { sections, sectionIds, noSectionIds } from "@/routes/routes";
+import { sectionIds, noSectionIds } from "@/routes/routes";
 import useActiveSection from "@/lib/use-active-section";
+import { useLocale } from "@/i18n/use-locale";
+import { ui } from "@/i18n/ui";
 import { usePathname } from "next/navigation";
 import { ScrollLink } from "@/components/ui/scroll-links";
 
 export default function SheetButton() {
   const pathname = usePathname();
-  const activeSection = useActiveSection(
-    pathname === "/" ? sectionIds : noSectionIds
-  );
+  const locale = useLocale();
+  const t = ui[locale];
+  const enHome = pathname === `/${locale}`;
+  const activeSection = useActiveSection(enHome ? sectionIds : noSectionIds);
 
   return (
     <Sheet>
@@ -28,23 +32,23 @@ export default function SheetButton() {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle className="text-2xl">Navegación</SheetTitle>
+          <SheetTitle className="text-2xl">{t.header.menu}</SheetTitle>
           <SheetDescription className="sr-only">
-            Menú lateral con enlaces de navegación del portafolio.
+            {t.header.menuDesc}
           </SheetDescription>
         </SheetHeader>
         <ul className="space-y-3 px-4">
-          {sections.map((section) => (
-            <li key={section.id}>
+          {sectionIds.map((id) => (
+            <li key={id}>
               <ScrollLink
-                href={section.link}
+                href={`/${locale}#${id}`}
                 className={`transition duration-300 ease-in-out hover:text-emerald-600 hover:dark:text-emerald-400 hover:scale-105 hover:underline text-lg ${
-                  pathname === "/" && activeSection === section.id
+                  enHome && activeSection === id
                     ? "text-emerald-600 dark:text-emerald-400 font-bold underline"
                     : ""
                 }`}
               >
-                {section.title}
+                {t.nav[id]}
               </ScrollLink>
             </li>
           ))}

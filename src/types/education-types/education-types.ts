@@ -1,9 +1,12 @@
+import { I18nText } from "@/i18n/config";
+
 export type EducationCardType = {
-  kind: "Título" | "Certificación" | "Curso";
-  title: string;
+  /** Clave, no etiqueta: la etiqueta visible sale del diccionario. */
+  kind: "degree" | "certification" | "course";
+  title: I18nText;
   institution: string;
-  description: string;
-  stDate: string;
-  endDate?: string;
+  description: I18nText;
+  start: string;
+  end?: string;
   certificationLink?: string;
 };

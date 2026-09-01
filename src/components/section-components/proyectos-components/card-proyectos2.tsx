@@ -4,6 +4,8 @@ import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
 import GithubButton from "../github-button";
 import RedirectButton from "../redirect-button";
 import Pill from "@/components/ui/pill";
+import { useLocale } from "@/i18n/use-locale";
+import { ui } from "@/i18n/ui";
 
 export default function CardProyectos2({
   proyectoObj,
@@ -12,7 +14,13 @@ export default function CardProyectos2({
   proyectoObj: CardProyectoTypes;
   horizontal?: boolean;
 }) {
-  const terminado = proyectoObj.status === "Terminado";
+  const locale = useLocale();
+  const t = ui[locale];
+  const terminado = proyectoObj.status === "done";
+  // Las rutas internas se guardan sin idioma; el enlace lo lleva al actual.
+  const destino = proyectoObj.detailPage.startsWith("http")
+    ? proyectoObj.detailPage
+    : `/${locale}${proyectoObj.detailPage}`;
 
   const media = (
     <div
@@ -24,7 +32,7 @@ export default function CardProyectos2({
     >
       <Image
         src={proyectoObj.img}
-        alt={`Captura de ${proyectoObj.title}`}
+        alt={`${t.secciones.proyectos.captura} ${proyectoObj.title[locale]}`}
         fill
         sizes={
           horizontal
@@ -45,15 +53,15 @@ export default function CardProyectos2({
             terminado ? "bg-brand" : "bg-amber-400"
           }`}
         />
-        {proyectoObj.status}
+        {t.estado[proyectoObj.status]}
       </p>
 
       <h3 className="mt-3 text-xl font-bold tracking-tight">
-        {proyectoObj.title}
+        {proyectoObj.title[locale]}
       </h3>
 
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-        {proyectoObj.description}
+        {proyectoObj.description[locale]}
       </p>
 
       <ul className="mt-4 flex flex-wrap gap-2">
@@ -65,22 +73,24 @@ export default function CardProyectos2({
       <div className="mt-auto flex flex-wrap items-center gap-5 pt-5">
         {proyectoObj.detailPage ? (
           <RedirectButton
-            link={proyectoObj.detailPage}
+            link={destino}
             onClick={() =>
               window.umami?.track("ver-proyecto", {
-                proyecto: proyectoObj.title,
+                proyecto: proyectoObj.title.es,
               })
             }
           />
         ) : (
-          <span className="text-sm text-muted-foreground">En desarrollo</span>
+          <span className="text-sm text-muted-foreground">
+            {t.secciones.proyectos.enDesarrollo}
+          </span>
         )}
         {proyectoObj.githubLink && (
           <GithubButton
             link={proyectoObj.githubLink}
             variant="link"
             onClick={() =>
-              window.umami?.track("ver-github", { proyecto: proyectoObj.title })
+              window.umami?.track("ver-github", { proyecto: proyectoObj.title.es })
             }
           />
         )}

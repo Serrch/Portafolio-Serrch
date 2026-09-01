@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Pill from "@/components/ui/pill";
 import { CardTypes } from "@/types/sobre-mi-types/card-types";
+import { formatMonth, Locale } from "@/i18n/config";
+import { ui } from "@/i18n/ui";
 
 // Igualar el alto no sirve: un wordmark horizontal ocupa mucha mas superficie
 // que un logo cuadrado. Se iguala el area, que es lo que el ojo compara.
@@ -14,13 +16,17 @@ const medidas = (ratio: number) => {
 
 export default function ExperienciaList({
   experiencias,
+  locale,
 }: {
   experiencias: CardTypes[];
+  locale: Locale;
 }) {
+  const t = ui[locale].secciones.experiencia;
+
   return (
     <ol className="divide-y divide-border">
       {experiencias.map((exp) => {
-        const actual = exp.endDate === "Actualidad";
+        const actual = exp.end === null;
         return (
           <li
             key={exp.title}
@@ -34,8 +40,8 @@ export default function ExperienciaList({
                     actual ? "bg-brand" : "bg-muted-foreground/50"
                   }`}
                 />
-                {exp.stDate}
-                {exp.endDate}
+                {formatMonth(exp.start, locale)} -{" "}
+                {exp.end ? formatMonth(exp.end, locale) : t.actualidad}
               </p>
               <div className="mt-4 flex h-28 w-full max-w-52 items-center">
                 <Image
@@ -50,10 +56,10 @@ export default function ExperienciaList({
             <div>
               <h3 className="text-2xl font-bold tracking-tight">{exp.title}</h3>
               <p className="mt-0.5 text-sm text-muted-foreground">
-                {exp.cargo}
+                {exp.cargo[locale]}
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                {exp.description}
+                {exp.description[locale]}
               </p>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {exp.techStack.map((tech) => (

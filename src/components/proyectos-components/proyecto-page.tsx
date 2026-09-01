@@ -6,6 +6,8 @@ import GithubButton from "@/components/section-components/github-button";
 import ImagenZoom from "@/components/image-zoom";
 import { TechOptions } from "@/types/sobre-mi-types/card-types";
 import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
+import { Locale } from "@/i18n/config";
+import { ui } from "@/i18n/ui";
 
 /**
  * Piezas compartidas por las paginas de detalle de proyecto. Cada pagina solo
@@ -14,6 +16,7 @@ import { CardProyectoTypes } from "@/types/proyectos-types/proyectos-types";
 
 /** Cabecera completa: volver, estado, titulo, meta, entrada, stack y repo. */
 export function ProyectoHeader({
+  locale,
   titulo,
   estado,
   meta,
@@ -21,6 +24,7 @@ export function ProyectoHeader({
   techs,
   github,
 }: {
+  locale: Locale;
   titulo: string;
   estado: CardProyectoTypes["status"];
   /** Empresa y/o fechas, en una linea. */
@@ -29,24 +33,26 @@ export function ProyectoHeader({
   techs: TechOptions[];
   github?: string;
 }) {
+  const t = ui[locale];
+
   return (
     <>
       <Link
-        href="/#proyectos"
+        href={`/${locale}#proyectos`}
         className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
       >
         <FiArrowLeft aria-hidden />
-        Proyectos
+        {t.botones.volverProyectos}
       </Link>
 
       <p className="mt-8 flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
         <span
           aria-hidden
           className={`h-1.5 w-1.5 rounded-full ${
-            estado === "Terminado" ? "bg-brand" : "bg-amber-400"
+            estado === "done" ? "bg-brand" : "bg-amber-400"
           }`}
         />
-        {estado}
+        {t.estado[estado]}
       </p>
 
       <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">

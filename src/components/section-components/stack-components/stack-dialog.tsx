@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/dialog";
 import { TechStackTypes } from "@/types/tech-stack-types/tech-stack-types";
 import ChooseIconStack from "./choose-icon-stack";
+import { useLocale } from "@/i18n/use-locale";
+
 export default function StackDialog({
   children,
   techObj,
@@ -16,6 +18,8 @@ export default function StackDialog({
   children: React.ReactNode;
   techObj: TechStackTypes;
 }) {
+  const locale = useLocale();
+
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -32,7 +36,7 @@ export default function StackDialog({
             {techObj.name}
           </DialogTitle>
           <DialogDescription className="text-base md:text-xl dark:text-zinc-300 text-justify">
-            {techObj.desc}
+            {techObj.desc[locale]}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
