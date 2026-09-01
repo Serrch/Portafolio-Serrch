@@ -1,22 +1,25 @@
 import SectionHeading from "@/components/ui/section-heading";
 import { languageObj, frameworkObj, databaseObj, otrosObj } from "./tech-obj";
 import Pill from "@/components/ui/pill";
+import { Locale } from "@/i18n/config";
+import { ui } from "@/i18n/ui";
 
-const CATEGORIAS = [
-  { label: "Lenguajes", techs: languageObj },
-  { label: "Frameworks y librerías", techs: frameworkObj },
-  { label: "Bases de datos", techs: databaseObj },
-  { label: "Herramientas y entorno", techs: otrosObj },
-];
+export default function Stack({ locale }: { locale: Locale }) {
+  const t = ui[locale].secciones.stack;
+  const categorias = [
+    { label: t.lenguajes, techs: languageObj },
+    { label: t.frameworks, techs: frameworkObj },
+    { label: t.bases, techs: databaseObj },
+    { label: t.otros, techs: otrosObj },
+  ];
 
-export default function Stack() {
   return (
     <section id="stack" className="scroll-mt-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading index="05" eyebrow="Herramientas" title="Tech stack" />
+        <SectionHeading index="05" eyebrow={t.eyebrow} title={t.title} />
 
         <div className="mt-4 divide-y divide-border">
-          {CATEGORIAS.map((categoria) => (
+          {categorias.map((categoria) => (
             <div
               key={categoria.label}
               className="grid gap-3 py-6 md:grid-cols-[14rem_minmax(0,1fr)] md:items-start md:gap-8"
@@ -30,9 +33,7 @@ export default function Stack() {
             </div>
           ))}
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">
-          Toca cualquier tecnología para ver cómo la uso.
-        </p>
+        <p className="mt-2 text-xs text-muted-foreground">{t.hint}</p>
       </div>
     </section>
   );

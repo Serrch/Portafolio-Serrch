@@ -32,6 +32,19 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // El idioma vive en la ruta, asi que la raiz no tiene pagina propia.
+      { source: "/", destination: "/es", permanent: false },
+      // Los detalles de proyecto vivian sin prefijo: los enlaces ya compartidos
+      // siguen funcionando.
+      {
+        source: "/proyectos/:path*",
+        destination: "/es/proyectos/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

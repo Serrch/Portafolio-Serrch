@@ -17,7 +17,7 @@ export default function GridProyectos({
     >
       {arrProyectos.map((proyecto) => (
         <CardProyectos2
-          key={proyecto.title}
+          key={proyecto.title.es}
           proyectoObj={proyecto}
           horizontal={horizontal}
         />

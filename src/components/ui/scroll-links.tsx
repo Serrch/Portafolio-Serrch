@@ -9,10 +9,11 @@ export function ScrollLink({
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: string }) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  // El href ya trae el idioma ("/es#contacto"): si la ruta actual es esa misma
+  // pagina, el salto es scroll suave en vez de navegacion.
+  const [ruta, ancla] = href.split("#");
 
-  if (isHome && href.startsWith("/#")) {
-    const id = href.replace("/#", "");
+  if (ancla && pathname === ruta) {
     return (
       <a
         href={href}
@@ -20,7 +21,7 @@ export function ScrollLink({
         {...props}
         onClick={(e) => {
           e.preventDefault();
-          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          document.getElementById(ancla)?.scrollIntoView({ behavior: "smooth" });
           props.onClick?.(e);
         }}
       >

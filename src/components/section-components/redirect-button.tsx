@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FiExternalLink, FiArrowRight } from "react-icons/fi";
+import { useLocale } from "@/i18n/use-locale";
+import { ui } from "@/i18n/ui";
 
 export default function RedirectButton({
   link,
@@ -12,13 +14,14 @@ export default function RedirectButton({
   texto?: string;
   onClick?: () => void;
 }) {
+  const t = ui[useLocale()].botones;
   // Los proyectos con sitio publicado apuntan fuera del portafolio: abrirlos en
   // la misma pestana deja al visitante sin camino de vuelta.
   const esExterno = link.startsWith("http");
 
   const contenido = (
     <>
-      {texto ?? (esExterno ? "Visitar sitio" : "Ver proyecto")}
+      {texto ?? (esExterno ? t.visitarSitio : t.verProyecto)}
       {esExterno ? <FiExternalLink /> : <FiArrowRight />}
     </>
   );

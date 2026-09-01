@@ -3,31 +3,37 @@ import { EducationCardType } from "@/types/education-types/education-types";
 // Una sola lista: el tipo lo dice la etiqueta de la tarjeta, no el array.
 export const educacionObj: EducationCardType[] = [
   {
-    kind: "Título",
-    title: "Ingeniería en Software",
+    kind: "degree",
+    title: { es: "Ingeniería en Software", en: "Software Engineering" },
     institution: "Universidad Estatal de Sonora",
-    description:
-      "Fundamentos de programación, desarrollo y arquitectura de software, con introducción a la electrónica con Arduino.",
-    stDate: "Agosto 2021",
-    endDate: "Mayo 2025",
+    description: {
+      es: "Fundamentos de programación, desarrollo y arquitectura de software, con introducción a la electrónica con Arduino.",
+      en: "Programming fundamentals, software development and architecture, with an introduction to electronics using Arduino.",
+    },
+    start: "2021-08",
+    end: "2025-05",
   },
   {
-    kind: "Certificación",
-    title: "JavaScript",
+    kind: "certification",
+    title: { es: "JavaScript", en: "JavaScript" },
     institution: "Scrimba",
-    description:
-      "Conceptos fundamentales del lenguaje JavaScript aplicados al desarrollo profesional de páginas web.",
-    stDate: "Julio 2024",
+    description: {
+      es: "Conceptos fundamentales del lenguaje JavaScript aplicados al desarrollo profesional de páginas web.",
+      en: "Core concepts of the JavaScript language applied to professional web development.",
+    },
+    start: "2024-07",
     certificationLink:
       "https://www.coursera.org/account/accomplishments/verify/5RYVLCV97Y3M",
   },
   {
-    kind: "Curso",
-    title: "Principios SOLID",
+    kind: "course",
+    title: { es: "Principios SOLID", en: "SOLID Principles" },
     institution: "Radical Software",
-    description:
-      "Aplicación de los principios SOLID en los proyectos desarrollados durante mi estancia en la empresa.",
-    stDate: "Diciembre 2024",
-    endDate: "Enero 2025",
+    description: {
+      es: "Aplicación de los principios SOLID en los proyectos desarrollados durante mi estancia en la empresa.",
+      en: "Application of the SOLID principles across the projects I worked on during my time at the company.",
+    },
+    start: "2024-12",
+    end: "2025-01",
   },
 ];
