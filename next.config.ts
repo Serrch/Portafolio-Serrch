@@ -26,10 +26,7 @@ const nextConfig: NextConfig = {
         source: "/umami/script.js",
         destination: "https://cloud.umami.is/script.js",
       },
-      {
-        source: "/umami/api/send",
-        destination: "https://cloud.umami.is/api/send",
-      },
+      // /umami/api/send lo atiende src/app/umami/api/send/route.ts
     ];
   },
   async redirects() {
