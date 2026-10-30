@@ -16,6 +16,9 @@ export default function SectionTracker() {
     // la da el navegador sin red ni permisos, y ningún adblocker la toca.
     let zona = Intl.DateTimeFormat().resolvedOptions().timeZone;
     let actual = "";
+    // ?ref=empresa en los enlaces del CV. Umami lo guarda en la URL de la
+    // visita, pero no lo muestra en los eventos: lo mandamos como propiedad.
+    const ref = new URLSearchParams(location.search).get("ref");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,6 +31,7 @@ export default function SectionTracker() {
           window.umami.track("ver-seccion", {
             seccion: SECCIONES[id],
             ...(zona && { zona }), // solo en el primer evento de cada carga
+            ...(zona && ref && { ref }),
           });
           zona = "";
         }
@@ -51,6 +55,7 @@ export default function SectionTracker() {
       window.umami?.track("salida", {
         segundos: Math.round(performance.now() / 1000),
         ...(actual && { seccion: actual }),
+        ...(ref && { ref }),
       });
     };
     document.addEventListener("visibilitychange", salir);
