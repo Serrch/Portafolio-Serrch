@@ -15,6 +15,7 @@ const STACK_PRINCIPAL: TechOptions[] = [
   "Python",
   "FastAPI",
   "PostgreSQL",
+  "Supabase",
 ];
 
 export default function Hero({ locale }: { locale: Locale }) {
