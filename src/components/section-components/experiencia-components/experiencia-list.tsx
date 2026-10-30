@@ -32,7 +32,7 @@ export default function ExperienciaList({
             key={exp.title}
             className="grid gap-5 py-8 md:grid-cols-[13rem_minmax(0,1fr)] md:gap-10"
           >
-            <div>
+            <div className="flex flex-col">
               <p className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
                 <span
                   aria-hidden
@@ -43,7 +43,7 @@ export default function ExperienciaList({
                 {formatMonth(exp.start, locale)} -{" "}
                 {exp.end ? formatMonth(exp.end, locale) : t.actualidad}
               </p>
-              <div className="mt-4 flex h-28 w-full max-w-52 items-center">
+              <div className="mt-4 flex min-h-28 flex-1 w-full max-w-52 items-center justify-center">
                 <Image
                   src={exp.img}
                   alt={exp.title}
